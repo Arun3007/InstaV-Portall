@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new_set">
+    <item_option_new_set action="INSERT_OR_UPDATE">
+        <create_roles/>
+        <description/>
+        <display_title>false</display_title>
+        <internal_name>common_comments</internal_name>
+        <layout>normal</layout>
+        <name/>
+        <order>400</order>
+        <read_roles/>
+        <set_attributes/>
+        <sys_class_name>item_option_new_set</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-06 07:21:50</sys_created_on>
+        <sys_id>aaf21572875a1190f0bd419d0ebb3519</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>common_comments</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>item_option_new_set_aaf21572875a1190f0bd419d0ebb3519</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-06 07:21:50</sys_updated_on>
+        <title>common_comments</title>
+        <type>one_to_one</type>
+        <write_roles/>
+    </item_option_new_set>
+</record_update>

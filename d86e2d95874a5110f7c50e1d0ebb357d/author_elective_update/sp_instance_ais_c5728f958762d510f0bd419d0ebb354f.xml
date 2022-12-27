@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_ais">
+    <sp_instance_ais action="DELETE">
+        <active>true</active>
+        <ai_search_source_filter/>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <disable_all_suggestions>false</disable_all_suggestions>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <placeholder/>
+        <roles/>
+        <search_application/>
+        <search_results_configuration/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">9c520b958762d510f0bd419d0ebb3538</sp_column>
+        <sp_widget display_value="Homepage Search">200fbd96cb20020000f8d856634c9ca1</sp_widget>
+        <spell_check_font_size>xl</spell_check_font_size>
+        <sys_class_name>sp_instance_ais</sys_class_name>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-14 09:53:11</sys_created_on>
+        <sys_id>c5728f958762d510f0bd419d0ebb354f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sp_instance_ais_c5728f958762d510f0bd419d0ebb354f</sys_update_name>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-14 09:53:11</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance_ais>
+    <sys_translated_text action="DELETE" query="documentkey=c5728f958762d510f0bd419d0ebb354f"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</application>
+        <file_path/>
+        <instance_id>5b3553eddb6af41007072f17d4961905</instance_id>
+        <instance_name>instavtechnologiespvtltddemo4</instance_name>
+        <name>sp_instance_ais_c5728f958762d510f0bd419d0ebb354f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_ais"><sp_instance_ais action="INSERT_OR_UPDATE"><active>true</active><ai_search_source_filter/><class_name/><color>default</color><css/><disable_all_suggestions>false</disable_all_suggestions><glyph/><id/><order>1</order><placeholder/><roles/><search_application/><search_results_configuration/><short_description/><size>md</size><sp_column display_value="1">9c520b958762d510f0bd419d0ebb3538</sp_column><sp_widget display_value="Homepage Search">200fbd96cb20020000f8d856634c9ca1</sp_widget><spell_check_font_size>xl</spell_check_font_size><sys_class_name>sp_instance_ais</sys_class_name><sys_created_by>Jab19</sys_created_by><sys_created_on>2022-10-14 09:53:11</sys_created_on><sys_id>c5728f958762d510f0bd419d0ebb354f</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package><sys_policy/><sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope><sys_update_name>sp_instance_ais_c5728f958762d510f0bd419d0ebb354f</sys_update_name><sys_updated_by>Jab19</sys_updated_by><sys_updated_on>2022-10-14 09:53:11</sys_updated_on><title/><url/><widget_parameters/></sp_instance_ais><sys_translated_text action="delete_multiple" query="documentkey=c5728f958762d510f0bd419d0ebb354f"/></record_update>]]></payload>
+        <payload_hash>-385637425</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>7a3d9139871e5150f7c50e1d0ebb3587</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-14 09:53:12</sys_created_on>
+        <sys_id>15728f958762d510f0bd419d0ebb3552</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183d5e97d870000001</sys_recorded_at>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-14 09:53:12</sys_updated_on>
+        <type>Instance with Search</type>
+        <update_guid>5d728f954862d510fb94f88ceb9c9951</update_guid>
+        <update_guid_history>5d728f954862d510fb94f88ceb9c9951:-385637425</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">0527db9987a2d510f0bd419d0ebb3524</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-14 11:23:34</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_ais">sp_instance_ais</sys_db_object>
+        <sys_id>8d6ae3f9ba864e33828533ad7d4f5a31</sys_id>
+        <sys_metadata>c5728f958762d510f0bd419d0ebb354f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_scope_delete display_value="">74cfaf93962f4aa9bc64e19b81ff1861</sys_scope_delete>
+        <sys_update_name>sp_instance_ais_c5728f958762d510f0bd419d0ebb354f</sys_update_name>
+        <sys_update_version display_value="sp_instance_ais_c5728f958762d510f0bd419d0ebb354f">15728f958762d510f0bd419d0ebb3552</sys_update_version>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-14 11:23:34</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

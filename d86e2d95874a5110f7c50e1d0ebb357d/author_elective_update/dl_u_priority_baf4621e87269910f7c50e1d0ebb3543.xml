@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="dl_u_priority">
+    <dl_u_priority action="DELETE">
+        <active>true</active>
+        <impact>2</impact>
+        <order>100</order>
+        <priority>2</priority>
+        <sys_class_name>dl_u_priority</sys_class_name>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-17 10:18:36</sys_created_on>
+        <sys_id>baf4621e87269910f7c50e1d0ebb3543</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>100</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>dl_u_priority_baf4621e87269910f7c50e1d0ebb3543</sys_update_name>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-17 10:18:36</sys_updated_on>
+        <urgency>1</urgency>
+    </dl_u_priority>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</application>
+        <file_path/>
+        <instance_id>5b3553eddb6af41007072f17d4961905</instance_id>
+        <instance_name>instavtechnologiespvtltddemo4</instance_name>
+        <name>dl_u_priority_baf4621e87269910f7c50e1d0ebb3543</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="dl_u_priority"><dl_u_priority action="INSERT_OR_UPDATE"><active>true</active><impact>2</impact><order>100</order><priority>2</priority><sys_class_name>dl_u_priority</sys_class_name><sys_created_by>Jab19</sys_created_by><sys_created_on>2022-10-17 10:18:36</sys_created_on><sys_id>baf4621e87269910f7c50e1d0ebb3543</sys_id><sys_mod_count>0</sys_mod_count><sys_name>100</sys_name><sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package><sys_policy/><sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope><sys_update_name>dl_u_priority_baf4621e87269910f7c50e1d0ebb3543</sys_update_name><sys_updated_by>Jab19</sys_updated_by><sys_updated_on>2022-10-17 10:18:36</sys_updated_on><urgency>1</urgency></dl_u_priority></record_update>]]></payload>
+        <payload_hash>121188937</payload_hash>
+        <record_name>100</record_name>
+        <reverted_from/>
+        <source>68ef199a87229910f7c50e1d0ebb3562</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-17 10:18:36</sys_created_on>
+        <sys_id>ae05eeda87269910f7c50e1d0ebb351b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183e573d22e0000001</sys_recorded_at>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-17 10:18:36</sys_updated_on>
+        <type>Priority Data Lookup</type>
+        <update_guid>e605eeda45269910c9f5617f1f204e1b</update_guid>
+        <update_guid_history>e605eeda45269910c9f5617f1f204e1b:121188937</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="100">0451cbda87a69910f7c50e1d0ebb351c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-17 12:22:08</sys_created_on>
+        <sys_db_object display_value="" name="dl_u_priority">dl_u_priority</sys_db_object>
+        <sys_id>4c270e93886d4be68dbe52a581270864</sys_id>
+        <sys_metadata>baf4621e87269910f7c50e1d0ebb3543</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>100</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_scope_delete display_value="">74cfaf93962f4aa9bc64e19b81ff1861</sys_scope_delete>
+        <sys_update_name>dl_u_priority_baf4621e87269910f7c50e1d0ebb3543</sys_update_name>
+        <sys_update_version display_value="dl_u_priority_baf4621e87269910f7c50e1d0ebb3543">ae05eeda87269910f7c50e1d0ebb351b</sys_update_version>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-17 12:22:08</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic">
+    <sys_cb_topic action="INSERT_OR_UPDATE">
+        <applicability/>
+        <applicability_mode>query</applicability_mode>
+        <autopilot_topic>false</autopilot_topic>
+        <category/>
+        <channels/>
+        <connect_queue/>
+        <description>Log an issue with a device</description>
+        <expose_on_palette>false</expose_on_palette>
+        <flexible_conversation_switching>false</flexible_conversation_switching>
+        <graph>{
+  "graph_api_version": "1.0.39",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "c9884fef53c84fbe9d0ec5407c85953e": {
+          "id": "c9884fef53c84fbe9d0ec5407c85953e",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "55ed023082064bcc9f1561b5c778fd6e": {
+          "id": "55ed023082064bcc9f1561b5c778fd6e",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "80cb324cc4df4c4e945f7b661356d56c": {
+          "id": "80cb324cc4df4c4e945f7b661356d56c",
+          "stepType": "Prompt",
+          "name": "Issue",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Please describe your issue"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "acf977c39be64ca2b93e62153e00386b",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        },
+        "bf90c242af994de192be6fbbff8fe6b5": {
+          "stepType": "ReferenceChoicePrompt",
+          "name": "Device",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Please select your device"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "23982f0f762f45f6aedba2fcb6114f1e",
+          "id": "bf90c242af994de192be6fbbff8fe6b5",
+          "mode": "glide_record",
+          "script": "",
+          "metadataScript": "",
+          "cardData": {},
+          "noRecordsResponseMsg": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "There dare no devices"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "condition": {
+            "mode": "glide_query",
+            "value": "assigned_to={{vaInputs.user.sys_id}}"
+          },
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "6065ba75619449caa7e08088a612f84d": {
+          "stepType": "ChoicePrompt",
+          "name": "Contact",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "What is the best way to you regarding this issue ?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "35689adc09d547ed90aa6907c0bafb9f",
+          "id": "6065ba75619449caa7e08088a612f84d",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "5b1843dd3bc4400b84e1cb1755ce8322": {
+          "id": "5b1843dd3bc4400b84e1cb1755ce8322",
+          "stepType": "CrudAction",
+          "name": "Create Issue",
+          "template": "short_description={{vaInputs.issue}}^cmdb_ci={{vaInputs.device}}",
+          "mode": "create",
+          "record": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "variableId": "3c4581622a8c467f82d4af2ade25af8a"
+        },
+        "9e30cf3bb3cf4f878303a8245c3d57c2": {
+          "id": "9e30cf3bb3cf4f878303a8245c3d57c2",
+          "stepType": "RecordOutput",
+          "name": "Issue Record",
+          "variableId": "3c4581622a8c467f82d4af2ade25af8a",
+          "cardTemplate": "General",
+          "cardFields": {},
+          "mode": "variable",
+          "tableName": "incident",
+          "fields": [
+            "number",
+            "short_description",
+            "cmdb_ci"
+          ],
+          "cardDefinition": {
+            "name": "Record",
+            "value": "General"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "condition": {
+            "mode": "glide_query",
+            "value": ""
+          }
+        }
+      },
+      "edges": [
+        {
+          "id": "e0fea6ffc2904b9f8775ababb3c507b5",
+          "edgeType": "Edge",
+          "source": "c9884fef53c84fbe9d0ec5407c85953e",
+          "target": "80cb324cc4df4c4e945f7b661356d56c",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "d37936bd2ee64fa881fb0fa4faee7a0b",
+          "edgeType": "Edge",
+          "source": "80cb324cc4df4c4e945f7b661356d56c",
+          "target": "bf90c242af994de192be6fbbff8fe6b5",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "f47dab2024894bcfa9237eddf8b43f7d",
+          "edgeType": "Edge",
+          "source": "bf90c242af994de192be6fbbff8fe6b5",
+          "target": "6065ba75619449caa7e08088a612f84d",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "5816953c5c2543cca7cc56ed457cffdb",
+          "edgeType": "Edge",
+          "source": "6065ba75619449caa7e08088a612f84d",
+          "target": "5b1843dd3bc4400b84e1cb1755ce8322",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "8ab8eb5b253a4aba9016d5533433ff9d",
+          "edgeType": "Edge",
+          "source": "5b1843dd3bc4400b84e1cb1755ce8322",
+          "target": "9e30cf3bb3cf4f878303a8245c3d57c2",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "4c0a54742a764de6a89a9af75582f795",
+          "edgeType": "Edge",
+          "source": "9e30cf3bb3cf4f878303a8245c3d57c2",
+          "target": "55ed023082064bcc9f1561b5c778fd6e",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "acf977c39be64ca2b93e62153e00386b": {
+      "id": "acf977c39be64ca2b93e62153e00386b",
+      "name": "issue",
+      "label": "Issue",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTY2NDc4NzU5NTMwOSBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
+    },
+    "23982f0f762f45f6aedba2fcb6114f1e": {
+      "id": "23982f0f762f45f6aedba2fcb6114f1e",
+      "name": "device",
+      "label": "Device",
+      "varType": "reference",
+      "table": "cmdb_ci",
+      "category": "vaInputs"
+    },
+    "35689adc09d547ed90aa6907c0bafb9f": {
+      "id": "35689adc09d547ed90aa6907c0bafb9f",
+      "name": "contact",
+      "label": "Contact",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "Chat",
+          "value": "chat"
+        },
+        {
+          "label": "Email",
+          "value": "Email",
+          "checked": true
+        },
+        {
+          "label": "Phone",
+          "value": "Phone",
+          "checked": true
+        }
+      ],
+      "category": "vaInputs"
+    },
+    "3c4581622a8c467f82d4af2ade25af8a": {
+      "id": "3c4581622a8c467f82d4af2ade25af8a",
+      "name": "create_issue",
+      "label": "Create Issue",
+      "varType": "reference",
+      "table": "incident",
+      "inactive": false,
+      "category": "vaInputs"
+    }
+  }
+}</graph>
+        <key_phrases>device,issue,hardware</key_phrases>
+        <library>false</library>
+        <live_agent>false</live_agent>
+        <name>Log Device Issue</name>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider/>
+        <palette_label/>
+        <roles/>
+        <secure_custom_input_control>false</secure_custom_input_control>
+        <source_topic_id/>
+        <sys_class_name>sys_cb_topic</sys_class_name>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-03 08:59:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>c5bc06f587529150f7c50e1d0ebb35fd</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Log Device Issue</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sys_cb_topic_c5bc06f587529150f7c50e1d0ebb35fd</sys_update_name>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-03 09:19:22</sys_updated_on>
+        <triggerable_by_notification>false</triggerable_by_notification>
+        <type>STANDARD</type>
+        <variables/>
+    </sys_cb_topic>
+    <sys_variable_value action="delete_multiple" query="document_key=c5bc06f587529150f7c50e1d0ebb35fd"/>
+</record_update>

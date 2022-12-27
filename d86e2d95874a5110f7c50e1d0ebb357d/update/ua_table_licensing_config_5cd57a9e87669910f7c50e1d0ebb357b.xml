@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ua_table_licensing_config">
+    <ua_table_licensing_config action="INSERT_OR_UPDATE">
+        <is_fulfillment>false</is_fulfillment>
+        <license_condition/>
+        <license_model>none</license_model>
+        <license_roles/>
+        <name>x_intep_instav_employee_task_lookup_table</name>
+        <op_delete>true</op_delete>
+        <op_insert>true</op_insert>
+        <op_update>true</op_update>
+        <owner_condition/>
+        <sys_class_name>ua_table_licensing_config</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-17 11:31:54</sys_created_on>
+        <sys_id>5cd57a9e87669910f7c50e1d0ebb357b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_intep_instav_employee_task_lookup_table</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>ua_table_licensing_config_5cd57a9e87669910f7c50e1d0ebb357b</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-17 11:31:54</sys_updated_on>
+    </ua_table_licensing_config>
+</record_update>

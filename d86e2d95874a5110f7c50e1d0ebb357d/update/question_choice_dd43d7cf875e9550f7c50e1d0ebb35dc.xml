@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <inactive>false</inactive>
+        <misc>0</misc>
+        <order>100</order>
+        <published_ref/>
+        <question display_value="What application is experiencing performance problems?">d014d5b2875a1190f0bd419d0ebb351f</question>
+        <rec_misc>0</rec_misc>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-07 11:20:46</sys_created_on>
+        <sys_id>dd43d7cf875e9550f7c50e1d0ebb35dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Now Learning</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>question_choice_dd43d7cf875e9550f7c50e1d0ebb35dc</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-07 11:20:46</sys_updated_on>
+        <text>Now Learning</text>
+        <value>Service Now</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=dd43d7cf875e9550f7c50e1d0ebb35dc"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>misc</field>
+        <id>dd43d7cf875e9550f7c50e1d0ebb35dc</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-07 11:20:46</sys_created_on>
+        <sys_id>73535bcf875e9550f7c50e1d0ebb359b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-07 11:20:46</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>rec_misc</field>
+        <id>dd43d7cf875e9550f7c50e1d0ebb35dc</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-07 11:20:46</sys_created_on>
+        <sys_id>bf535bcf875e9550f7c50e1d0ebb3599</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-07 11:20:46</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

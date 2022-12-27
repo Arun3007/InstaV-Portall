@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="2df53e9e87669910f7c50e1d0ebb35cd" sys_domain="global" table="x_intep_instav_employee_task_lookup_table" version="3" view="">
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_intep_instav_employee_task_lookup_table</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>rajendra.g</sys_created_by>
+            <sys_created_on>2022-10-17 11:32:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2df53e9e87669910f7c50e1d0ebb35cd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_intep_instav_employee_task_lookup_table</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+            <sys_update_name>sys_ui_section_2df53e9e87669910f7c50e1d0ebb35cd</sys_update_name>
+            <sys_updated_by>rajendra.g</sys_updated_by>
+            <sys_updated_on>2022-10-17 11:32:32</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

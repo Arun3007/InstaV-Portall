@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_user_registration_request" label="Instav User Reg Req 498742" max_length="40" name="x_intep_instav_user_reg_req_498742" sizeclass="4" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=user_name" label="User Name" max_length="40" name="user_name" type="string"/>
+    </element>
+</database>

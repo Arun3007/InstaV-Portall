@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="va_branding_contact_menu">
+    <va_branding_contact_menu action="INSERT_OR_UPDATE">
+        <branding display_value="virtual agent">f5b1f9bd87de5150f7c50e1d0ebb35ec</branding>
+        <display_default_icon>true</display_default_icon>
+        <display_wait_time>true</display_wait_time>
+        <icon>f5837d3187129150f7c50e1d0ebb35e7</icon>
+        <label>Contact Live Agent</label>
+        <order>1</order>
+        <sys_class_name>va_branding_contact_menu</sys_class_name>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-03 07:09:37</sys_created_on>
+        <sys_id>b1837d3187129150f7c50e1d0ebb35e6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>va_branding_contact_menu_b1837d3187129150f7c50e1d0ebb35e6</sys_update_name>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-03 07:09:37</sys_updated_on>
+        <type>Chat</type>
+        <value/>
+        <visible>true</visible>
+    </va_branding_contact_menu>
+</record_update>

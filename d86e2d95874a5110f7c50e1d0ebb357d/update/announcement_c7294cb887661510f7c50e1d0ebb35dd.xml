@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="announcement">
+    <announcement action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <click_target/>
+        <details/>
+        <details_link_text/>
+        <details_page/>
+        <details_url/>
+        <dismiss_options>dismissible</dismiss_options>
+        <display_first>false</display_first>
+        <display_style display_value="iec style">ae3dca2487d65d10f7c50e1d0ebb3581</display_style>
+        <from>2022-10-12 07:07:15</from>
+        <glyph/>
+        <glyph_alt_text/>
+        <name>Announcement 2</name>
+        <public>true</public>
+        <roles/>
+        <show_for_unauthenticated_users_only>false</show_for_unauthenticated_users_only>
+        <summary>Hello All, &#13;
+There is an appraisal meeting to give hikes,&#13;
+Meeting date will be disclosed soon.</summary>
+        <sys_class_name>announcement</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-12 07:08:51</sys_created_on>
+        <sys_id>c7294cb887661510f7c50e1d0ebb35dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Announcement 2</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>announcement_c7294cb887661510f7c50e1d0ebb35dd</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-12 07:08:51</sys_updated_on>
+        <title>Appraisal meeting</title>
+        <to>2022-10-16 07:07:19</to>
+        <type>67eaf134e7a3320075c2a117c2f6a9d2</type>
+    </announcement>
+    <sys_translated_text action="delete_multiple" query="documentkey=c7294cb887661510f7c50e1d0ebb35dd"/>
+</record_update>

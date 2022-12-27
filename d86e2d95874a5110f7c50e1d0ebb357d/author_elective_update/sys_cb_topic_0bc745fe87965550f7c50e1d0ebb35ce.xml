@@ -1,0 +1,2557 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic">
+    <sys_cb_topic action="DELETE">
+        <applicability/>
+        <applicability_mode>query</applicability_mode>
+        <autopilot_topic>false</autopilot_topic>
+        <category>140e2eda0b203300a1b16c2367673af4</category>
+        <channels/>
+        <connect_queue/>
+        <description>Example conversation to provide help with email issues.</description>
+        <expose_on_palette>false</expose_on_palette>
+        <flexible_conversation_switching>false</flexible_conversation_switching>
+        <graph>{
+  "graph_api_version": "1.0.39",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "e95d69520ce946c88e6b8ab5eff82475": {
+          "id": "e95d69520ce946c88e6b8ab5eff82475",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "cabd858fb60f4b96a015d6bc548eee35": {
+          "id": "cabd858fb60f4b96a015d6bc548eee35",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "b55346a8e8a740c6a6d3e3693c78dc33": {
+          "stepType": "ChoicePrompt",
+          "name": "User Issue",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": "What type of issue are you experiencing?"
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "optional": false,
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "b87e39cca05542eb8d9ab24f2d2b9256",
+          "id": "b55346a8e8a740c6a6d3e3693c78dc33",
+          "withNluUserInput": true,
+          "skipIfFulfilled": true,
+          "entity": {
+            "id": "",
+            "label": ""
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "hasCardHeader": false
+        },
+        "b6fb43e4109147199ac27521a1af024e": {
+          "id": "b6fb43e4109147199ac27521a1af024e",
+          "stepType": "ScriptOutput",
+          "name": "Mail client is slow",
+          "output_type": "single_part",
+          "script": "(function execute() {\n      return new sn_itsm_va.ItsmVaHelper().getRTEFormattedInstructions(gs.getMessage('Here are a few things you can try:'), [\n            gs.getMessage(\"Try closing and reopening your email client.\"),\n            gs.getMessage(\"If that doesn't solve the issue, try restarting your machine.\")\n      ]);\n})()\n\n\n",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "1a7d8b4d74194bdbbb695e863d88eb53": {
+          "id": "1a7d8b4d74194bdbbb695e863d88eb53",
+          "stepType": "Decision",
+          "name": "Which issue?"
+        },
+        "ae8f6909871e497eae78aba2198dcc24": {
+          "id": "ae8f6909871e497eae78aba2198dcc24",
+          "stepType": "ScriptOutput",
+          "name": "Can't receive email",
+          "output_type": "single_part",
+          "script": "(function execute() {\n      return new sn_itsm_va.ItsmVaHelper().getRTEFormattedInstructions(gs.getMessage('Here are a few things you can try:'), [\n            gs.getMessage(\"Check with the person who is trying to send the email if it doesn't have any attachments that exceed {0} MB.\", vaVars.maxAttachmentSizeInMB.toString()),\n            gs.getMessage(\"If it doesn't, try closing and reopening your email client.\"),\n            gs.getMessage(\"If closing and reopening your email client doesn't work, try removing your account and adding it back again.\")\n      ]);\n})()\n",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "45ff256d691e408cbea59b0ba2c8d93c": {
+          "id": "45ff256d691e408cbea59b0ba2c8d93c",
+          "stepType": "ScriptOutput",
+          "name": "Can't send email",
+          "output_type": "single_part",
+          "script": "(function execute() {\n      return new sn_itsm_va.ItsmVaHelper().getRTEFormattedInstructions(gs.getMessage('Here are a few things you can try:'), [\n            gs.getMessage(\"Check if the email you are trying to send doesn't have any attachments that exceed {0} MB.\", vaVars.maxAttachmentSizeInMB.toString()),\n            gs.getMessage(\"If it doesn't, try closing and reopening your email client.\"),\n            gs.getMessage(\"If closing and reopening your email client doesn't work, try removing your account and adding it back again.\")\n      ]);\n})()\n",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "c39d8a8fc76b4a579bf5999c1fbd115a": {
+          "id": "c39d8a8fc76b4a579bf5999c1fbd115a",
+          "stepType": "ScriptOutput",
+          "name": "Authentication issues",
+          "output_type": "single_part",
+          "script": "(function execute() {\n      return new sn_itsm_va.ItsmVaHelper().getRTEFormattedInstructions(gs.getMessage('Here are a few things you can try:'), [\n            gs.getMessage(\"Try closing and reopening your email client. You'll be asked for your username and password.\"),\n            gs.getMessage(\"If your username and password don't work, try resetting your password.\")\n      ]);\n})()",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "357df399f1e54e3686e6466bea05e1a8": {
+          "id": "357df399f1e54e3686e6466bea05e1a8",
+          "stepType": "Prompt",
+          "name": "Did steps work?",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": "Did these steps work for you?"
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "optional": false,
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "333431e5052d497e84b0fc26cad4a357",
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "entity": {
+            "id": ""
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "b96b9a054a7e4d22b64b05455b305533": {
+          "id": "b96b9a054a7e4d22b64b05455b305533",
+          "stepType": "Decision",
+          "name": "Steps worked?"
+        },
+        "eca570ed54764fd984c5459f18b2e9c6": {
+          "id": "eca570ed54764fd984c5459f18b2e9c6",
+          "stepType": "Prompt",
+          "name": "Issue description",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": "Please describe your issue"
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "optional": false,
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "e1b436b008a94b4d950338952aa8e7a5",
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "entity": {
+            "id": ""
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        },
+        "66a038de8fc0440c891f4d0ec57781b8": {
+          "id": "66a038de8fc0440c891f4d0ec57781b8",
+          "name": "Set search query",
+          "script": "(function execute() {\n    vaVars.query = vaInputs.issue_description.getDisplayValue();\n})()\n",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "3f4df1d2ae404cab84524093287c19bd": {
+          "id": "3f4df1d2ae404cab84524093287c19bd",
+          "name": "Set search query",
+          "script": "(function execute() {\n    vaVars.query = vaInputs.user_issue.getDisplayValue();\n})()\n",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "bc3e728805b74a22acce5e38be4ce974": {
+          "id": "bc3e728805b74a22acce5e38be4ce974",
+          "stepType": "Prompt",
+          "name": "Need further help",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": "Would you like to open an IT ticket to get further help?"
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "optional": false,
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "5dcf30f20b3743fa864b8b711fa057ac",
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "entity": {
+            "id": ""
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "0d5627c953dd4cde9fbb233ea933250b": {
+          "id": "0d5627c953dd4cde9fbb233ea933250b",
+          "stepType": "Decision",
+          "name": "Need further help?"
+        },
+        "44348c4bc0c44014b81fd09cdad73645": {
+          "id": "44348c4bc0c44014b81fd09cdad73645",
+          "stepType": "Decision",
+          "name": "KB results helpful?"
+        },
+        "fd5502270ea8473996104b4f8b6fca83": {
+          "id": "fd5502270ea8473996104b4f8b6fca83",
+          "name": "Check for outage",
+          "script": "(function execute() {\n    var gr = new GlideRecord('cmdb_ci_outage');\n    gr.addEncodedQuery('messageLIKEemail^ORcmdb_ciLIKEemail^end=NULL');\n    gr.addQuery('begin', '&lt;=', new GlideDateTime().getValue());\n    gr.orderByDesc('begin');\n    gr.query();\n\n    if (gr.next()) {\n        vaVars.outageId = gr.getUniqueValue();\n        vaVars.outageCI = gr.getValue('cmdb_ci');\n        vaVars.outageSince = gr.getDisplayValue('begin');\n        vaVars.outageDetails = gr.getDisplayValue('details');\n        vaVars.outageCIDisplay = gr.getDisplayValue('cmdb_ci');\n    }\n\n})()\n",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "7d5b79c9585142209bccee38ca03b7b2": {
+          "id": "7d5b79c9585142209bccee38ca03b7b2",
+          "stepType": "Decision",
+          "name": "Is there an outage?"
+        },
+        "288e57b2f063449d94111dc6944055a4": {
+          "id": "288e57b2f063449d94111dc6944055a4",
+          "stepType": "TextOutput",
+          "name": "Outage Confirmation Message",
+          "value": {
+            "value": "(function execute() {\n    return gs.getMessage('I found there is a service disruption on the email service since {0}', vaVars.outageSince);\n})()\n",
+            "mode": "script"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "secure": false
+        },
+        "9de2291dd7064758a954b5b945bb3963": {
+          "id": "9de2291dd7064758a954b5b945bb3963",
+          "stepType": "ScriptOutput",
+          "name": "Show outage card",
+          "output_type": "single_part",
+          "script": "(function execute() {\n    if (!vaVars.outageId)\n        return;\n\n    var card = [];\n    var baseURL = [];\n    var cardHeader = [];\n    baseURL.push(gs.getProperty('glide.servlet.uri'));\n    baseURL.push('/');\n    baseURL.push(gs.getProperty('sn_itsm_va.com.snc.itsm.virtualagent.portal_url'));\n    baseURL.push('?id=service_status&amp;service=');\n    baseURL.push(vaVars.outageCI);\n    cardHeader.push('[**');\n    cardHeader.push(gs.getMessage('Outage'));\n    cardHeader.push('** ](');\n    cardHeader.push(baseURL.join(''));\n    cardHeader.push(')');\n    card.push(cardHeader.join(''));\n    if (vaVars.outageCIDisplay) \n        card.push(gs.getMessage(\"**Service** : {0}\", vaVars.outageCIDisplay));\n\n    if (vaVars.outageSince) \n        card.push(gs.getMessage(\"**Begin** : {0}\", vaVars.outageSince));\n\n    if (vaVars.outageDetails) \n        card.push(gs.getMessage(\"**Details** : {0}\", vaVars.outageDetails));\n\n    return card.join('\\n');\n})()",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "ed15da8be315405fb981ead76837f2a1": {
+          "id": "ed15da8be315405fb981ead76837f2a1",
+          "stepType": "ReusableTopic",
+          "name": "",
+          "fields": [],
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "5c87011cb70c46ebac0f8af3815f0b6d": {
+          "id": "5c87011cb70c46ebac0f8af3815f0b6d",
+          "stepType": "ReusableTopic",
+          "name": "Contextual Search",
+          "fields": [],
+          "reusableTopicChoice": "Contextual Search",
+          "reusableTopicId": "d9dec393b3973300dbbf6030c6a8dc27",
+          "inputs": {
+            "context": {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    },
+                    {
+                      "type": "datapill",
+                      "dataPill": {
+                        "value": "{{vaVars.search_context_sys_id}}",
+                        "displayValue": "vaVars➛search_context_sys_id"
+                      },
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ]
+                    },
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "type": "String"
+            },
+            "query": {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    },
+                    {
+                      "type": "datapill",
+                      "dataPill": {
+                        "value": "{{vaVars.query}}",
+                        "displayValue": "vaVars➛query"
+                      },
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ]
+                    },
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "type": "String"
+            },
+            "portal": {
+              "value": "(function execute() {\n    return '';\n})()\n",
+              "mode": "script",
+              "type": "String"
+            },
+            "kb_knowledge_base": {
+              "value": "(function execute() {\n    return '';\n})()\n",
+              "mode": "script",
+              "type": "String"
+            }
+          },
+          "outputs": [
+            {
+              "id": "0a4b28d2609640cf8188946701d7fd06",
+              "value": "results_returned",
+              "mapping": "kb_results_returned",
+              "preventDisable": false
+            },
+            {
+              "id": "fddad032e24c4be7b21ca8498049c5bb",
+              "value": "results_helpful",
+              "mapping": "kb_results_helpful",
+              "preventDisable": false
+            },
+            {
+              "id": "8330b0527d0c47cf9b616e229bd81fbf",
+              "value": "ctx_search_details",
+              "mapping": "ctx_search_details"
+            }
+          ],
+          "variableIds": [
+            "0a4b28d2609640cf8188946701d7fd06",
+            "fddad032e24c4be7b21ca8498049c5bb",
+            "8330b0527d0c47cf9b616e229bd81fbf"
+          ],
+          "outdatedNote": false,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "loading": false
+        },
+        "140b3fef1194413ab4bde283ccc7c2f9": {
+          "id": "140b3fef1194413ab4bde283ccc7c2f9",
+          "stepType": "Component",
+          "name": "Deflection: Incident Created",
+          "fields": [],
+          "reusableTopicId": "7fb4ca055303201033cdddeeff7b12b3",
+          "reusableTopicChoice": "Deflection",
+          "sourceType": "TOPIC_BLOCK",
+          "loading": false,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "inputs": {
+            "deflection_configuration": {
+              "value": "5292005253213010000dddeeff7b126c",
+              "mode": "string",
+              "type": "Reference",
+              "table": "ssa_deflection_configuration"
+            },
+            "deflection_pattern": {
+              "value": "f063885253213010000dddeeff7b1221",
+              "mode": "string",
+              "type": "Reference",
+              "table": "ssa_deflection_pattern"
+            },
+            "activity_table": {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "incident"
+                    }
+                  ]
+                }
+              ],
+              "mode": "string",
+              "type": "String"
+            },
+            "activity_ids": {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    },
+                    {
+                      "type": "datapill",
+                      "dataPill": {
+                        "value": "{{vaInputs.created_incident_sys_id}}",
+                        "displayValue": "Input Variables➛Created_incident_sys_id"
+                      },
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ]
+                    },
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "mode": "string",
+              "type": "String"
+            }
+          },
+          "outputs": [],
+          "outdatedNote": false,
+          "variableIds": []
+        },
+        "8012f3e8fc8b49b9a84b1748ffddaa62": {
+          "id": "8012f3e8fc8b49b9a84b1748ffddaa62",
+          "stepType": "Component",
+          "name": "Deflection: KB Resolved",
+          "fields": [],
+          "reusableTopicId": "7fb4ca055303201033cdddeeff7b12b3",
+          "reusableTopicChoice": "Deflection",
+          "sourceType": "TOPIC_BLOCK",
+          "loading": false,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "inputs": {
+            "deflection_configuration": {
+              "value": "5292005253213010000dddeeff7b126c",
+              "mode": "string",
+              "type": "Reference",
+              "table": "ssa_deflection_configuration"
+            },
+            "deflection_pattern": {
+              "value": "eaf3809253213010000dddeeff7b1236",
+              "mode": "string",
+              "type": "Reference",
+              "table": "ssa_deflection_pattern"
+            },
+            "activity_table": {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "kb_knowledge"
+                    }
+                  ]
+                }
+              ],
+              "mode": "string",
+              "type": "String"
+            },
+            "activity_ids": {
+              "value": "(function execute() {\n    return JSON.parse(vaInputs.ctx_search_details.getValue())[\"kb_knowledge\"].toString();\n})()",
+              "mode": "script",
+              "type": "String"
+            }
+          },
+          "outputs": [],
+          "outdatedNote": false,
+          "variableIds": []
+        },
+        "d11aa8567f884a38bb317527773db149": {
+          "id": "d11aa8567f884a38bb317527773db149",
+          "stepType": "Component",
+          "name": "No Deflection",
+          "fields": [],
+          "reusableTopicId": "7fb4ca055303201033cdddeeff7b12b3",
+          "reusableTopicChoice": "Deflection",
+          "sourceType": "TOPIC_BLOCK",
+          "loading": false,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "inputs": {
+            "deflection_configuration": {
+              "value": "5292005253213010000dddeeff7b126c",
+              "mode": "string",
+              "type": "Reference",
+              "table": "ssa_deflection_configuration"
+            },
+            "deflection_pattern": {
+              "value": "9ee3409253213010000dddeeff7b123b",
+              "mode": "string",
+              "type": "Reference",
+              "table": "ssa_deflection_pattern"
+            },
+            "activity_table": {
+              "value": "",
+              "mode": "simple",
+              "type": "String"
+            },
+            "activity_ids": {
+              "value": "",
+              "mode": "simple",
+              "type": "String"
+            }
+          },
+          "outputs": [],
+          "outdatedNote": false,
+          "variableIds": []
+        },
+        "ba821b21a9d64f33afe31888089edb37": {
+          "id": "ba821b21a9d64f33afe31888089edb37",
+          "stepType": "Component",
+          "name": "Deflection: Outage Confirmed",
+          "fields": [],
+          "reusableTopicId": "7fb4ca055303201033cdddeeff7b12b3",
+          "reusableTopicChoice": "Deflection",
+          "sourceType": "TOPIC_BLOCK",
+          "loading": false,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "inputs": {
+            "deflection_configuration": {
+              "value": "5292005253213010000dddeeff7b126c",
+              "mode": "string",
+              "type": "Reference",
+              "table": "ssa_deflection_configuration"
+            },
+            "deflection_pattern": {
+              "value": "6eb34c5253213010000dddeeff7b12be",
+              "mode": "string",
+              "type": "Reference",
+              "table": "ssa_deflection_pattern"
+            },
+            "activity_table": {
+              "value": "",
+              "mode": "simple",
+              "type": "String"
+            },
+            "activity_ids": {
+              "value": "",
+              "mode": "simple",
+              "type": "String"
+            }
+          },
+          "outputs": [],
+          "outdatedNote": false,
+          "variableIds": []
+        },
+        "64e1cf542eba436ebc31e22d6371c325": {
+          "id": "64e1cf542eba436ebc31e22d6371c325",
+          "stepType": "Component",
+          "name": "Deflection: Steps Worked",
+          "fields": [],
+          "reusableTopicId": "7fb4ca055303201033cdddeeff7b12b3",
+          "reusableTopicChoice": "Deflection",
+          "sourceType": "TOPIC_BLOCK",
+          "loading": false,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "inputs": {
+            "deflection_configuration": {
+              "value": "5292005253213010000dddeeff7b126c",
+              "mode": "string",
+              "type": "Reference",
+              "table": "ssa_deflection_configuration"
+            },
+            "deflection_pattern": {
+              "value": "0273885253213010000dddeeff7b1210",
+              "mode": "string",
+              "type": "Reference",
+              "table": "ssa_deflection_pattern"
+            },
+            "activity_table": {
+              "value": "",
+              "mode": "simple",
+              "type": "String"
+            },
+            "activity_ids": {
+              "value": "",
+              "mode": "simple",
+              "type": "String"
+            }
+          },
+          "outputs": [],
+          "outdatedNote": false,
+          "variableIds": []
+        }
+      },
+      "edges": [
+        {
+          "id": "3276bd53d0c54d6bb14bef2b57785227",
+          "edgeType": "Edge",
+          "source": "5c87011cb70c46ebac0f8af3815f0b6d",
+          "target": "44348c4bc0c44014b81fd09cdad73645",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "5b9f156e3d034093b2b7104b18297351",
+          "edgeType": "Edge",
+          "source": "b6fb43e4109147199ac27521a1af024e",
+          "target": "357df399f1e54e3686e6466bea05e1a8",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "56832f158f804e0983abd1fb790e3e85",
+          "edgeType": "Edge",
+          "source": "b55346a8e8a740c6a6d3e3693c78dc33",
+          "target": "1a7d8b4d74194bdbbb695e863d88eb53",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "00576f1aec334432af54b7f91d5de1c5",
+          "edgeType": "Branch",
+          "source": "1a7d8b4d74194bdbbb695e863d88eb53",
+          "target": "b6fb43e4109147199ac27521a1af024e",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "user_issue=slow",
+            "mode": "query"
+          },
+          "label": "Slow"
+        },
+        {
+          "id": "7f81719e650c45a9b7ca28249965964b",
+          "edgeType": "Branch",
+          "source": "1a7d8b4d74194bdbbb695e863d88eb53",
+          "target": "ae8f6909871e497eae78aba2198dcc24",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "user_issue=receive",
+            "mode": "query"
+          },
+          "label": "Receive"
+        },
+        {
+          "id": "6ad03cf3f02b4aa092c7a2911f141a4e",
+          "edgeType": "Edge",
+          "source": "ae8f6909871e497eae78aba2198dcc24",
+          "target": "357df399f1e54e3686e6466bea05e1a8",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "42bba3ea4d84479d9f9d5ff3f43871eb",
+          "edgeType": "Branch",
+          "source": "1a7d8b4d74194bdbbb695e863d88eb53",
+          "target": "45ff256d691e408cbea59b0ba2c8d93c",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "user_issue=send",
+            "mode": "query"
+          },
+          "label": "Send"
+        },
+        {
+          "id": "9ccbe9fefee444cb8631a3686c3c8572",
+          "edgeType": "Edge",
+          "source": "45ff256d691e408cbea59b0ba2c8d93c",
+          "target": "357df399f1e54e3686e6466bea05e1a8",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "04b0bc80391b412eb94e6fe7ac170823",
+          "edgeType": "Branch",
+          "source": "1a7d8b4d74194bdbbb695e863d88eb53",
+          "target": "c39d8a8fc76b4a579bf5999c1fbd115a",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "user_issue=authentication",
+            "mode": "query"
+          },
+          "label": "Authentication"
+        },
+        {
+          "id": "5ee616d2c7a847cbb883f03776494023",
+          "edgeType": "Edge",
+          "source": "c39d8a8fc76b4a579bf5999c1fbd115a",
+          "target": "357df399f1e54e3686e6466bea05e1a8",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "1436853c2500433590abb0b38e5708a4",
+          "edgeType": "Edge",
+          "source": "357df399f1e54e3686e6466bea05e1a8",
+          "target": "b96b9a054a7e4d22b64b05455b305533",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "0a5ff65031ae43ff81712ec99a545d29",
+          "edgeType": "Branch",
+          "source": "1a7d8b4d74194bdbbb695e863d88eb53",
+          "target": "eca570ed54764fd984c5459f18b2e9c6",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "user_issue=different_issue",
+            "mode": "query"
+          },
+          "label": "Different issue"
+        },
+        {
+          "id": "4b4873b5c8c44253996aa90d85f9722b",
+          "edgeType": "Edge",
+          "source": "eca570ed54764fd984c5459f18b2e9c6",
+          "target": "66a038de8fc0440c891f4d0ec57781b8",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "4a70e84b3d1145ebbc3cf9916edf7adc",
+          "edgeType": "Edge",
+          "source": "66a038de8fc0440c891f4d0ec57781b8",
+          "target": "5c87011cb70c46ebac0f8af3815f0b6d",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "612556e3d25a4235990df43b224335e7",
+          "edgeType": "Branch",
+          "source": "b96b9a054a7e4d22b64b05455b305533",
+          "target": "3f4df1d2ae404cab84524093287c19bd",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "did_steps_work_!=true",
+            "mode": "query"
+          },
+          "label": "No"
+        },
+        {
+          "id": "19ce580df27b4c06a6524f09bad8f3d9",
+          "edgeType": "Edge",
+          "source": "bc3e728805b74a22acce5e38be4ce974",
+          "target": "0d5627c953dd4cde9fbb233ea933250b",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "0eebcdcffb3947c0bc5316854a22e552",
+          "edgeType": "Branch",
+          "source": "44348c4bc0c44014b81fd09cdad73645",
+          "target": "bc3e728805b74a22acce5e38be4ce974",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "kb_results_helpful!=true",
+            "mode": "query"
+          },
+          "label": "No"
+        },
+        {
+          "id": "9c77e127a3c74c639a0db1f77ad49da2",
+          "edgeType": "Edge",
+          "source": "e95d69520ce946c88e6b8ab5eff82475",
+          "target": "fd5502270ea8473996104b4f8b6fca83",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "aed521f0e1cb437fbf806549daa425d1",
+          "edgeType": "Edge",
+          "source": "fd5502270ea8473996104b4f8b6fca83",
+          "target": "7d5b79c9585142209bccee38ca03b7b2",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "cd90759c0f9a42acbb650c16423a4567",
+          "edgeType": "Branch",
+          "source": "7d5b79c9585142209bccee38ca03b7b2",
+          "target": "b55346a8e8a740c6a6d3e3693c78dc33",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    return !vaVars.outageId;\n})()\n"
+          },
+          "label": "No"
+        },
+        {
+          "id": "e8e024d3a49c4757a85693674f127d74",
+          "edgeType": "Branch",
+          "source": "7d5b79c9585142209bccee38ca03b7b2",
+          "target": "288e57b2f063449d94111dc6944055a4",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    return !!vaVars.outageId;\n})()\n"
+          },
+          "label": "Yes"
+        },
+        {
+          "id": "4e75914be1404015a111ae016af49d17",
+          "edgeType": "Edge",
+          "source": "288e57b2f063449d94111dc6944055a4",
+          "target": "9de2291dd7064758a954b5b945bb3963",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "29b047510ceb41dfa337431e4b19125e",
+          "edgeType": "Branch",
+          "source": "0d5627c953dd4cde9fbb233ea933250b",
+          "target": "ed15da8be315405fb981ead76837f2a1",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "need_further_help=true",
+            "mode": "query"
+          },
+          "label": "Yes"
+        },
+        {
+          "id": "17323b8c5e8d4065a5b510a69b36667e",
+          "edgeType": "Edge",
+          "source": "3f4df1d2ae404cab84524093287c19bd",
+          "target": "5c87011cb70c46ebac0f8af3815f0b6d",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "2603837232ec4d1baa6adb4a14249314",
+          "edgeType": "Edge",
+          "source": "ed15da8be315405fb981ead76837f2a1",
+          "target": "140b3fef1194413ab4bde283ccc7c2f9",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "cecd1dd8569242df90957d2dab89f5e0",
+          "edgeType": "Edge",
+          "source": "140b3fef1194413ab4bde283ccc7c2f9",
+          "target": "cabd858fb60f4b96a015d6bc548eee35",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "0ce456704cb84c33be7dbea2cfab7c02",
+          "edgeType": "Branch",
+          "source": "44348c4bc0c44014b81fd09cdad73645",
+          "target": "8012f3e8fc8b49b9a84b1748ffddaa62",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "kb_results_helpful=true",
+            "mode": "query"
+          },
+          "label": "Yes"
+        },
+        {
+          "id": "97f973efeb8e4f6997d760a39df904ef",
+          "edgeType": "Edge",
+          "source": "8012f3e8fc8b49b9a84b1748ffddaa62",
+          "target": "cabd858fb60f4b96a015d6bc548eee35",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "4369e40d6e0b492ba52daabd1dda1538",
+          "edgeType": "Branch",
+          "source": "0d5627c953dd4cde9fbb233ea933250b",
+          "target": "d11aa8567f884a38bb317527773db149",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "need_further_help!=true",
+            "mode": "query"
+          },
+          "label": "No"
+        },
+        {
+          "id": "57cd3b4161584e329c93fd93f1e6c62b",
+          "edgeType": "Edge",
+          "source": "d11aa8567f884a38bb317527773db149",
+          "target": "cabd858fb60f4b96a015d6bc548eee35",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "3e4adb6140f84a459cd2514e76d8de06",
+          "edgeType": "Edge",
+          "source": "9de2291dd7064758a954b5b945bb3963",
+          "target": "ba821b21a9d64f33afe31888089edb37",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "4846b0554bd041888ba48de3a3f763dc",
+          "edgeType": "Edge",
+          "source": "ba821b21a9d64f33afe31888089edb37",
+          "target": "cabd858fb60f4b96a015d6bc548eee35",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "74359569dc32460d9575ac6a51c8a9b9",
+          "edgeType": "Branch",
+          "source": "b96b9a054a7e4d22b64b05455b305533",
+          "target": "64e1cf542eba436ebc31e22d6371c325",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "did_steps_work_=true",
+            "mode": "query"
+          },
+          "label": "Yes"
+        },
+        {
+          "id": "fa570b8102594ef392209d93665d411f",
+          "edgeType": "Edge",
+          "source": "64e1cf542eba436ebc31e22d6371c325",
+          "target": "cabd858fb60f4b96a015d6bc548eee35",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "b87e39cca05542eb8d9ab24f2d2b9256": {
+      "id": "b87e39cca05542eb8d9ab24f2d2b9256",
+      "name": "user_issue",
+      "label": "User Issue",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "Authentication issues",
+          "value": "authentication"
+        },
+        {
+          "label": "Can't send email",
+          "value": "send"
+        },
+        {
+          "label": "Can't receive email",
+          "value": "receive"
+        },
+        {
+          "label": "Mail client is slow",
+          "value": "slow"
+        },
+        {
+          "label": "Different issue",
+          "value": "different_issue"
+        }
+      ],
+      "category": "vaInputs"
+    },
+    "333431e5052d497e84b0fc26cad4a357": {
+      "id": "333431e5052d497e84b0fc26cad4a357",
+      "name": "did_steps_work_",
+      "label": "Did Steps Work?",
+      "varType": "boolean",
+      "category": "vaInputs"
+    },
+    "99ba36d8129f4b25b8b9afd0d203890c": {
+      "id": "99ba36d8129f4b25b8b9afd0d203890c",
+      "value": {
+        "mode": "simple",
+        "value": "2821675a5b30130070e4492c11f91a89"
+      },
+      "name": "search_context_sys_id",
+      "label": "search_context_sys_id",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "e1b436b008a94b4d950338952aa8e7a5": {
+      "id": "e1b436b008a94b4d950338952aa8e7a5",
+      "name": "issue_description",
+      "label": "Issue Description",
+      "varType": "string",
+      "category": "vaInputs",
+      "secure": false,
+      "encryptionSalt": {
+        "value": "MTYxMTE0ODQwODQzNyBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      },
+      "encryptionHashFunction": "SHA-256"
+    },
+    "5dcf30f20b3743fa864b8b711fa057ac": {
+      "id": "5dcf30f20b3743fa864b8b711fa057ac",
+      "name": "need_further_help",
+      "label": "Need Further Help",
+      "varType": "boolean",
+      "category": "vaInputs"
+    },
+    "01859079db8c46f49b4dde4753579827": {
+      "id": "01859079db8c46f49b4dde4753579827",
+      "value": {
+        "value": "",
+        "mode": "simple"
+      },
+      "name": "query",
+      "label": "query",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "d8d6d2f8a9d1476cbf7c025bf5dc5e2e": {
+      "id": "d8d6d2f8a9d1476cbf7c025bf5dc5e2e",
+      "value": {
+        "mode": "simple",
+        "value": "25"
+      },
+      "name": "maxAttachmentSizeInMB",
+      "label": "maxAttachmentSizeInMB",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "13ff894d6e434bf895b5e22815f2685f": {
+      "id": "13ff894d6e434bf895b5e22815f2685f",
+      "value": {
+        "mode": "simple",
+        "value": ""
+      },
+      "name": "outageId",
+      "label": "outageId",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "6f673b7b2a5f492d9ec005c6b8d1df05": {
+      "category": "vaInputs",
+      "id": "6f673b7b2a5f492d9ec005c6b8d1df05",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "c9812260563b4d2281762a7869f636b8": {
+      "id": "c9812260563b4d2281762a7869f636b8",
+      "name": "created_incident_sys_id",
+      "label": "Created_incident_sys_id",
+      "defaultValue": "created_incident_sys_id",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "output"
+      }
+    },
+    "0a4b28d2609640cf8188946701d7fd06": {
+      "id": "0a4b28d2609640cf8188946701d7fd06",
+      "name": "kb_results_returned",
+      "label": "Kb_results_returned",
+      "defaultValue": "results_returned",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "output"
+      },
+      "preventDisable": false
+    },
+    "fddad032e24c4be7b21ca8498049c5bb": {
+      "id": "fddad032e24c4be7b21ca8498049c5bb",
+      "name": "kb_results_helpful",
+      "label": "Kb_results_helpful",
+      "defaultValue": "results_helpful",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "output"
+      },
+      "preventDisable": false
+    },
+    "8330b0527d0c47cf9b616e229bd81fbf": {
+      "id": "8330b0527d0c47cf9b616e229bd81fbf",
+      "name": "ctx_search_details",
+      "label": "Ctx_search_details",
+      "defaultValue": "ctx_search_details",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "output"
+      }
+    }
+  }
+}</graph>
+        <key_phrases>Email Issue,Email issues,email,issues,outlook,mail,sending,receiving</key_phrases>
+        <library>false</library>
+        <live_agent>false</live_agent>
+        <name>Email Issue</name>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider/>
+        <palette_label/>
+        <roles/>
+        <secure_custom_input_control>false</secure_custom_input_control>
+        <source_topic_id>5189a2cb0b73230094396c2367673a90</source_topic_id>
+        <sys_class_name>sys_cb_topic</sys_class_name>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-06 06:32:28</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>0bc745fe87965550f7c50e1d0ebb35ce</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Email Issue</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sys_cb_topic_0bc745fe87965550f7c50e1d0ebb35ce</sys_update_name>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-06 06:32:56</sys_updated_on>
+        <triggerable_by_notification>false</triggerable_by_notification>
+        <type>STANDARD</type>
+        <variables/>
+    </sys_cb_topic>
+    <sys_variable_value action="DELETE" query="document_key=0bc745fe87965550f7c50e1d0ebb35ce"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</application>
+        <file_path/>
+        <instance_id>5b3553eddb6af41007072f17d4961905</instance_id>
+        <instance_name>instavtechnologiespvtltddemo4</instance_name>
+        <name>sys_cb_topic_0bc745fe87965550f7c50e1d0ebb35ce</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic"><sys_cb_topic action="INSERT_OR_UPDATE"><applicability/><applicability_mode>query</applicability_mode><autopilot_topic>false</autopilot_topic><category>140e2eda0b203300a1b16c2367673af4</category><channels/><connect_queue/><description>Example conversation to provide help with email issues.</description><expose_on_palette>false</expose_on_palette><flexible_conversation_switching>false</flexible_conversation_switching><graph>{
+  "graph_api_version": "1.0.39",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "e95d69520ce946c88e6b8ab5eff82475": {
+          "id": "e95d69520ce946c88e6b8ab5eff82475",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "cabd858fb60f4b96a015d6bc548eee35": {
+          "id": "cabd858fb60f4b96a015d6bc548eee35",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "b55346a8e8a740c6a6d3e3693c78dc33": {
+          "stepType": "ChoicePrompt",
+          "name": "User Issue",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": "What type of issue are you experiencing?"
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "optional": false,
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "b87e39cca05542eb8d9ab24f2d2b9256",
+          "id": "b55346a8e8a740c6a6d3e3693c78dc33",
+          "withNluUserInput": true,
+          "skipIfFulfilled": true,
+          "entity": {
+            "id": "",
+            "label": ""
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "hasCardHeader": false
+        },
+        "b6fb43e4109147199ac27521a1af024e": {
+          "id": "b6fb43e4109147199ac27521a1af024e",
+          "stepType": "ScriptOutput",
+          "name": "Mail client is slow",
+          "output_type": "single_part",
+          "script": "(function execute() {\n      return new sn_itsm_va.ItsmVaHelper().getRTEFormattedInstructions(gs.getMessage('Here are a few things you can try:'), [\n            gs.getMessage(\"Try closing and reopening your email client.\"),\n            gs.getMessage(\"If that doesn't solve the issue, try restarting your machine.\")\n      ]);\n})()\n\n\n",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "1a7d8b4d74194bdbbb695e863d88eb53": {
+          "id": "1a7d8b4d74194bdbbb695e863d88eb53",
+          "stepType": "Decision",
+          "name": "Which issue?"
+        },
+        "ae8f6909871e497eae78aba2198dcc24": {
+          "id": "ae8f6909871e497eae78aba2198dcc24",
+          "stepType": "ScriptOutput",
+          "name": "Can't receive email",
+          "output_type": "single_part",
+          "script": "(function execute() {\n      return new sn_itsm_va.ItsmVaHelper().getRTEFormattedInstructions(gs.getMessage('Here are a few things you can try:'), [\n            gs.getMessage(\"Check with the person who is trying to send the email if it doesn't have any attachments that exceed {0} MB.\", vaVars.maxAttachmentSizeInMB.toString()),\n            gs.getMessage(\"If it doesn't, try closing and reopening your email client.\"),\n            gs.getMessage(\"If closing and reopening your email client doesn't work, try removing your account and adding it back again.\")\n      ]);\n})()\n",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "45ff256d691e408cbea59b0ba2c8d93c": {
+          "id": "45ff256d691e408cbea59b0ba2c8d93c",
+          "stepType": "ScriptOutput",
+          "name": "Can't send email",
+          "output_type": "single_part",
+          "script": "(function execute() {\n      return new sn_itsm_va.ItsmVaHelper().getRTEFormattedInstructions(gs.getMessage('Here are a few things you can try:'), [\n            gs.getMessage(\"Check if the email you are trying to send doesn't have any attachments that exceed {0} MB.\", vaVars.maxAttachmentSizeInMB.toString()),\n            gs.getMessage(\"If it doesn't, try closing and reopening your email client.\"),\n            gs.getMessage(\"If closing and reopening your email client doesn't work, try removing your account and adding it back again.\")\n      ]);\n})()\n",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "c39d8a8fc76b4a579bf5999c1fbd115a": {
+          "id": "c39d8a8fc76b4a579bf5999c1fbd115a",
+          "stepType": "ScriptOutput",
+          "name": "Authentication issues",
+          "output_type": "single_part",
+          "script": "(function execute() {\n      return new sn_itsm_va.ItsmVaHelper().getRTEFormattedInstructions(gs.getMessage('Here are a few things you can try:'), [\n            gs.getMessage(\"Try closing and reopening your email client. You'll be asked for your username and password.\"),\n            gs.getMessage(\"If your username and password don't work, try resetting your password.\")\n      ]);\n})()",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "357df399f1e54e3686e6466bea05e1a8": {
+          "id": "357df399f1e54e3686e6466bea05e1a8",
+          "stepType": "Prompt",
+          "name": "Did steps work?",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": "Did these steps work for you?"
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "optional": false,
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "333431e5052d497e84b0fc26cad4a357",
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "entity": {
+            "id": ""
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "b96b9a054a7e4d22b64b05455b305533": {
+          "id": "b96b9a054a7e4d22b64b05455b305533",
+          "stepType": "Decision",
+          "name": "Steps worked?"
+        },
+        "eca570ed54764fd984c5459f18b2e9c6": {
+          "id": "eca570ed54764fd984c5459f18b2e9c6",
+          "stepType": "Prompt",
+          "name": "Issue description",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": "Please describe your issue"
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "optional": false,
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "e1b436b008a94b4d950338952aa8e7a5",
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "entity": {
+            "id": ""
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        },
+        "66a038de8fc0440c891f4d0ec57781b8": {
+          "id": "66a038de8fc0440c891f4d0ec57781b8",
+          "name": "Set search query",
+          "script": "(function execute() {\n    vaVars.query = vaInputs.issue_description.getDisplayValue();\n})()\n",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "3f4df1d2ae404cab84524093287c19bd": {
+          "id": "3f4df1d2ae404cab84524093287c19bd",
+          "name": "Set search query",
+          "script": "(function execute() {\n    vaVars.query = vaInputs.user_issue.getDisplayValue();\n})()\n",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "bc3e728805b74a22acce5e38be4ce974": {
+          "id": "bc3e728805b74a22acce5e38be4ce974",
+          "stepType": "Prompt",
+          "name": "Need further help",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": "Would you like to open an IT ticket to get further help?"
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "optional": false,
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "5dcf30f20b3743fa864b8b711fa057ac",
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "entity": {
+            "id": ""
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "0d5627c953dd4cde9fbb233ea933250b": {
+          "id": "0d5627c953dd4cde9fbb233ea933250b",
+          "stepType": "Decision",
+          "name": "Need further help?"
+        },
+        "44348c4bc0c44014b81fd09cdad73645": {
+          "id": "44348c4bc0c44014b81fd09cdad73645",
+          "stepType": "Decision",
+          "name": "KB results helpful?"
+        },
+        "fd5502270ea8473996104b4f8b6fca83": {
+          "id": "fd5502270ea8473996104b4f8b6fca83",
+          "name": "Check for outage",
+          "script": "(function execute() {\n    var gr = new GlideRecord('cmdb_ci_outage');\n    gr.addEncodedQuery('messageLIKEemail^ORcmdb_ciLIKEemail^end=NULL');\n    gr.addQuery('begin', '&lt;=', new GlideDateTime().getValue());\n    gr.orderByDesc('begin');\n    gr.query();\n\n    if (gr.next()) {\n        vaVars.outageId = gr.getUniqueValue();\n        vaVars.outageCI = gr.getValue('cmdb_ci');\n        vaVars.outageSince = gr.getDisplayValue('begin');\n        vaVars.outageDetails = gr.getDisplayValue('details');\n        vaVars.outageCIDisplay = gr.getDisplayValue('cmdb_ci');\n    }\n\n})()\n",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "7d5b79c9585142209bccee38ca03b7b2": {
+          "id": "7d5b79c9585142209bccee38ca03b7b2",
+          "stepType": "Decision",
+          "name": "Is there an outage?"
+        },
+        "288e57b2f063449d94111dc6944055a4": {
+          "id": "288e57b2f063449d94111dc6944055a4",
+          "stepType": "TextOutput",
+          "name": "Outage Confirmation Message",
+          "value": {
+            "value": "(function execute() {\n    return gs.getMessage('I found there is a service disruption on the email service since {0}', vaVars.outageSince);\n})()\n",
+            "mode": "script"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "secure": false
+        },
+        "9de2291dd7064758a954b5b945bb3963": {
+          "id": "9de2291dd7064758a954b5b945bb3963",
+          "stepType": "ScriptOutput",
+          "name": "Show outage card",
+          "output_type": "single_part",
+          "script": "(function execute() {\n    if (!vaVars.outageId)\n        return;\n\n    var card = [];\n    var baseURL = [];\n    var cardHeader = [];\n    baseURL.push(gs.getProperty('glide.servlet.uri'));\n    baseURL.push('/');\n    baseURL.push(gs.getProperty('sn_itsm_va.com.snc.itsm.virtualagent.portal_url'));\n    baseURL.push('?id=service_status&amp;service=');\n    baseURL.push(vaVars.outageCI);\n    cardHeader.push('[**');\n    cardHeader.push(gs.getMessage('Outage'));\n    cardHeader.push('** ](');\n    cardHeader.push(baseURL.join(''));\n    cardHeader.push(')');\n    card.push(cardHeader.join(''));\n    if (vaVars.outageCIDisplay) \n        card.push(gs.getMessage(\"**Service** : {0}\", vaVars.outageCIDisplay));\n\n    if (vaVars.outageSince) \n        card.push(gs.getMessage(\"**Begin** : {0}\", vaVars.outageSince));\n\n    if (vaVars.outageDetails) \n        card.push(gs.getMessage(\"**Details** : {0}\", vaVars.outageDetails));\n\n    return card.join('\\n');\n})()",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "ed15da8be315405fb981ead76837f2a1": {
+          "id": "ed15da8be315405fb981ead76837f2a1",
+          "stepType": "ReusableTopic",
+          "name": "",
+          "fields": [],
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "5c87011cb70c46ebac0f8af3815f0b6d": {
+          "id": "5c87011cb70c46ebac0f8af3815f0b6d",
+          "stepType": "ReusableTopic",
+          "name": "Contextual Search",
+          "fields": [],
+          "reusableTopicChoice": "Contextual Search",
+          "reusableTopicId": "d9dec393b3973300dbbf6030c6a8dc27",
+          "inputs": {
+            "context": {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    },
+                    {
+                      "type": "datapill",
+                      "dataPill": {
+                        "value": "{{vaVars.search_context_sys_id}}",
+                        "displayValue": "vaVars➛search_context_sys_id"
+                      },
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ]
+                    },
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "type": "String"
+            },
+            "query": {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    },
+                    {
+                      "type": "datapill",
+                      "dataPill": {
+                        "value": "{{vaVars.query}}",
+                        "displayValue": "vaVars➛query"
+                      },
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ]
+                    },
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "type": "String"
+            },
+            "portal": {
+              "value": "(function execute() {\n    return '';\n})()\n",
+              "mode": "script",
+              "type": "String"
+            },
+            "kb_knowledge_base": {
+              "value": "(function execute() {\n    return '';\n})()\n",
+              "mode": "script",
+              "type": "String"
+            }
+          },
+          "outputs": [
+            {
+              "id": "0a4b28d2609640cf8188946701d7fd06",
+              "value": "results_returned",
+              "mapping": "kb_results_returned",
+              "preventDisable": false
+            },
+            {
+              "id": "fddad032e24c4be7b21ca8498049c5bb",
+              "value": "results_helpful",
+              "mapping": "kb_results_helpful",
+              "preventDisable": false
+            },
+            {
+              "id": "8330b0527d0c47cf9b616e229bd81fbf",
+              "value": "ctx_search_details",
+              "mapping": "ctx_search_details"
+            }
+          ],
+          "variableIds": [
+            "0a4b28d2609640cf8188946701d7fd06",
+            "fddad032e24c4be7b21ca8498049c5bb",
+            "8330b0527d0c47cf9b616e229bd81fbf"
+          ],
+          "outdatedNote": false,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "loading": false
+        },
+        "140b3fef1194413ab4bde283ccc7c2f9": {
+          "id": "140b3fef1194413ab4bde283ccc7c2f9",
+          "stepType": "Component",
+          "name": "Deflection: Incident Created",
+          "fields": [],
+          "reusableTopicId": "7fb4ca055303201033cdddeeff7b12b3",
+          "reusableTopicChoice": "Deflection",
+          "sourceType": "TOPIC_BLOCK",
+          "loading": false,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "inputs": {
+            "deflection_configuration": {
+              "value": "5292005253213010000dddeeff7b126c",
+              "mode": "string",
+              "type": "Reference",
+              "table": "ssa_deflection_configuration"
+            },
+            "deflection_pattern": {
+              "value": "f063885253213010000dddeeff7b1221",
+              "mode": "string",
+              "type": "Reference",
+              "table": "ssa_deflection_pattern"
+            },
+            "activity_table": {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "incident"
+                    }
+                  ]
+                }
+              ],
+              "mode": "string",
+              "type": "String"
+            },
+            "activity_ids": {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    },
+                    {
+                      "type": "datapill",
+                      "dataPill": {
+                        "value": "{{vaInputs.created_incident_sys_id}}",
+                        "displayValue": "Input Variables➛Created_incident_sys_id"
+                      },
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ]
+                    },
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "mode": "string",
+              "type": "String"
+            }
+          },
+          "outputs": [],
+          "outdatedNote": false,
+          "variableIds": []
+        },
+        "8012f3e8fc8b49b9a84b1748ffddaa62": {
+          "id": "8012f3e8fc8b49b9a84b1748ffddaa62",
+          "stepType": "Component",
+          "name": "Deflection: KB Resolved",
+          "fields": [],
+          "reusableTopicId": "7fb4ca055303201033cdddeeff7b12b3",
+          "reusableTopicChoice": "Deflection",
+          "sourceType": "TOPIC_BLOCK",
+          "loading": false,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "inputs": {
+            "deflection_configuration": {
+              "value": "5292005253213010000dddeeff7b126c",
+              "mode": "string",
+              "type": "Reference",
+              "table": "ssa_deflection_configuration"
+            },
+            "deflection_pattern": {
+              "value": "eaf3809253213010000dddeeff7b1236",
+              "mode": "string",
+              "type": "Reference",
+              "table": "ssa_deflection_pattern"
+            },
+            "activity_table": {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "kb_knowledge"
+                    }
+                  ]
+                }
+              ],
+              "mode": "string",
+              "type": "String"
+            },
+            "activity_ids": {
+              "value": "(function execute() {\n    return JSON.parse(vaInputs.ctx_search_details.getValue())[\"kb_knowledge\"].toString();\n})()",
+              "mode": "script",
+              "type": "String"
+            }
+          },
+          "outputs": [],
+          "outdatedNote": false,
+          "variableIds": []
+        },
+        "d11aa8567f884a38bb317527773db149": {
+          "id": "d11aa8567f884a38bb317527773db149",
+          "stepType": "Component",
+          "name": "No Deflection",
+          "fields": [],
+          "reusableTopicId": "7fb4ca055303201033cdddeeff7b12b3",
+          "reusableTopicChoice": "Deflection",
+          "sourceType": "TOPIC_BLOCK",
+          "loading": false,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "inputs": {
+            "deflection_configuration": {
+              "value": "5292005253213010000dddeeff7b126c",
+              "mode": "string",
+              "type": "Reference",
+              "table": "ssa_deflection_configuration"
+            },
+            "deflection_pattern": {
+              "value": "9ee3409253213010000dddeeff7b123b",
+              "mode": "string",
+              "type": "Reference",
+              "table": "ssa_deflection_pattern"
+            },
+            "activity_table": {
+              "value": "",
+              "mode": "simple",
+              "type": "String"
+            },
+            "activity_ids": {
+              "value": "",
+              "mode": "simple",
+              "type": "String"
+            }
+          },
+          "outputs": [],
+          "outdatedNote": false,
+          "variableIds": []
+        },
+        "ba821b21a9d64f33afe31888089edb37": {
+          "id": "ba821b21a9d64f33afe31888089edb37",
+          "stepType": "Component",
+          "name": "Deflection: Outage Confirmed",
+          "fields": [],
+          "reusableTopicId": "7fb4ca055303201033cdddeeff7b12b3",
+          "reusableTopicChoice": "Deflection",
+          "sourceType": "TOPIC_BLOCK",
+          "loading": false,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "inputs": {
+            "deflection_configuration": {
+              "value": "5292005253213010000dddeeff7b126c",
+              "mode": "string",
+              "type": "Reference",
+              "table": "ssa_deflection_configuration"
+            },
+            "deflection_pattern": {
+              "value": "6eb34c5253213010000dddeeff7b12be",
+              "mode": "string",
+              "type": "Reference",
+              "table": "ssa_deflection_pattern"
+            },
+            "activity_table": {
+              "value": "",
+              "mode": "simple",
+              "type": "String"
+            },
+            "activity_ids": {
+              "value": "",
+              "mode": "simple",
+              "type": "String"
+            }
+          },
+          "outputs": [],
+          "outdatedNote": false,
+          "variableIds": []
+        },
+        "64e1cf542eba436ebc31e22d6371c325": {
+          "id": "64e1cf542eba436ebc31e22d6371c325",
+          "stepType": "Component",
+          "name": "Deflection: Steps Worked",
+          "fields": [],
+          "reusableTopicId": "7fb4ca055303201033cdddeeff7b12b3",
+          "reusableTopicChoice": "Deflection",
+          "sourceType": "TOPIC_BLOCK",
+          "loading": false,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "inputs": {
+            "deflection_configuration": {
+              "value": "5292005253213010000dddeeff7b126c",
+              "mode": "string",
+              "type": "Reference",
+              "table": "ssa_deflection_configuration"
+            },
+            "deflection_pattern": {
+              "value": "0273885253213010000dddeeff7b1210",
+              "mode": "string",
+              "type": "Reference",
+              "table": "ssa_deflection_pattern"
+            },
+            "activity_table": {
+              "value": "",
+              "mode": "simple",
+              "type": "String"
+            },
+            "activity_ids": {
+              "value": "",
+              "mode": "simple",
+              "type": "String"
+            }
+          },
+          "outputs": [],
+          "outdatedNote": false,
+          "variableIds": []
+        }
+      },
+      "edges": [
+        {
+          "id": "3276bd53d0c54d6bb14bef2b57785227",
+          "edgeType": "Edge",
+          "source": "5c87011cb70c46ebac0f8af3815f0b6d",
+          "target": "44348c4bc0c44014b81fd09cdad73645",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "5b9f156e3d034093b2b7104b18297351",
+          "edgeType": "Edge",
+          "source": "b6fb43e4109147199ac27521a1af024e",
+          "target": "357df399f1e54e3686e6466bea05e1a8",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "56832f158f804e0983abd1fb790e3e85",
+          "edgeType": "Edge",
+          "source": "b55346a8e8a740c6a6d3e3693c78dc33",
+          "target": "1a7d8b4d74194bdbbb695e863d88eb53",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "00576f1aec334432af54b7f91d5de1c5",
+          "edgeType": "Branch",
+          "source": "1a7d8b4d74194bdbbb695e863d88eb53",
+          "target": "b6fb43e4109147199ac27521a1af024e",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "user_issue=slow",
+            "mode": "query"
+          },
+          "label": "Slow"
+        },
+        {
+          "id": "7f81719e650c45a9b7ca28249965964b",
+          "edgeType": "Branch",
+          "source": "1a7d8b4d74194bdbbb695e863d88eb53",
+          "target": "ae8f6909871e497eae78aba2198dcc24",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "user_issue=receive",
+            "mode": "query"
+          },
+          "label": "Receive"
+        },
+        {
+          "id": "6ad03cf3f02b4aa092c7a2911f141a4e",
+          "edgeType": "Edge",
+          "source": "ae8f6909871e497eae78aba2198dcc24",
+          "target": "357df399f1e54e3686e6466bea05e1a8",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "42bba3ea4d84479d9f9d5ff3f43871eb",
+          "edgeType": "Branch",
+          "source": "1a7d8b4d74194bdbbb695e863d88eb53",
+          "target": "45ff256d691e408cbea59b0ba2c8d93c",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "user_issue=send",
+            "mode": "query"
+          },
+          "label": "Send"
+        },
+        {
+          "id": "9ccbe9fefee444cb8631a3686c3c8572",
+          "edgeType": "Edge",
+          "source": "45ff256d691e408cbea59b0ba2c8d93c",
+          "target": "357df399f1e54e3686e6466bea05e1a8",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "04b0bc80391b412eb94e6fe7ac170823",
+          "edgeType": "Branch",
+          "source": "1a7d8b4d74194bdbbb695e863d88eb53",
+          "target": "c39d8a8fc76b4a579bf5999c1fbd115a",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "user_issue=authentication",
+            "mode": "query"
+          },
+          "label": "Authentication"
+        },
+        {
+          "id": "5ee616d2c7a847cbb883f03776494023",
+          "edgeType": "Edge",
+          "source": "c39d8a8fc76b4a579bf5999c1fbd115a",
+          "target": "357df399f1e54e3686e6466bea05e1a8",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "1436853c2500433590abb0b38e5708a4",
+          "edgeType": "Edge",
+          "source": "357df399f1e54e3686e6466bea05e1a8",
+          "target": "b96b9a054a7e4d22b64b05455b305533",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "0a5ff65031ae43ff81712ec99a545d29",
+          "edgeType": "Branch",
+          "source": "1a7d8b4d74194bdbbb695e863d88eb53",
+          "target": "eca570ed54764fd984c5459f18b2e9c6",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "user_issue=different_issue",
+            "mode": "query"
+          },
+          "label": "Different issue"
+        },
+        {
+          "id": "4b4873b5c8c44253996aa90d85f9722b",
+          "edgeType": "Edge",
+          "source": "eca570ed54764fd984c5459f18b2e9c6",
+          "target": "66a038de8fc0440c891f4d0ec57781b8",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "4a70e84b3d1145ebbc3cf9916edf7adc",
+          "edgeType": "Edge",
+          "source": "66a038de8fc0440c891f4d0ec57781b8",
+          "target": "5c87011cb70c46ebac0f8af3815f0b6d",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "612556e3d25a4235990df43b224335e7",
+          "edgeType": "Branch",
+          "source": "b96b9a054a7e4d22b64b05455b305533",
+          "target": "3f4df1d2ae404cab84524093287c19bd",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "did_steps_work_!=true",
+            "mode": "query"
+          },
+          "label": "No"
+        },
+        {
+          "id": "19ce580df27b4c06a6524f09bad8f3d9",
+          "edgeType": "Edge",
+          "source": "bc3e728805b74a22acce5e38be4ce974",
+          "target": "0d5627c953dd4cde9fbb233ea933250b",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "0eebcdcffb3947c0bc5316854a22e552",
+          "edgeType": "Branch",
+          "source": "44348c4bc0c44014b81fd09cdad73645",
+          "target": "bc3e728805b74a22acce5e38be4ce974",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "kb_results_helpful!=true",
+            "mode": "query"
+          },
+          "label": "No"
+        },
+        {
+          "id": "9c77e127a3c74c639a0db1f77ad49da2",
+          "edgeType": "Edge",
+          "source": "e95d69520ce946c88e6b8ab5eff82475",
+          "target": "fd5502270ea8473996104b4f8b6fca83",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "aed521f0e1cb437fbf806549daa425d1",
+          "edgeType": "Edge",
+          "source": "fd5502270ea8473996104b4f8b6fca83",
+          "target": "7d5b79c9585142209bccee38ca03b7b2",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "cd90759c0f9a42acbb650c16423a4567",
+          "edgeType": "Branch",
+          "source": "7d5b79c9585142209bccee38ca03b7b2",
+          "target": "b55346a8e8a740c6a6d3e3693c78dc33",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    return !vaVars.outageId;\n})()\n"
+          },
+          "label": "No"
+        },
+        {
+          "id": "e8e024d3a49c4757a85693674f127d74",
+          "edgeType": "Branch",
+          "source": "7d5b79c9585142209bccee38ca03b7b2",
+          "target": "288e57b2f063449d94111dc6944055a4",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    return !!vaVars.outageId;\n})()\n"
+          },
+          "label": "Yes"
+        },
+        {
+          "id": "4e75914be1404015a111ae016af49d17",
+          "edgeType": "Edge",
+          "source": "288e57b2f063449d94111dc6944055a4",
+          "target": "9de2291dd7064758a954b5b945bb3963",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "29b047510ceb41dfa337431e4b19125e",
+          "edgeType": "Branch",
+          "source": "0d5627c953dd4cde9fbb233ea933250b",
+          "target": "ed15da8be315405fb981ead76837f2a1",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "need_further_help=true",
+            "mode": "query"
+          },
+          "label": "Yes"
+        },
+        {
+          "id": "17323b8c5e8d4065a5b510a69b36667e",
+          "edgeType": "Edge",
+          "source": "3f4df1d2ae404cab84524093287c19bd",
+          "target": "5c87011cb70c46ebac0f8af3815f0b6d",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "2603837232ec4d1baa6adb4a14249314",
+          "edgeType": "Edge",
+          "source": "ed15da8be315405fb981ead76837f2a1",
+          "target": "140b3fef1194413ab4bde283ccc7c2f9",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "cecd1dd8569242df90957d2dab89f5e0",
+          "edgeType": "Edge",
+          "source": "140b3fef1194413ab4bde283ccc7c2f9",
+          "target": "cabd858fb60f4b96a015d6bc548eee35",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "0ce456704cb84c33be7dbea2cfab7c02",
+          "edgeType": "Branch",
+          "source": "44348c4bc0c44014b81fd09cdad73645",
+          "target": "8012f3e8fc8b49b9a84b1748ffddaa62",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "kb_results_helpful=true",
+            "mode": "query"
+          },
+          "label": "Yes"
+        },
+        {
+          "id": "97f973efeb8e4f6997d760a39df904ef",
+          "edgeType": "Edge",
+          "source": "8012f3e8fc8b49b9a84b1748ffddaa62",
+          "target": "cabd858fb60f4b96a015d6bc548eee35",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "4369e40d6e0b492ba52daabd1dda1538",
+          "edgeType": "Branch",
+          "source": "0d5627c953dd4cde9fbb233ea933250b",
+          "target": "d11aa8567f884a38bb317527773db149",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "need_further_help!=true",
+            "mode": "query"
+          },
+          "label": "No"
+        },
+        {
+          "id": "57cd3b4161584e329c93fd93f1e6c62b",
+          "edgeType": "Edge",
+          "source": "d11aa8567f884a38bb317527773db149",
+          "target": "cabd858fb60f4b96a015d6bc548eee35",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "3e4adb6140f84a459cd2514e76d8de06",
+          "edgeType": "Edge",
+          "source": "9de2291dd7064758a954b5b945bb3963",
+          "target": "ba821b21a9d64f33afe31888089edb37",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "4846b0554bd041888ba48de3a3f763dc",
+          "edgeType": "Edge",
+          "source": "ba821b21a9d64f33afe31888089edb37",
+          "target": "cabd858fb60f4b96a015d6bc548eee35",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "74359569dc32460d9575ac6a51c8a9b9",
+          "edgeType": "Branch",
+          "source": "b96b9a054a7e4d22b64b05455b305533",
+          "target": "64e1cf542eba436ebc31e22d6371c325",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "did_steps_work_=true",
+            "mode": "query"
+          },
+          "label": "Yes"
+        },
+        {
+          "id": "fa570b8102594ef392209d93665d411f",
+          "edgeType": "Edge",
+          "source": "64e1cf542eba436ebc31e22d6371c325",
+          "target": "cabd858fb60f4b96a015d6bc548eee35",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "b87e39cca05542eb8d9ab24f2d2b9256": {
+      "id": "b87e39cca05542eb8d9ab24f2d2b9256",
+      "name": "user_issue",
+      "label": "User Issue",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "Authentication issues",
+          "value": "authentication"
+        },
+        {
+          "label": "Can't send email",
+          "value": "send"
+        },
+        {
+          "label": "Can't receive email",
+          "value": "receive"
+        },
+        {
+          "label": "Mail client is slow",
+          "value": "slow"
+        },
+        {
+          "label": "Different issue",
+          "value": "different_issue"
+        }
+      ],
+      "category": "vaInputs"
+    },
+    "333431e5052d497e84b0fc26cad4a357": {
+      "id": "333431e5052d497e84b0fc26cad4a357",
+      "name": "did_steps_work_",
+      "label": "Did Steps Work?",
+      "varType": "boolean",
+      "category": "vaInputs"
+    },
+    "99ba36d8129f4b25b8b9afd0d203890c": {
+      "id": "99ba36d8129f4b25b8b9afd0d203890c",
+      "value": {
+        "mode": "simple",
+        "value": "2821675a5b30130070e4492c11f91a89"
+      },
+      "name": "search_context_sys_id",
+      "label": "search_context_sys_id",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "e1b436b008a94b4d950338952aa8e7a5": {
+      "id": "e1b436b008a94b4d950338952aa8e7a5",
+      "name": "issue_description",
+      "label": "Issue Description",
+      "varType": "string",
+      "category": "vaInputs",
+      "secure": false,
+      "encryptionSalt": {
+        "value": "MTYxMTE0ODQwODQzNyBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      },
+      "encryptionHashFunction": "SHA-256"
+    },
+    "5dcf30f20b3743fa864b8b711fa057ac": {
+      "id": "5dcf30f20b3743fa864b8b711fa057ac",
+      "name": "need_further_help",
+      "label": "Need Further Help",
+      "varType": "boolean",
+      "category": "vaInputs"
+    },
+    "01859079db8c46f49b4dde4753579827": {
+      "id": "01859079db8c46f49b4dde4753579827",
+      "value": {
+        "value": "",
+        "mode": "simple"
+      },
+      "name": "query",
+      "label": "query",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "d8d6d2f8a9d1476cbf7c025bf5dc5e2e": {
+      "id": "d8d6d2f8a9d1476cbf7c025bf5dc5e2e",
+      "value": {
+        "mode": "simple",
+        "value": "25"
+      },
+      "name": "maxAttachmentSizeInMB",
+      "label": "maxAttachmentSizeInMB",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "13ff894d6e434bf895b5e22815f2685f": {
+      "id": "13ff894d6e434bf895b5e22815f2685f",
+      "value": {
+        "mode": "simple",
+        "value": ""
+      },
+      "name": "outageId",
+      "label": "outageId",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "6f673b7b2a5f492d9ec005c6b8d1df05": {
+      "category": "vaInputs",
+      "id": "6f673b7b2a5f492d9ec005c6b8d1df05",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "c9812260563b4d2281762a7869f636b8": {
+      "id": "c9812260563b4d2281762a7869f636b8",
+      "name": "created_incident_sys_id",
+      "label": "Created_incident_sys_id",
+      "defaultValue": "created_incident_sys_id",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "output"
+      }
+    },
+    "0a4b28d2609640cf8188946701d7fd06": {
+      "id": "0a4b28d2609640cf8188946701d7fd06",
+      "name": "kb_results_returned",
+      "label": "Kb_results_returned",
+      "defaultValue": "results_returned",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "output"
+      },
+      "preventDisable": false
+    },
+    "fddad032e24c4be7b21ca8498049c5bb": {
+      "id": "fddad032e24c4be7b21ca8498049c5bb",
+      "name": "kb_results_helpful",
+      "label": "Kb_results_helpful",
+      "defaultValue": "results_helpful",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "output"
+      },
+      "preventDisable": false
+    },
+    "8330b0527d0c47cf9b616e229bd81fbf": {
+      "id": "8330b0527d0c47cf9b616e229bd81fbf",
+      "name": "ctx_search_details",
+      "label": "Ctx_search_details",
+      "defaultValue": "ctx_search_details",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "output"
+      }
+    }
+  }
+}</graph><key_phrases>Email Issue,Email issues,email,issues,outlook,mail,sending,receiving</key_phrases><library>false</library><live_agent>false</live_agent><name>Email Issue</name><nlu_intent/><nlu_intent_label/><nlu_model/><nlu_model_label/><nlu_provider/><palette_label/><roles/><secure_custom_input_control>false</secure_custom_input_control><source_topic_id>5189a2cb0b73230094396c2367673a90</source_topic_id><sys_class_name>sys_cb_topic</sys_class_name><sys_created_by>Jab19</sys_created_by><sys_created_on>2022-10-06 06:32:28</sys_created_on><sys_domain>global</sys_domain><sys_id>0bc745fe87965550f7c50e1d0ebb35ce</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Email Issue</sys_name><sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package><sys_policy/><sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope><sys_update_name>sys_cb_topic_0bc745fe87965550f7c50e1d0ebb35ce</sys_update_name><sys_updated_by>Jab19</sys_updated_by><sys_updated_on>2022-10-06 06:32:56</sys_updated_on><triggerable_by_notification>false</triggerable_by_notification><type>STANDARD</type><variables/></sys_cb_topic><sys_variable_value action="delete_multiple" query="document_key=0bc745fe87965550f7c50e1d0ebb35ce"/></record_update>]]></payload>
+        <payload_hash>1949517134</payload_hash>
+        <record_name>Email Issue</record_name>
+        <reverted_from/>
+        <source>7a3d9139871e5150f7c50e1d0ebb3587</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-06 06:32:56</sys_created_on>
+        <sys_id>ede7857287d65550f7c50e1d0ebb35fe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183abff428f0000001</sys_recorded_at>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-06 06:32:56</sys_updated_on>
+        <type>Topic</type>
+        <update_guid>29e7857297d65550803b987c8c3ec3fe</update_guid>
+        <update_guid_history>29e7857297d65550803b987c8c3ec3fe:1949517134,5bc749729ed65550a0c65342c27917a6:531290343</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-06 06:34:02</sys_created_on>
+        <sys_db_object display_value="" name="sys_cb_topic">sys_cb_topic</sys_db_object>
+        <sys_id>0122658cd53c4e7d83beb089a3a069c9</sys_id>
+        <sys_metadata>0bc745fe87965550f7c50e1d0ebb35ce</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Email Issue</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_scope_delete display_value="">74cfaf93962f4aa9bc64e19b81ff1861</sys_scope_delete>
+        <sys_update_name>sys_cb_topic_0bc745fe87965550f7c50e1d0ebb35ce</sys_update_name>
+        <sys_update_version display_value="sys_cb_topic_0bc745fe87965550f7c50e1d0ebb35ce">ede7857287d65550f7c50e1d0ebb35fe</sys_update_version>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-06 06:34:02</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

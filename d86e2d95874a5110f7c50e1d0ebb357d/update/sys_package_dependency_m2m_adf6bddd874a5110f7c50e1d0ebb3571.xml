@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="Task table schema" source="com.glide.task">7d9dac8587030110f7c50e1d0ebb3568</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>kriti.kumari</sys_created_by>
+        <sys_created_on>2022-09-19 07:51:57</sys_created_on>
+        <sys_id>adf6bddd874a5110f7c50e1d0ebb3571</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_updated_by>kriti.kumari</sys_updated_by>
+        <sys_updated_on>2022-09-19 07:51:57</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="DELETE">
+        <sc_cat_item display_value="Devices">c2e8625287669910f7c50e1d0ebb359d</sc_cat_item>
+        <sc_category display_value="Things you can request">f20dba11f9542010fa9b7f43378be374</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-17 11:20:23</sys_created_on>
+        <sys_id>6723b2da87669910f7c50e1d0ebb35a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Things you can request.Devices</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sc_cat_item_category_6723b2da87669910f7c50e1d0ebb35a7</sys_update_name>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-17 11:20:23</sys_updated_on>
+    </sc_cat_item_category>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</application>
+        <file_path/>
+        <instance_id>5b3553eddb6af41007072f17d4961905</instance_id>
+        <instance_name>instavtechnologiespvtltddemo4</instance_name>
+        <name>sc_cat_item_category_6723b2da87669910f7c50e1d0ebb35a7</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category"><sc_cat_item_category action="INSERT_OR_UPDATE"><sc_cat_item display_value="Devices">c2e8625287669910f7c50e1d0ebb359d</sc_cat_item><sc_category display_value="Things you can request">f20dba11f9542010fa9b7f43378be374</sc_category><sys_class_name>sc_cat_item_category</sys_class_name><sys_created_by>Jab19</sys_created_by><sys_created_on>2022-10-17 11:20:23</sys_created_on><sys_id>6723b2da87669910f7c50e1d0ebb35a7</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Things you can request.Devices</sys_name><sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package><sys_policy/><sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope><sys_update_name>sc_cat_item_category_6723b2da87669910f7c50e1d0ebb35a7</sys_update_name><sys_updated_by>Jab19</sys_updated_by><sys_updated_on>2022-10-17 11:20:23</sys_updated_on></sc_cat_item_category></record_update>]]></payload>
+        <payload_hash>2091352198</payload_hash>
+        <record_name>Things you can request.Devices</record_name>
+        <reverted_from/>
+        <source>8bcc892487d25d10f7c50e1d0ebb35b0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-17 11:20:23</sys_created_on>
+        <sys_id>fb23b2da87669910f7c50e1d0ebb35aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183e5ac63e20000001</sys_recorded_at>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-17 11:20:23</sys_updated_on>
+        <type>Catalog Item Category</type>
+        <update_guid>3723b2da7c669910e861a6c16e747daa</update_guid>
+        <update_guid_history>3723b2da7c669910e861a6c16e747daa:2091352198</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Things you can request.Devices">81b4f25e87669910f7c50e1d0ebb35c8</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-17 11:27:02</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_category">sc_cat_item_category</sys_db_object>
+        <sys_id>83d7bee0dc4e413195a571c2a5e0ae51</sys_id>
+        <sys_metadata>6723b2da87669910f7c50e1d0ebb35a7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Things you can request.Devices</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_scope_delete display_value="">74cfaf93962f4aa9bc64e19b81ff1861</sys_scope_delete>
+        <sys_update_name>sc_cat_item_category_6723b2da87669910f7c50e1d0ebb35a7</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_category_6723b2da87669910f7c50e1d0ebb35a7">fb23b2da87669910f7c50e1d0ebb35aa</sys_update_version>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-17 11:27:02</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

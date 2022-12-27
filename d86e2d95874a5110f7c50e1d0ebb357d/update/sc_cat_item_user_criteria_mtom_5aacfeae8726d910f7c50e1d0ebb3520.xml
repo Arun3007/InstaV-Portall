@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_user_criteria_mtom">
+    <sc_cat_item_user_criteria_mtom action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Apple iPhone X">ada7fa2a8726d910f7c50e1d0ebb3564</sc_cat_item>
+        <sys_class_name>sc_cat_item_user_criteria_mtom</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-18 06:40:17</sys_created_on>
+        <sys_id>5aacfeae8726d910f7c50e1d0ebb3520</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Apple iPhone X.</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sc_cat_item_user_criteria_mtom_5aacfeae8726d910f7c50e1d0ebb3520</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-10-18 06:41:06</sys_updated_on>
+        <user_criteria display_value="Roles : public,snc_external,snc_internal">42fa2c3c87e61510f7c50e1d0ebb3545</user_criteria>
+    </sc_cat_item_user_criteria_mtom>
+</record_update>

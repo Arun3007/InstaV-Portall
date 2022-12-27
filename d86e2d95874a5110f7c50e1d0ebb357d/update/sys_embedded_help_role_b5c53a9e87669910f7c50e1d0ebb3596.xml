@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_intep_instav.employee_task_lookup_table_user" name="x_intep_instav.employee_task_lookup_table_user">a5c53a9e87669910f7c50e1d0ebb3594</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-17 11:31:43</sys_created_on>
+        <sys_id>b5c53a9e87669910f7c50e1d0ebb3596</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>a5c53a9e87669910f7c50e1d0ebb3594</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sys_embedded_help_role_b5c53a9e87669910f7c50e1d0ebb3596</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-17 11:31:43</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_hr_sp_todos_widget_mapping">
+    <sn_hr_sp_todos_widget_mapping action="DELETE">
+        <active>false</active>
+        <condition table="task">approvalANYTHING^EQ<item endquery="false" field="approval" goto="false" newquery="false" operator="ANYTHING" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <sys_class_name>sn_hr_sp_todos_widget_mapping</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-06 09:31:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a49071fe879a1190f0bd419d0ebb35df</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sn_hr_sp_todos_widget_mapping_a49071fe879a1190f0bd419d0ebb35df</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-06 09:35:22</sys_updated_on>
+        <table>task</table>
+        <to_dos_configuration display_value="Incident-Open">de10b9be879a1190f0bd419d0ebb3517</to_dos_configuration>
+        <widget display_value="Approvals IEC">ebea46a087d65d10f7c50e1d0ebb35f4</widget>
+    </sn_hr_sp_todos_widget_mapping>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</application>
+        <file_path/>
+        <instance_id>5b3553eddb6af41007072f17d4961905</instance_id>
+        <instance_name>instavtechnologiespvtltddemo4</instance_name>
+        <name>sn_hr_sp_todos_widget_mapping_a49071fe879a1190f0bd419d0ebb35df</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_hr_sp_todos_widget_mapping"><sn_hr_sp_todos_widget_mapping action="INSERT_OR_UPDATE"><active>false</active><condition table="task">approvalANYTHING^EQ<item endquery="false" field="approval" goto="false" newquery="false" operator="ANYTHING" or="false" value=""/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></condition><sys_class_name>sn_hr_sp_todos_widget_mapping</sys_class_name><sys_created_by>rajendra.g</sys_created_by><sys_created_on>2022-10-06 09:31:11</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>a49071fe879a1190f0bd419d0ebb35df</sys_id><sys_mod_count>2</sys_mod_count><sys_name/><sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package><sys_policy/><sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope><sys_update_name>sn_hr_sp_todos_widget_mapping_a49071fe879a1190f0bd419d0ebb35df</sys_update_name><sys_updated_by>rajendra.g</sys_updated_by><sys_updated_on>2022-10-06 09:35:22</sys_updated_on><table>task</table><to_dos_configuration display_value="Incident-Open">de10b9be879a1190f0bd419d0ebb3517</to_dos_configuration><widget display_value="Approvals IEC">ebea46a087d65d10f7c50e1d0ebb35f4</widget></sn_hr_sp_todos_widget_mapping></record_update>]]></payload>
+        <payload_hash>-1485359261</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>42ee3dd087da9550f0bd419d0ebb357b</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-06 09:35:22</sys_created_on>
+        <sys_id>0ea1713287da1190f0bd419d0ebb355e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183aca649710000001</sys_recorded_at>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-06 09:35:22</sys_updated_on>
+        <type>To-dos Widget Mapping</type>
+        <update_guid>46a171328cda119073fa4896a046595e</update_guid>
+        <update_guid_history>46a171328cda119073fa4896a046595e:-1485359261,1ed035fed39a1190223465698243727e:696919354,78b0b1fe8c9a1190fa381c21c53a5a2d:191927969</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">b7e2797287da1190f0bd419d0ebb35f3</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-06 09:40:57</sys_created_on>
+        <sys_db_object display_value="" name="sn_hr_sp_todos_widget_mapping">sn_hr_sp_todos_widget_mapping</sys_db_object>
+        <sys_id>10ae1bcea4f94acd87ca02e9997744b1</sys_id>
+        <sys_metadata>a49071fe879a1190f0bd419d0ebb35df</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_scope_delete display_value="">74cfaf93962f4aa9bc64e19b81ff1861</sys_scope_delete>
+        <sys_update_name>sn_hr_sp_todos_widget_mapping_a49071fe879a1190f0bd419d0ebb35df</sys_update_name>
+        <sys_update_version display_value="sn_hr_sp_todos_widget_mapping_a49071fe879a1190f0bd419d0ebb35df">0ea1713287da1190f0bd419d0ebb355e</sys_update_version>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-06 09:40:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

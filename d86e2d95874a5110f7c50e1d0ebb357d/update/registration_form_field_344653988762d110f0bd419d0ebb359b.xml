@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="registration_form_field">
+    <registration_form_field action="INSERT_OR_UPDATE">
+        <column_label>Home phone</column_label>
+        <column_name>home_phone</column_name>
+        <custom_field>false</custom_field>
+        <display>false</display>
+        <mandatory>false</mandatory>
+        <order>10000</order>
+        <registration_configuration display_value="User Registration ">16169f588762d110f0bd419d0ebb3593</registration_configuration>
+        <sys_class_name>registration_form_field</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-11 08:45:48</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>344653988762d110f0bd419d0ebb359b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Home phone</sys_name>
+        <sys_package display_value="External User Self-Registration" source="com.snc.external_user_self_registration">1adeac5c87569550f0bd419d0ebb35dc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>registration_form_field_344653988762d110f0bd419d0ebb359b</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-11 08:45:48</sys_updated_on>
+        <type>6</type>
+        <validation_only>false</validation_only>
+    </registration_form_field>
+</record_update>

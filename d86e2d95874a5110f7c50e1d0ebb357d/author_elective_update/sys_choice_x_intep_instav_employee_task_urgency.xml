@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="urgency" table="x_intep_instav_employee_task" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>urgency</element>
+            <name>x_intep_instav_employee_task</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>rajendra.g</sys_created_by>
+            <sys_created_on>2022-10-17 07:34:38</sys_created_on>
+            <sys_id>788f7d1a87a29910f7c50e1d0ebb3559</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>urgency</sys_name>
+            <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+            <sys_update_name>sys_choice_x_intep_instav_employee_task_urgency</sys_update_name>
+            <sys_updated_by>rajendra.g</sys_updated_by>
+            <sys_updated_on>2022-10-17 07:34:38</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>urgency</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>1 - High</label>
+            <language>en</language>
+            <name>x_intep_instav_employee_task</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>rajendra.g</sys_created_by>
+            <sys_created_on>2022-10-17 07:34:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>348f7d1a87a29910f7c50e1d0ebb3559</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>rajendra.g</sys_updated_by>
+            <sys_updated_on>2022-10-17 10:27:16</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>urgency</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>2 - Medium</label>
+            <language>en</language>
+            <name>x_intep_instav_employee_task</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>rajendra.g</sys_created_by>
+            <sys_created_on>2022-10-17 07:34:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>858f7d1a87a29910f7c50e1d0ebb355d</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>rajendra.g</sys_updated_by>
+            <sys_updated_on>2022-10-17 10:27:17</sys_updated_on>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>urgency</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>3 - Low</label>
+            <language>en</language>
+            <name>x_intep_instav_employee_task</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>rajendra.g</sys_created_by>
+            <sys_created_on>2022-10-17 07:34:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4d8f7d1a87a29910f7c50e1d0ebb3560</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>rajendra.g</sys_updated_by>
+            <sys_updated_on>2022-10-17 10:27:18</sys_updated_on>
+            <value>3</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

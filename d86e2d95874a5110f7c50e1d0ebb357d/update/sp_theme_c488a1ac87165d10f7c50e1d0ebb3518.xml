@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_theme">
+    <sp_theme action="INSERT_OR_UPDATE">
+        <css_variables>$cloud-Primary: #2d80c3;&#13;
+$cloud-Secondary: #ebf2f4 ;&#13;
+$cloud-CloudWhite: #ece5de;&#13;
+$cloud-CloudBlack: #FFFFFF;&#13;
+&#13;
+/* ELEMENT SPECIFIC CSS */&#13;
+$sp-tagline-color:		$cloud-CloudBlack !default;&#13;
+$navbar-inverse-bg: 	#000000 !default;&#13;
+$navbar-inverse-link-color: $cloud-CloudWhite !default;&#13;
+$navbar-inverse-link-hover-color: $cloud-Primary !default;&#13;
+$body-bg: $cloud-Secondary !default;&#13;
+/*h1 {&#13;
+font-family: 'Calibiri';&#13;
+color: green;&#13;
+}*/&#13;
+h2 {&#13;
+font-family: 'Calibiri';&#13;
+color:black;&#13;
+}&#13;
+h1 {&#13;
+font-family: 'Calibiri';&#13;
+}</css_variables>
+        <footer display_value="iec_footer">688e65e087565d10f7c50e1d0ebb35bf</footer>
+        <footer_fixed>false</footer_fixed>
+        <header display_value="Stock Header">bf5ec2f2cb10120000f8d856634c9c0c</header>
+        <name>iec_theme</name>
+        <navbar_fixed>true</navbar_fixed>
+        <sys_class_name>sp_theme</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-09-29 09:10:26</sys_created_on>
+        <sys_id>c488a1ac87165d10f7c50e1d0ebb3518</sys_id>
+        <sys_mod_count>53</sys_mod_count>
+        <sys_name>iec_theme</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sp_theme_c488a1ac87165d10f7c50e1d0ebb3518</sys_update_name>
+        <sys_updated_by>arun.kumar</sys_updated_by>
+        <sys_updated_on>2022-10-17 04:23:08</sys_updated_on>
+    </sp_theme>
+</record_update>

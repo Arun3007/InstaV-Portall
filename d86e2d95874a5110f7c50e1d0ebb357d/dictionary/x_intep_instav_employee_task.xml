@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="Employee Task" max_length="40" name="x_intep_instav_employee_task" sizeclass="15" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Additinal Comments" max_length="4000" name="additional_comments" type="journal"/>
+        <element attributes="encode_utf8=false" label="Assignment group" max_length="32" name="assignement_group" reference="sys_user_group" type="reference"/>
+        <element attributes="encode_utf8=false" label="Caller" max_length="32" name="caller_id" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="inquiry" label="Category" max_length="40" name="category" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Inquiry / Help" sequence="0" value="inquiry"/>
+                <element inactive_on_update="false" label="Software" sequence="1" value="software"/>
+                <element inactive_on_update="false" label="Hardware" sequence="2" value="hardware"/>
+                <element inactive_on_update="false" label="Network" sequence="3" value="network"/>
+                <element inactive_on_update="false" label="Database" sequence="4" value="database"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="Caused by Change" max_length="32" name="caused_by" reference="change_request" type="reference"/>
+        <element attributes="encode_utf8=false" label="Change Request" max_length="32" name="changerequest" reference="change_request" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Channel" max_length="40" name="channel" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Email" sequence="0" value="email"/>
+                <element inactive_on_update="false" label="Phone" sequence="1" value="phone"/>
+                <element inactive_on_update="false" label="Self-Service" sequence="2" value="self-service"/>
+                <element inactive_on_update="false" label="Virtual Agent" sequence="3" value="virtual agent"/>
+                <element inactive_on_update="false" label="Walk-in" sequence="4" value="walk-in"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Resolution Code" max_length="40" name="close_code" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Solved (Work Around)" sequence="0" value="solved (work around)"/>
+                <element inactive_on_update="false" label="Solved (Permanently)" sequence="1" value="solved (permanently)"/>
+                <element inactive_on_update="false" label="Solved Remotely (Work Around)" sequence="2" value="solved remotely (work around)"/>
+                <element inactive_on_update="false" label="Solved Remotely (Permanently)" sequence="3" value="solved remotely (permanently)"/>
+                <element inactive_on_update="false" label="Not Solved (Not Reproducible)" sequence="4" value="not solved (not reproducible)"/>
+                <element inactive_on_update="false" label="Not Solved (Too Costly)" sequence="5" value="not solved (too costly)"/>
+                <element inactive_on_update="false" label="Closed/Resolved by Caller" sequence="6" value="closed/resolved by caller"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="Configuration item" max_length="32" name="configuration_item" reference="cmdb_ci" type="reference"/>
+        <element attributes="encode_utf8=false" label="Parent Incident" max_length="32" name="parent_incident" reference="incident" type="reference"/>
+        <element attributes="encode_utf8=false" label="Problem" max_length="32" name="problem" reference="problem" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Resolved" max_length="40" name="resolved" type="glide_date_time"/>
+        <element attributes="encode_utf8=false" label="Resolved by" max_length="32" name="resolved_by" reference="sys_user" type="reference"/>
+        <element choice="1" label="Transfer Reason" max_length="40" name="routereason" type="integer">
+            <choice>
+                <element inactive_on_update="false" label="Transfer with reason" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="Transfer withput reason" sequence="1" value="2"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="Service" max_length="32" name="service" reference="cmdb_ci_service" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" dependent="category" dependent_on_field="category" label="Sub Category" max_length="40" name="subcategory" type="string" use_dependent_field="true"/>
+        <element choice="1" label="On hold reason" max_length="40" name="u_integer_7" type="integer">
+            <choice>
+                <element inactive_on_update="false" label="Awaiting Calller" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="Awaiting Evidence" sequence="1" value="2"/>
+                <element inactive_on_update="false" label="Awaiting Problem" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="Awaiting Vendor" sequence="3" value="4"/>
+                <element inactive_on_update="false" label="Awaiting Change" sequence="4" value="5"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="New Reference" max_length="32" name="u_reference_2" reference="cmdb_ci_appl_dot_net" type="reference"/>
+    </element>
+</database>

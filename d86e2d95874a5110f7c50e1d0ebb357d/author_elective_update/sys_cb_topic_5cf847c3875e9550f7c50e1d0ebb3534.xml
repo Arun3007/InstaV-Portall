@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic">
+    <sys_cb_topic action="DELETE">
+        <applicability>(function execute() {
+
+    return false;
+})()
+</applicability>
+        <applicability_mode>script</applicability_mode>
+        <autopilot_topic>false</autopilot_topic>
+        <category/>
+        <channels/>
+        <connect_queue/>
+        <description>Dynamic Greeting Topic</description>
+        <expose_on_palette>false</expose_on_palette>
+        <flexible_conversation_switching>false</flexible_conversation_switching>
+        <graph>{
+  "graph_api_version": "1.0.39",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "cf308d13fc184644958eda856d739043": {
+          "id": "cf308d13fc184644958eda856d739043",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "03a5e130c77a4093953f8689e678d0e2": {
+          "id": "03a5e130c77a4093953f8689e678d0e2",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "55fbb624686e46d99be9c0d1a380a946": {
+          "id": "55fbb624686e46d99be9c0d1a380a946",
+          "stepType": "TextOutput",
+          "name": "Greeting",
+          "value": {
+            "value": "(function execute() {\n    var userFirstName = gs.getUser().getFirstName();\n    var message = '';\n    if (gs.nil(userFirstName) || userFirstName == '')\n        message = gs.getMessage('Hello');\n    else\n        message = gs.getMessage('Hello, {0}.', userFirstName);\n    return message;\n})()\n",
+            "mode": "script"
+          },
+          "applicability": {
+            "mode": "script",
+            "value": ""
+          },
+          "secure": false
+        },
+        "04f76f477ab94182b8d9762bb9bc8b0e": {
+          "id": "04f76f477ab94182b8d9762bb9bc8b0e",
+          "name": "Get Open Tickets",
+          "script": "(function execute() {\n\tvaVars.open_ticket_count = new global.VATopicsHelper().openTicketsCount();\n    vaVars.open_ticket_info =new global.VATopicsHelper().openTicketsInfo();\n})()\n\n\n",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "a58ea0834e1e4ba2bb7b5f18b99addd8": {
+          "id": "a58ea0834e1e4ba2bb7b5f18b99addd8",
+          "name": "Outage Info ",
+          "script": "(function execute() {\n   var encQuery = 'cmdb_ci.nameISNOTEMPTY^endISEMPTY^ORend&gt;javascript:gs.endOfCurrentMinute()^begin&gt;=javascript:gs.beginningOfLast7Days()'; \n   vaVars.outage_data = new global.VATopicsHelper().outagesInfo('cmdb_ci_outage', encQuery);\n})()\n",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "fa86a529c3844bb5a43f8d22c9af3086": {
+          "id": "fa86a529c3844bb5a43f8d22c9af3086",
+          "name": "Send Topic Picker",
+          "script": "(function execute() {\n    if (!vaVars.user_loggedin) {\n        //User is Not LoggedIn\n        var agentSupport = [];\n        agentSupport.push(gs.getMessage(\"To connect to a Live Agent, or to check what I can help with now, select {0}. To see more, log in first.\",gs.getMessage('Show me everything')));\n        vaSystem.sendTopicPickerControl(agentSupport.join(' '));\n    }\n    else {\n        //User is LoggedIn\n        var greetingMessages = [];\n        greetingMessages.push(gs.getMessage('Let me know how I can help you today ? '));\n        greetingMessages.push(vaSystem.getTopicSelectionMessage());\n        vaSystem.sendTopicPickerControl(greetingMessages.join(''));\n    }\n})()\n",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "9fbadbeac5f141caae99db27373578bd": {
+          "id": "9fbadbeac5f141caae99db27373578bd",
+          "stepType": "Decision",
+          "name": "Outage Data Exists"
+        },
+        "666a474fec9e4f119dbaf7feeb1ae095": {
+          "id": "666a474fec9e4f119dbaf7feeb1ae095",
+          "stepType": "Decision",
+          "name": "Open Tickets Exist"
+        },
+        "856f86a798a64b2898f0cfdc5c4353d0": {
+          "id": "856f86a798a64b2898f0cfdc5c4353d0",
+          "stepType": "Decision",
+          "name": "Is User LoggedIn ?"
+        },
+        "5fcfe2e0667f42879414b7ed10b6819d": {
+          "id": "5fcfe2e0667f42879414b7ed10b6819d",
+          "stepType": "TextOutput",
+          "name": "Login Status",
+          "secure": false,
+          "value": {
+            "value": "(function execute() {\n    return gs.getMessage(\"Hi, looks like you're not logged in at the moment.\");\n})()\n",
+            "mode": "script"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "5b94b64d66ae46a69e98f5076c92b4d1": {
+          "id": "5b94b64d66ae46a69e98f5076c92b4d1",
+          "stepType": "Decision",
+          "name": "Request Count"
+        },
+        "444d5dab82704f00af972c9d4c6d1a3f": {
+          "id": "444d5dab82704f00af972c9d4c6d1a3f",
+          "stepType": "ScriptOutput",
+          "name": "Open Tickets",
+          "output_type": "single_part",
+          "script": "(function execute() {\n    return vaVars.open_ticket_info;\n})()\n",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "ec108ab6675242328085d1c79560f8ba": {
+          "id": "ec108ab6675242328085d1c79560f8ba",
+          "stepType": "ScriptOutput",
+          "name": "Tickets Status",
+          "output_type": "single_part",
+          "script": "(function execute() {\n    return new global.VATopicsHelper().openTicketsStatus();\n})()\n",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "d86536728e524933a495df1a9bc86637": {
+          "id": "d86536728e524933a495df1a9bc86637",
+          "stepType": "ScriptOutput",
+          "name": "Outage Response",
+          "output_type": "single_part",
+          "script": "(function execute() {\n    return vaVars.outage_data;\n})()\n",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        }
+      },
+      "edges": [
+        {
+          "id": "c0e014d9311049a3b8ba4737725266d8",
+          "edgeType": "Edge",
+          "source": "d86536728e524933a495df1a9bc86637",
+          "target": "fa86a529c3844bb5a43f8d22c9af3086",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "38ab3cb603c5466eb61ef81dbf69dea1",
+          "edgeType": "Edge",
+          "source": "ec108ab6675242328085d1c79560f8ba",
+          "target": "a58ea0834e1e4ba2bb7b5f18b99addd8",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "910b69a03d88426f9aed3fe123f603e1",
+          "edgeType": "Edge",
+          "source": "444d5dab82704f00af972c9d4c6d1a3f",
+          "target": "5b94b64d66ae46a69e98f5076c92b4d1",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "1688fcf5d56946c785c085eaf1e9a45e",
+          "edgeType": "Edge",
+          "source": "55fbb624686e46d99be9c0d1a380a946",
+          "target": "04f76f477ab94182b8d9762bb9bc8b0e",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "67699eef786948498eebdcc1f4a5c5b6",
+          "edgeType": "Edge",
+          "source": "fa86a529c3844bb5a43f8d22c9af3086",
+          "target": "03a5e130c77a4093953f8689e678d0e2",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "c4c2ef0ea9b34ea2862ec98d95ae1452",
+          "edgeType": "Edge",
+          "source": "a58ea0834e1e4ba2bb7b5f18b99addd8",
+          "target": "9fbadbeac5f141caae99db27373578bd",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "9207c2eb8ff845eab832de6600a621de",
+          "edgeType": "Branch",
+          "source": "9fbadbeac5f141caae99db27373578bd",
+          "target": "fa86a529c3844bb5a43f8d22c9af3086",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n  \n    return vaVars.outage_data === '';\n})()\n"
+          },
+          "label": "No"
+        },
+        {
+          "id": "d704a7c0dc4045229b27c71ead6ce1c5",
+          "edgeType": "Edge",
+          "source": "04f76f477ab94182b8d9762bb9bc8b0e",
+          "target": "666a474fec9e4f119dbaf7feeb1ae095",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "4315ba3fd7d8481685a4827830d59f2a",
+          "edgeType": "Branch",
+          "source": "666a474fec9e4f119dbaf7feeb1ae095",
+          "target": "a58ea0834e1e4ba2bb7b5f18b99addd8",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    \n    return vaVars.open_ticket_count === 0;\n})()\n"
+          },
+          "label": "No"
+        },
+        {
+          "id": "d0c3d90149d446b19eed2c1111ab402b",
+          "edgeType": "Edge",
+          "source": "cf308d13fc184644958eda856d739043",
+          "target": "856f86a798a64b2898f0cfdc5c4353d0",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "b85ac2c551674c95b5b3a4c110babcae",
+          "edgeType": "Branch",
+          "source": "856f86a798a64b2898f0cfdc5c4353d0",
+          "target": "55fbb624686e46d99be9c0d1a380a946",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n\n    return vaVars.user_loggedin;\n})()\n"
+          },
+          "label": "Yes"
+        },
+        {
+          "id": "5d4782c941374102b7421f263c23909e",
+          "edgeType": "Branch",
+          "source": "856f86a798a64b2898f0cfdc5c4353d0",
+          "target": "5fcfe2e0667f42879414b7ed10b6819d",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n   \n    return !vaVars.user_loggedin;\n})()\n"
+          },
+          "label": "No"
+        },
+        {
+          "id": "1274df53d7ff4e2fb5beb89010e7d8bb",
+          "edgeType": "Edge",
+          "source": "5fcfe2e0667f42879414b7ed10b6819d",
+          "target": "fa86a529c3844bb5a43f8d22c9af3086",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "4fc9ae62d19846efb43a263df870852f",
+          "edgeType": "Branch",
+          "source": "5b94b64d66ae46a69e98f5076c92b4d1",
+          "target": "a58ea0834e1e4ba2bb7b5f18b99addd8",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    return vaVars.open_ticket_count &gt; 3;\n})()\n"
+          },
+          "label": "Requests Greater than 3"
+        },
+        {
+          "id": "14675e4ba8d545aeb8679092b7c49532",
+          "edgeType": "Branch",
+          "source": "666a474fec9e4f119dbaf7feeb1ae095",
+          "target": "444d5dab82704f00af972c9d4c6d1a3f",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n   \n    return vaVars.open_ticket_count &gt; 0;\n})()\n"
+          },
+          "label": "Yes"
+        },
+        {
+          "id": "66efafea059b4b748e3f3cc04a1c8bd3",
+          "edgeType": "Branch",
+          "source": "5b94b64d66ae46a69e98f5076c92b4d1",
+          "target": "ec108ab6675242328085d1c79560f8ba",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    return vaVars.open_ticket_count &lt;= 3;\n})()\n"
+          },
+          "label": "Requests Lesser than or EqualTo 3"
+        },
+        {
+          "id": "6ab1c9df2de2461a81a335582ecc9fee",
+          "edgeType": "Branch",
+          "source": "9fbadbeac5f141caae99db27373578bd",
+          "target": "d86536728e524933a495df1a9bc86637",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    \n    return vaVars.outage_data !== '';\n})()\n"
+          },
+          "label": "Yes"
+        }
+      ]
+    }
+  },
+  "variables": {
+    "8e38ce32321848c8abb552418a96ef84": {
+      "category": "vaInputs",
+      "id": "8e38ce32321848c8abb552418a96ef84",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "7caafc45bd074cc4b6dc6a322306d14d": {
+      "id": "7caafc45bd074cc4b6dc6a322306d14d",
+      "value": {
+        "mode": "script",
+        "value": "(function execute() {\n    return '';\n})()\n"
+      },
+      "name": "open_ticket_count",
+      "label": "open_ticket_count",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "e743623d81864e1d853568fde9aba65d": {
+      "id": "e743623d81864e1d853568fde9aba65d",
+      "value": {
+        "value": "",
+        "mode": "simple"
+      },
+      "name": "outage_data",
+      "label": "outage_data",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "5704604960ca4b448ae74ef1a5397985": {
+      "id": "5704604960ca4b448ae74ef1a5397985",
+      "value": {
+        "mode": "script",
+        "value": "(function execute() {\n    if (vaContext.deviceType == \"ios\" || vaContext.deviceType == \"android\")\n        return \"mesp\";\n\n    return gs.getProperty('sn_itsm_va.com.snc.itsm.virtualagent.portal_url', 'sp');\n})()\n"
+      },
+      "name": "portalName",
+      "label": "portalName",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "a04a5b2d548c4f36afd34078fc6da9de": {
+      "id": "a04a5b2d548c4f36afd34078fc6da9de",
+      "value": {
+        "mode": "script",
+        "value": "(function execute() {\n    return gs.isLoggedIn();\n})()\n"
+      },
+      "name": "user_loggedin",
+      "label": "user_loggedin",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "4a889bcd424f4271b0081018b47c301b": {
+      "id": "4a889bcd424f4271b0081018b47c301b",
+      "value": {
+        "mode": "simple",
+        "value": ""
+      },
+      "name": "open_ticket_info",
+      "label": "open_ticket_info",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "7d23bb1adb0a4203822b53ffc361e892": {
+      "id": "7d23bb1adb0a4203822b53ffc361e892",
+      "value": {
+        "mode": "script",
+        "value": "(function execute() {\n    return '';\n})()\n"
+      },
+      "name": "open_tkts_msg",
+      "label": "open_tkts_msg",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "efedebf037574e89b91d181a1a87b0b3": {
+      "id": "efedebf037574e89b91d181a1a87b0b3",
+      "value": {
+        "mode": "simple",
+        "value": ""
+      },
+      "name": "req_count",
+      "label": "req_count",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "f4d6bcd00b49440cb4078f9ba54de982": {
+      "id": "f4d6bcd00b49440cb4078f9ba54de982",
+      "value": {
+        "mode": "simple",
+        "value": ""
+      },
+      "name": "status_tkts_msg",
+      "label": "status_tkts_msg",
+      "varType": "script",
+      "category": "vaVars"
+    }
+  }
+}</graph>
+        <key_phrases>VA_Greetings,Dynamic Greeting Topic</key_phrases>
+        <library>false</library>
+        <live_agent>false</live_agent>
+        <name>VA_Greetings</name>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider/>
+        <palette_label/>
+        <roles>public</roles>
+        <secure_custom_input_control>false</secure_custom_input_control>
+        <source_topic_id>9b73c0c0ff170010c839bc6bd53bf141</source_topic_id>
+        <sys_class_name>sys_cb_topic</sys_class_name>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-07 10:35:12</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>5cf847c3875e9550f7c50e1d0ebb3534</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>VA_Greetings</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sys_cb_topic_5cf847c3875e9550f7c50e1d0ebb3534</sys_update_name>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-07 10:41:38</sys_updated_on>
+        <triggerable_by_notification>false</triggerable_by_notification>
+        <type>SETUP_TOPIC</type>
+        <variables/>
+    </sys_cb_topic>
+    <sys_variable_value action="DELETE" query="document_key=5cf847c3875e9550f7c50e1d0ebb3534"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</application>
+        <file_path/>
+        <instance_id>5b3553eddb6af41007072f17d4961905</instance_id>
+        <instance_name>instavtechnologiespvtltddemo4</instance_name>
+        <name>sys_cb_topic_5cf847c3875e9550f7c50e1d0ebb3534</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic"><sys_cb_topic action="INSERT_OR_UPDATE"><applicability>(function execute() {
+
+    return false;
+})()
+</applicability><applicability_mode>script</applicability_mode><autopilot_topic>false</autopilot_topic><category/><channels/><connect_queue/><description>Dynamic Greeting Topic</description><expose_on_palette>false</expose_on_palette><flexible_conversation_switching>false</flexible_conversation_switching><graph>{
+  "graph_api_version": "1.0.39",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "cf308d13fc184644958eda856d739043": {
+          "id": "cf308d13fc184644958eda856d739043",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "03a5e130c77a4093953f8689e678d0e2": {
+          "id": "03a5e130c77a4093953f8689e678d0e2",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "55fbb624686e46d99be9c0d1a380a946": {
+          "id": "55fbb624686e46d99be9c0d1a380a946",
+          "stepType": "TextOutput",
+          "name": "Greeting",
+          "value": {
+            "value": "(function execute() {\n    var userFirstName = gs.getUser().getFirstName();\n    var message = '';\n    if (gs.nil(userFirstName) || userFirstName == '')\n        message = gs.getMessage('Hello');\n    else\n        message = gs.getMessage('Hello, {0}.', userFirstName);\n    return message;\n})()\n",
+            "mode": "script"
+          },
+          "applicability": {
+            "mode": "script",
+            "value": ""
+          },
+          "secure": false
+        },
+        "04f76f477ab94182b8d9762bb9bc8b0e": {
+          "id": "04f76f477ab94182b8d9762bb9bc8b0e",
+          "name": "Get Open Tickets",
+          "script": "(function execute() {\n\tvaVars.open_ticket_count = new global.VATopicsHelper().openTicketsCount();\n    vaVars.open_ticket_info =new global.VATopicsHelper().openTicketsInfo();\n})()\n\n\n",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "a58ea0834e1e4ba2bb7b5f18b99addd8": {
+          "id": "a58ea0834e1e4ba2bb7b5f18b99addd8",
+          "name": "Outage Info ",
+          "script": "(function execute() {\n   var encQuery = 'cmdb_ci.nameISNOTEMPTY^endISEMPTY^ORend&gt;javascript:gs.endOfCurrentMinute()^begin&gt;=javascript:gs.beginningOfLast7Days()'; \n   vaVars.outage_data = new global.VATopicsHelper().outagesInfo('cmdb_ci_outage', encQuery);\n})()\n",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "fa86a529c3844bb5a43f8d22c9af3086": {
+          "id": "fa86a529c3844bb5a43f8d22c9af3086",
+          "name": "Send Topic Picker",
+          "script": "(function execute() {\n    if (!vaVars.user_loggedin) {\n        //User is Not LoggedIn\n        var agentSupport = [];\n        agentSupport.push(gs.getMessage(\"To connect to a Live Agent, or to check what I can help with now, select {0}. To see more, log in first.\",gs.getMessage('Show me everything')));\n        vaSystem.sendTopicPickerControl(agentSupport.join(' '));\n    }\n    else {\n        //User is LoggedIn\n        var greetingMessages = [];\n        greetingMessages.push(gs.getMessage('Let me know how I can help you today ? '));\n        greetingMessages.push(vaSystem.getTopicSelectionMessage());\n        vaSystem.sendTopicPickerControl(greetingMessages.join(''));\n    }\n})()\n",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "9fbadbeac5f141caae99db27373578bd": {
+          "id": "9fbadbeac5f141caae99db27373578bd",
+          "stepType": "Decision",
+          "name": "Outage Data Exists"
+        },
+        "666a474fec9e4f119dbaf7feeb1ae095": {
+          "id": "666a474fec9e4f119dbaf7feeb1ae095",
+          "stepType": "Decision",
+          "name": "Open Tickets Exist"
+        },
+        "856f86a798a64b2898f0cfdc5c4353d0": {
+          "id": "856f86a798a64b2898f0cfdc5c4353d0",
+          "stepType": "Decision",
+          "name": "Is User LoggedIn ?"
+        },
+        "5fcfe2e0667f42879414b7ed10b6819d": {
+          "id": "5fcfe2e0667f42879414b7ed10b6819d",
+          "stepType": "TextOutput",
+          "name": "Login Status",
+          "secure": false,
+          "value": {
+            "value": "(function execute() {\n    return gs.getMessage(\"Hi, looks like you're not logged in at the moment.\");\n})()\n",
+            "mode": "script"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "5b94b64d66ae46a69e98f5076c92b4d1": {
+          "id": "5b94b64d66ae46a69e98f5076c92b4d1",
+          "stepType": "Decision",
+          "name": "Request Count"
+        },
+        "444d5dab82704f00af972c9d4c6d1a3f": {
+          "id": "444d5dab82704f00af972c9d4c6d1a3f",
+          "stepType": "ScriptOutput",
+          "name": "Open Tickets",
+          "output_type": "single_part",
+          "script": "(function execute() {\n    return vaVars.open_ticket_info;\n})()\n",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "ec108ab6675242328085d1c79560f8ba": {
+          "id": "ec108ab6675242328085d1c79560f8ba",
+          "stepType": "ScriptOutput",
+          "name": "Tickets Status",
+          "output_type": "single_part",
+          "script": "(function execute() {\n    return new global.VATopicsHelper().openTicketsStatus();\n})()\n",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "d86536728e524933a495df1a9bc86637": {
+          "id": "d86536728e524933a495df1a9bc86637",
+          "stepType": "ScriptOutput",
+          "name": "Outage Response",
+          "output_type": "single_part",
+          "script": "(function execute() {\n    return vaVars.outage_data;\n})()\n",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        }
+      },
+      "edges": [
+        {
+          "id": "c0e014d9311049a3b8ba4737725266d8",
+          "edgeType": "Edge",
+          "source": "d86536728e524933a495df1a9bc86637",
+          "target": "fa86a529c3844bb5a43f8d22c9af3086",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "38ab3cb603c5466eb61ef81dbf69dea1",
+          "edgeType": "Edge",
+          "source": "ec108ab6675242328085d1c79560f8ba",
+          "target": "a58ea0834e1e4ba2bb7b5f18b99addd8",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "910b69a03d88426f9aed3fe123f603e1",
+          "edgeType": "Edge",
+          "source": "444d5dab82704f00af972c9d4c6d1a3f",
+          "target": "5b94b64d66ae46a69e98f5076c92b4d1",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "1688fcf5d56946c785c085eaf1e9a45e",
+          "edgeType": "Edge",
+          "source": "55fbb624686e46d99be9c0d1a380a946",
+          "target": "04f76f477ab94182b8d9762bb9bc8b0e",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "67699eef786948498eebdcc1f4a5c5b6",
+          "edgeType": "Edge",
+          "source": "fa86a529c3844bb5a43f8d22c9af3086",
+          "target": "03a5e130c77a4093953f8689e678d0e2",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "c4c2ef0ea9b34ea2862ec98d95ae1452",
+          "edgeType": "Edge",
+          "source": "a58ea0834e1e4ba2bb7b5f18b99addd8",
+          "target": "9fbadbeac5f141caae99db27373578bd",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "9207c2eb8ff845eab832de6600a621de",
+          "edgeType": "Branch",
+          "source": "9fbadbeac5f141caae99db27373578bd",
+          "target": "fa86a529c3844bb5a43f8d22c9af3086",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n  \n    return vaVars.outage_data === '';\n})()\n"
+          },
+          "label": "No"
+        },
+        {
+          "id": "d704a7c0dc4045229b27c71ead6ce1c5",
+          "edgeType": "Edge",
+          "source": "04f76f477ab94182b8d9762bb9bc8b0e",
+          "target": "666a474fec9e4f119dbaf7feeb1ae095",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "4315ba3fd7d8481685a4827830d59f2a",
+          "edgeType": "Branch",
+          "source": "666a474fec9e4f119dbaf7feeb1ae095",
+          "target": "a58ea0834e1e4ba2bb7b5f18b99addd8",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    \n    return vaVars.open_ticket_count === 0;\n})()\n"
+          },
+          "label": "No"
+        },
+        {
+          "id": "d0c3d90149d446b19eed2c1111ab402b",
+          "edgeType": "Edge",
+          "source": "cf308d13fc184644958eda856d739043",
+          "target": "856f86a798a64b2898f0cfdc5c4353d0",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "b85ac2c551674c95b5b3a4c110babcae",
+          "edgeType": "Branch",
+          "source": "856f86a798a64b2898f0cfdc5c4353d0",
+          "target": "55fbb624686e46d99be9c0d1a380a946",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n\n    return vaVars.user_loggedin;\n})()\n"
+          },
+          "label": "Yes"
+        },
+        {
+          "id": "5d4782c941374102b7421f263c23909e",
+          "edgeType": "Branch",
+          "source": "856f86a798a64b2898f0cfdc5c4353d0",
+          "target": "5fcfe2e0667f42879414b7ed10b6819d",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n   \n    return !vaVars.user_loggedin;\n})()\n"
+          },
+          "label": "No"
+        },
+        {
+          "id": "1274df53d7ff4e2fb5beb89010e7d8bb",
+          "edgeType": "Edge",
+          "source": "5fcfe2e0667f42879414b7ed10b6819d",
+          "target": "fa86a529c3844bb5a43f8d22c9af3086",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "4fc9ae62d19846efb43a263df870852f",
+          "edgeType": "Branch",
+          "source": "5b94b64d66ae46a69e98f5076c92b4d1",
+          "target": "a58ea0834e1e4ba2bb7b5f18b99addd8",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    return vaVars.open_ticket_count &gt; 3;\n})()\n"
+          },
+          "label": "Requests Greater than 3"
+        },
+        {
+          "id": "14675e4ba8d545aeb8679092b7c49532",
+          "edgeType": "Branch",
+          "source": "666a474fec9e4f119dbaf7feeb1ae095",
+          "target": "444d5dab82704f00af972c9d4c6d1a3f",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n   \n    return vaVars.open_ticket_count &gt; 0;\n})()\n"
+          },
+          "label": "Yes"
+        },
+        {
+          "id": "66efafea059b4b748e3f3cc04a1c8bd3",
+          "edgeType": "Branch",
+          "source": "5b94b64d66ae46a69e98f5076c92b4d1",
+          "target": "ec108ab6675242328085d1c79560f8ba",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    return vaVars.open_ticket_count &lt;= 3;\n})()\n"
+          },
+          "label": "Requests Lesser than or EqualTo 3"
+        },
+        {
+          "id": "6ab1c9df2de2461a81a335582ecc9fee",
+          "edgeType": "Branch",
+          "source": "9fbadbeac5f141caae99db27373578bd",
+          "target": "d86536728e524933a495df1a9bc86637",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    \n    return vaVars.outage_data !== '';\n})()\n"
+          },
+          "label": "Yes"
+        }
+      ]
+    }
+  },
+  "variables": {
+    "8e38ce32321848c8abb552418a96ef84": {
+      "category": "vaInputs",
+      "id": "8e38ce32321848c8abb552418a96ef84",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "7caafc45bd074cc4b6dc6a322306d14d": {
+      "id": "7caafc45bd074cc4b6dc6a322306d14d",
+      "value": {
+        "mode": "script",
+        "value": "(function execute() {\n    return '';\n})()\n"
+      },
+      "name": "open_ticket_count",
+      "label": "open_ticket_count",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "e743623d81864e1d853568fde9aba65d": {
+      "id": "e743623d81864e1d853568fde9aba65d",
+      "value": {
+        "value": "",
+        "mode": "simple"
+      },
+      "name": "outage_data",
+      "label": "outage_data",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "5704604960ca4b448ae74ef1a5397985": {
+      "id": "5704604960ca4b448ae74ef1a5397985",
+      "value": {
+        "mode": "script",
+        "value": "(function execute() {\n    if (vaContext.deviceType == \"ios\" || vaContext.deviceType == \"android\")\n        return \"mesp\";\n\n    return gs.getProperty('sn_itsm_va.com.snc.itsm.virtualagent.portal_url', 'sp');\n})()\n"
+      },
+      "name": "portalName",
+      "label": "portalName",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "a04a5b2d548c4f36afd34078fc6da9de": {
+      "id": "a04a5b2d548c4f36afd34078fc6da9de",
+      "value": {
+        "mode": "script",
+        "value": "(function execute() {\n    return gs.isLoggedIn();\n})()\n"
+      },
+      "name": "user_loggedin",
+      "label": "user_loggedin",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "4a889bcd424f4271b0081018b47c301b": {
+      "id": "4a889bcd424f4271b0081018b47c301b",
+      "value": {
+        "mode": "simple",
+        "value": ""
+      },
+      "name": "open_ticket_info",
+      "label": "open_ticket_info",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "7d23bb1adb0a4203822b53ffc361e892": {
+      "id": "7d23bb1adb0a4203822b53ffc361e892",
+      "value": {
+        "mode": "script",
+        "value": "(function execute() {\n    return '';\n})()\n"
+      },
+      "name": "open_tkts_msg",
+      "label": "open_tkts_msg",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "efedebf037574e89b91d181a1a87b0b3": {
+      "id": "efedebf037574e89b91d181a1a87b0b3",
+      "value": {
+        "mode": "simple",
+        "value": ""
+      },
+      "name": "req_count",
+      "label": "req_count",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "f4d6bcd00b49440cb4078f9ba54de982": {
+      "id": "f4d6bcd00b49440cb4078f9ba54de982",
+      "value": {
+        "mode": "simple",
+        "value": ""
+      },
+      "name": "status_tkts_msg",
+      "label": "status_tkts_msg",
+      "varType": "script",
+      "category": "vaVars"
+    }
+  }
+}</graph><key_phrases>VA_Greetings,Dynamic Greeting Topic</key_phrases><library>false</library><live_agent>false</live_agent><name>VA_Greetings</name><nlu_intent/><nlu_intent_label/><nlu_model/><nlu_model_label/><nlu_provider/><palette_label/><roles>public</roles><secure_custom_input_control>false</secure_custom_input_control><source_topic_id>9b73c0c0ff170010c839bc6bd53bf141</source_topic_id><sys_class_name>sys_cb_topic</sys_class_name><sys_created_by>Jab19</sys_created_by><sys_created_on>2022-10-07 10:35:12</sys_created_on><sys_domain>global</sys_domain><sys_id>5cf847c3875e9550f7c50e1d0ebb3534</sys_id><sys_mod_count>4</sys_mod_count><sys_name>VA_Greetings</sys_name><sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package><sys_policy/><sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope><sys_update_name>sys_cb_topic_5cf847c3875e9550f7c50e1d0ebb3534</sys_update_name><sys_updated_by>Jab19</sys_updated_by><sys_updated_on>2022-10-07 10:41:38</sys_updated_on><triggerable_by_notification>false</triggerable_by_notification><type>SETUP_TOPIC</type><variables/></sys_cb_topic><sys_variable_value action="delete_multiple" query="document_key=5cf847c3875e9550f7c50e1d0ebb3534"/></record_update>]]></payload>
+        <payload_hash>1724368323</payload_hash>
+        <record_name>VA_Greetings</record_name>
+        <reverted_from/>
+        <source>7a3d9139871e5150f7c50e1d0ebb3587</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-07 10:41:38</sys_created_on>
+        <sys_id>a26a8b47875e9550f7c50e1d0ebb3564</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183b20951400000001</sys_recorded_at>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-07 10:41:38</sys_updated_on>
+        <type>Topic</type>
+        <update_guid>ea6a8b47325e95504ebad5cba8267c63</update_guid>
+        <update_guid_history>ea6a8b47325e95504ebad5cba8267c63:1724368323,c43a03475e5e955093bd6d3fddfd3e80:-97067158,fc0a4f07b75e9550838d3603331c815b:957598105,7699cbc3815e95503711ec535caa40ce:1724368323,b8f887c3935e95509cab4d0420a91353:546491454</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-07 10:42:25</sys_created_on>
+        <sys_db_object display_value="" name="sys_cb_topic">sys_cb_topic</sys_db_object>
+        <sys_id>d5f54c483b9c4c1ea48ef9bd4dadbf01</sys_id>
+        <sys_metadata>5cf847c3875e9550f7c50e1d0ebb3534</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>VA_Greetings</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_scope_delete display_value="">74cfaf93962f4aa9bc64e19b81ff1861</sys_scope_delete>
+        <sys_update_name>sys_cb_topic_5cf847c3875e9550f7c50e1d0ebb3534</sys_update_name>
+        <sys_update_version display_value="sys_cb_topic_5cf847c3875e9550f7c50e1d0ebb3534">a26a8b47875e9550f7c50e1d0ebb3564</sys_update_version>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-07 10:42:25</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

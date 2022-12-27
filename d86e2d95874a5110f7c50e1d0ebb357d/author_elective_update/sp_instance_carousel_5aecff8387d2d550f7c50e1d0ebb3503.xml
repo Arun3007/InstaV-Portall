@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_carousel">
+    <sp_instance_carousel action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <interval>5000</interval>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">38ec73c387d2d550f7c50e1d0ebb3552</sp_column>
+        <sp_widget display_value="Carousel">cf1a5153cb21020000f8d856634c9c3c</sp_widget>
+        <sys_class_name>sp_instance_carousel</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-07 14:22:15</sys_created_on>
+        <sys_id>5aecff8387d2d550f7c50e1d0ebb3503</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sp_instance_carousel_5aecff8387d2d550f7c50e1d0ebb3503</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-07 14:22:15</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance_carousel>
+    <sys_translated_text action="DELETE" query="documentkey=5aecff8387d2d550f7c50e1d0ebb3503"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</application>
+        <file_path/>
+        <instance_id>5b3553eddb6af41007072f17d4961905</instance_id>
+        <instance_name>instavtechnologiespvtltddemo4</instance_name>
+        <name>sp_instance_carousel_5aecff8387d2d550f7c50e1d0ebb3503</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_carousel"><sp_instance_carousel action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><glyph/><id/><interval>5000</interval><order>1</order><roles/><short_description/><size>md</size><sp_column display_value="1">38ec73c387d2d550f7c50e1d0ebb3552</sp_column><sp_widget display_value="Carousel">cf1a5153cb21020000f8d856634c9c3c</sp_widget><sys_class_name>sp_instance_carousel</sys_class_name><sys_created_by>rajendra.g</sys_created_by><sys_created_on>2022-10-07 14:22:15</sys_created_on><sys_id>5aecff8387d2d550f7c50e1d0ebb3503</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package><sys_policy/><sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope><sys_update_name>sp_instance_carousel_5aecff8387d2d550f7c50e1d0ebb3503</sys_update_name><sys_updated_by>rajendra.g</sys_updated_by><sys_updated_on>2022-10-07 14:22:15</sys_updated_on><title/><url/><widget_parameters/></sp_instance_carousel><sys_translated_text action="delete_multiple" query="documentkey=5aecff8387d2d550f7c50e1d0ebb3503"/></record_update>]]></payload>
+        <payload_hash>-1298050516</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>7b8f3132871e1190f0bd419d0ebb356a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-07 14:22:15</sys_created_on>
+        <sys_id>56ecff8387d2d550f7c50e1d0ebb3506</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183b2d34c720000001</sys_recorded_at>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-07 14:22:15</sys_updated_on>
+        <type>Instance of Carousel</type>
+        <update_guid>9eecff8360d2d5503bc36c6f84185e05</update_guid>
+        <update_guid_history>9eecff8360d2d5503bc36c6f84185e05:-1298050516</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">560ef30787d2d550f7c50e1d0ebb352f</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-07 14:27:11</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_carousel">sp_instance_carousel</sys_db_object>
+        <sys_id>0a61b8dd05464e6a970ee1d131ebb464</sys_id>
+        <sys_metadata>5aecff8387d2d550f7c50e1d0ebb3503</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_scope_delete display_value="">74cfaf93962f4aa9bc64e19b81ff1861</sys_scope_delete>
+        <sys_update_name>sp_instance_carousel_5aecff8387d2d550f7c50e1d0ebb3503</sys_update_name>
+        <sys_update_version display_value="sp_instance_carousel_5aecff8387d2d550f7c50e1d0ebb3503">56ecff8387d2d550f7c50e1d0ebb3506</sys_update_version>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-07 14:27:11</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

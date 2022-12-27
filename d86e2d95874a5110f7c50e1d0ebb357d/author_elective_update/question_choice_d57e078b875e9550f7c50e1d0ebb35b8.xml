@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="DELETE">
+        <inactive>false</inactive>
+        <order>10</order>
+        <published_ref/>
+        <question display_value="How would you like to be contacted with your new password?">a9765136875a1190f0bd419d0ebb35a3</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-07 10:59:35</sys_created_on>
+        <sys_id>d57e078b875e9550f7c50e1d0ebb35b8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Message</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>question_choice_d57e078b875e9550f7c50e1d0ebb35b8</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-07 11:01:56</sys_updated_on>
+        <text>Message</text>
+        <value>SMS</value>
+    </question_choice>
+    <fx_price action="DELETE" query="id=d57e078b875e9550f7c50e1d0ebb35b8"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</application>
+        <file_path/>
+        <instance_id>5b3553eddb6af41007072f17d4961905</instance_id>
+        <instance_name>instavtechnologiespvtltddemo4</instance_name>
+        <name>question_choice_d57e078b875e9550f7c50e1d0ebb35b8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice"><question_choice action="INSERT_OR_UPDATE"><inactive>false</inactive><order>10</order><published_ref/><question display_value="How would you like to be contacted with your new password?">a9765136875a1190f0bd419d0ebb35a3</question><sys_class_name>question_choice</sys_class_name><sys_created_by>rajendra.g</sys_created_by><sys_created_on>2022-10-07 10:59:35</sys_created_on><sys_id>d57e078b875e9550f7c50e1d0ebb35b8</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Message</sys_name><sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package><sys_policy/><sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope><sys_update_name>question_choice_d57e078b875e9550f7c50e1d0ebb35b8</sys_update_name><sys_updated_by>rajendra.g</sys_updated_by><sys_updated_on>2022-10-07 11:01:56</sys_updated_on><text>Message</text><value>SMS</value></question_choice><fx_price action="delete_multiple" query="id=d57e078b875e9550f7c50e1d0ebb35b8"/></record_update>]]></payload>
+        <payload_hash>1112762047</payload_hash>
+        <record_name>Message</record_name>
+        <reverted_from/>
+        <source>7b8f3132871e1190f0bd419d0ebb356a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-07 11:01:56</sys_created_on>
+        <sys_id>041f8f8b875e9550f7c50e1d0ebb35f5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183b21be7830000001</sys_recorded_at>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-07 11:01:56</sys_updated_on>
+        <type>Question Choice</type>
+        <update_guid>4c1f8f8be35e95508954e8731bb8acf4</update_guid>
+        <update_guid_history>4c1f8f8be35e95508954e8731bb8acf4:1112762047,6d8e0b8bc15e95503bdc5ef2f5d91bb6:-597740541</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Message">b30dcea987be5510f0bd419d0ebb3521</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-27 10:54:04</sys_created_on>
+        <sys_db_object display_value="" name="question_choice">question_choice</sys_db_object>
+        <sys_id>4fca7a1624e044e085743f352c7d0400</sys_id>
+        <sys_metadata>d57e078b875e9550f7c50e1d0ebb35b8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Message</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_parent display_value="How would you like to be contacted with your new password?">a9765136875a1190f0bd419d0ebb35a3</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_scope_delete display_value="">74cfaf93962f4aa9bc64e19b81ff1861</sys_scope_delete>
+        <sys_update_name>question_choice_d57e078b875e9550f7c50e1d0ebb35b8</sys_update_name>
+        <sys_update_version display_value="question_choice_d57e078b875e9550f7c50e1d0ebb35b8">041f8f8b875e9550f7c50e1d0ebb35f5</sys_update_version>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-27 10:54:04</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

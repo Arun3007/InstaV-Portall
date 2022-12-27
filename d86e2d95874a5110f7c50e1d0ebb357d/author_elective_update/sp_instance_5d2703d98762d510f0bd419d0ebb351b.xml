@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">aeb283d58762d510f0bd419d0ebb3536</sp_column>
+        <sp_widget display_value="HTML">8679ef89cb21120000f8d856634c9c4f</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-14 10:13:41</sys_created_on>
+        <sys_id>5d2703d98762d510f0bd419d0ebb351b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sp_instance_5d2703d98762d510f0bd419d0ebb351b</sys_update_name>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-14 10:14:19</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"html": {
+		"value": "<div class=\"iconlink\"><!--// Top Icon --> <div class=\"m-b fa fa-{{::options.glyph}} fa-4x {{::options.class_name}} text-{{::options.color}}\">&nbsp;<br></div><h2>{{::options.title}}</h2><a class=\"top_icon {{::options.class_name}}\" target=\"{{::data.target}}\"><span class=\"text-muted\">{{::options.short_description}}</span> </a> <!--// Circle Icon --> <h2>{{::options.title}}</h2><a class=\"circle_icon {{::options.class_name}} text-{{::options.color}}\" target=\"{{::data.target}}\"><span class=\"text-muted\">{{::options.short_description}}</span> </a> <!--// Color Box --> <div class=\"fa fa-{{::options.glyph}} fa-3x {{::options.class_name}}\">&nbsp;<br></div><h2>{{::options.title}}</h2><a class=\"color_box {{::options.class_name}} icon-link-background-{{::options.color}} text-white\" target=\"{{::data.target}}\">{{::options.short_description}} </a></div>",
+		"displayValue": "<div class=\"iconlink\"><!--// Top Icon -->\n<div class=\"m-b fa fa-{{::options.glyph}} fa-4x {{::options.class_name}} text-{{::options.color}}\">&nbsp;</div>\n<h2>{{::options.title}}</h2>\n<a class=\"top_icon {{::options.class_name}}\" target=\"{{::data.target}}\"><span class=\"text-muted\">{{::options.short_description}}</span> </a> <!--// Circle Icon -->\n<h2>{{::options.title}}</h2>\n<a class=\"circle_icon {{::options.class_name}} text-{{::options.color}}\" target=\"{{::data.target}}\"><span class=\"text-muted\">{{::options.short_description}}</span> </a> <!--// Color Box -->\n<div class=\"fa fa-{{::options.glyph}} fa-3x {{::options.class_name}}\">&nbsp;</div>\n<h2>{{::options.title}}</h2>\n<a class=\"color_box {{::options.class_name}} icon-link-background-{{::options.color}} text-white\" target=\"{{::data.target}}\">{{::options.short_description}} </a></div>"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=5d2703d98762d510f0bd419d0ebb351b"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</application>
+        <file_path/>
+        <instance_id>5b3553eddb6af41007072f17d4961905</instance_id>
+        <instance_name>instavtechnologiespvtltddemo4</instance_name>
+        <name>sp_instance_5d2703d98762d510f0bd419d0ebb351b</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance"&gt;&lt;sp_instance action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="2"&gt;aeb283d58762d510f0bd419d0ebb3536&lt;/sp_column&gt;&lt;sp_widget display_value="HTML"&gt;8679ef89cb21120000f8d856634c9c4f&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Jab19&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-10-14 10:13:41&lt;/sys_created_on&gt;&lt;sys_id&gt;5d2703d98762d510f0bd419d0ebb351b&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="InstaV Portal" source="x_intep_instav"&gt;d86e2d95874a5110f7c50e1d0ebb357d&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="InstaV Portal"&gt;d86e2d95874a5110f7c50e1d0ebb357d&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_5d2703d98762d510f0bd419d0ebb351b&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;Jab19&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-10-14 10:14:19&lt;/sys_updated_on&gt;&lt;title/&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"html": {
+		"value": "&lt;div class=\"iconlink\"&gt;&lt;!--// Top Icon --&gt; &lt;div class=\"m-b fa fa-{{::options.glyph}} fa-4x {{::options.class_name}} text-{{::options.color}}\"&gt;&amp;nbsp;&lt;br&gt;&lt;/div&gt;&lt;h2&gt;{{::options.title}}&lt;/h2&gt;&lt;a class=\"top_icon {{::options.class_name}}\" target=\"{{::data.target}}\"&gt;&lt;span class=\"text-muted\"&gt;{{::options.short_description}}&lt;/span&gt; &lt;/a&gt; &lt;!--// Circle Icon --&gt; &lt;h2&gt;{{::options.title}}&lt;/h2&gt;&lt;a class=\"circle_icon {{::options.class_name}} text-{{::options.color}}\" target=\"{{::data.target}}\"&gt;&lt;span class=\"text-muted\"&gt;{{::options.short_description}}&lt;/span&gt; &lt;/a&gt; &lt;!--// Color Box --&gt; &lt;div class=\"fa fa-{{::options.glyph}} fa-3x {{::options.class_name}}\"&gt;&amp;nbsp;&lt;br&gt;&lt;/div&gt;&lt;h2&gt;{{::options.title}}&lt;/h2&gt;&lt;a class=\"color_box {{::options.class_name}} icon-link-background-{{::options.color}} text-white\" target=\"{{::data.target}}\"&gt;{{::options.short_description}} &lt;/a&gt;&lt;/div&gt;",
+		"displayValue": "&lt;div class=\"iconlink\"&gt;&lt;!--// Top Icon --&gt;\n&lt;div class=\"m-b fa fa-{{::options.glyph}} fa-4x {{::options.class_name}} text-{{::options.color}}\"&gt;&amp;nbsp;&lt;/div&gt;\n&lt;h2&gt;{{::options.title}}&lt;/h2&gt;\n&lt;a class=\"top_icon {{::options.class_name}}\" target=\"{{::data.target}}\"&gt;&lt;span class=\"text-muted\"&gt;{{::options.short_description}}&lt;/span&gt; &lt;/a&gt; &lt;!--// Circle Icon --&gt;\n&lt;h2&gt;{{::options.title}}&lt;/h2&gt;\n&lt;a class=\"circle_icon {{::options.class_name}} text-{{::options.color}}\" target=\"{{::data.target}}\"&gt;&lt;span class=\"text-muted\"&gt;{{::options.short_description}}&lt;/span&gt; &lt;/a&gt; &lt;!--// Color Box --&gt;\n&lt;div class=\"fa fa-{{::options.glyph}} fa-3x {{::options.class_name}}\"&gt;&amp;nbsp;&lt;/div&gt;\n&lt;h2&gt;{{::options.title}}&lt;/h2&gt;\n&lt;a class=\"color_box {{::options.class_name}} icon-link-background-{{::options.color}} text-white\" target=\"{{::data.target}}\"&gt;{{::options.short_description}} &lt;/a&gt;&lt;/div&gt;"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=5d2703d98762d510f0bd419d0ebb351b"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-760769920</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>7a3d9139871e5150f7c50e1d0ebb3587</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-14 10:14:19</sys_created_on>
+        <sys_id>624783d98762d510f0bd419d0ebb354b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183d5fcd1cd0000001</sys_recorded_at>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-14 10:14:19</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>aa4783d93c62d510343c02368611b24a</update_guid>
+        <update_guid_history>aa4783d93c62d510343c02368611b24a:-760769920,e92703d93d62d5109068cedeac62841d:-1673856180</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">f96787d98762d510f0bd419d0ebb35e7</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-14 10:14:49</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>06da5c39ba8642fdbef32b37d335ff91</sys_id>
+        <sys_metadata>5d2703d98762d510f0bd419d0ebb351b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_scope_delete display_value="">74cfaf93962f4aa9bc64e19b81ff1861</sys_scope_delete>
+        <sys_update_name>sp_instance_5d2703d98762d510f0bd419d0ebb351b</sys_update_name>
+        <sys_update_version display_value="sp_instance_5d2703d98762d510f0bd419d0ebb351b">624783d98762d510f0bd419d0ebb354b</sys_update_version>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-14 10:14:49</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

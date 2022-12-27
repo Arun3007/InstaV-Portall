@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_self_registered_user_profile" label="Instav Self Reg User Profile 498742" max_length="40" name="x_intep_instav_self_reg_user_profile_498742" sizeclass="0" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=user_name" label="User Name" max_length="40" name="user_name" type="string"/>
+    </element>
+</database>

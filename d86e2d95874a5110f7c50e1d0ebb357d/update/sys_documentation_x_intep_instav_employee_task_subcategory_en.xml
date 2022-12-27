@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="subcategory" label="Sub Category" language="en" table="x_intep_instav_employee_task">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>subcategory</element>
+            <help/>
+            <hint/>
+            <label>Sub Category</label>
+            <language>en</language>
+            <name>x_intep_instav_employee_task</name>
+            <plural>Sub Categories</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>rajendra.g</sys_created_by>
+            <sys_created_on>2022-10-17 07:32:09</sys_created_on>
+            <sys_id>18feb11a87a29910f7c50e1d0ebb35e8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Sub Category</sys_name>
+            <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+            <sys_update_name>sys_documentation_x_intep_instav_employee_task_subcategory_en</sys_update_name>
+            <sys_updated_by>rajendra.g</sys_updated_by>
+            <sys_updated_on>2022-10-17 07:32:09</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

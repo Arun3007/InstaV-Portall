@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column">
+    <sp_column action="DELETE">
+        <class_name/>
+        <order>3</order>
+        <size>1</size>
+        <size_lg/>
+        <size_sm/>
+        <size_xs/>
+        <sp_row display_value="1">3a1e8fbd87125d50f0bd419d0ebb357a</sp_row>
+        <sys_class_name>sp_column</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-13 11:14:29</sys_created_on>
+        <sys_id>da7bca0187ae5510f0bd419d0ebb351e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>3</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sp_column_da7bca0187ae5510f0bd419d0ebb351e</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-13 11:14:29</sys_updated_on>
+    </sp_column>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</application>
+        <file_path/>
+        <instance_id>5b3553eddb6af41007072f17d4961905</instance_id>
+        <instance_name>instavtechnologiespvtltddemo4</instance_name>
+        <name>sp_column_da7bca0187ae5510f0bd419d0ebb351e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column"><sp_column action="INSERT_OR_UPDATE"><class_name/><order>3</order><size>1</size><size_lg/><size_sm/><size_xs/><sp_row display_value="1">3a1e8fbd87125d50f0bd419d0ebb357a</sp_row><sys_class_name>sp_column</sys_class_name><sys_created_by>rajendra.g</sys_created_by><sys_created_on>2022-10-13 11:14:29</sys_created_on><sys_id>da7bca0187ae5510f0bd419d0ebb351e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>3</sys_name><sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package><sys_policy/><sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope><sys_update_name>sp_column_da7bca0187ae5510f0bd419d0ebb351e</sys_update_name><sys_updated_by>rajendra.g</sys_updated_by><sys_updated_on>2022-10-13 11:14:29</sys_updated_on></sp_column></record_update>]]></payload>
+        <payload_hash>146989198</payload_hash>
+        <record_name>3</record_name>
+        <reverted_from/>
+        <source>42ee3dd087da9550f0bd419d0ebb357b</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-13 11:14:29</sys_created_on>
+        <sys_id>967bca0187ae5510f0bd419d0ebb3520</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183d10d8c800000001</sys_recorded_at>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-13 11:14:29</sys_updated_on>
+        <type>Column</type>
+        <update_guid>de7bca0174ae55102226f00f1c44651f</update_guid>
+        <update_guid_history>de7bca0174ae55102226f00f1c44651f:146989198</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="3">5cbbce0187ae5510f0bd419d0ebb350c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-13 11:15:26</sys_created_on>
+        <sys_db_object display_value="" name="sp_column">sp_column</sys_db_object>
+        <sys_id>4bb115bf774941ecb6613ddc95034909</sys_id>
+        <sys_metadata>da7bca0187ae5510f0bd419d0ebb351e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>3</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_scope_delete display_value="">74cfaf93962f4aa9bc64e19b81ff1861</sys_scope_delete>
+        <sys_update_name>sp_column_da7bca0187ae5510f0bd419d0ebb351e</sys_update_name>
+        <sys_update_version display_value="sp_column_da7bca0187ae5510f0bd419d0ebb351e">967bca0187ae5510f0bd419d0ebb3520</sys_update_version>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-13 11:15:26</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

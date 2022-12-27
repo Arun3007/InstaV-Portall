@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic">
+    <sys_cb_topic action="DELETE">
+        <applicability/>
+        <applicability_mode>query</applicability_mode>
+        <autopilot_topic>false</autopilot_topic>
+        <category>ccde424173f0330018dd3ae234f6a7bf</category>
+        <channels/>
+        <connect_queue/>
+        <description>Provide policy information on employee safety</description>
+        <expose_on_palette>false</expose_on_palette>
+        <flexible_conversation_switching>true</flexible_conversation_switching>
+        <graph>{
+  "graph_api_version": "1.0.39",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "08744a2c997748a18446570640c2fbcc": {
+          "id": "08744a2c997748a18446570640c2fbcc",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "4245382e29914a76bba8b41d2c58d87c": {
+          "id": "4245382e29914a76bba8b41d2c58d87c",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "223690925caf40ecb14cb5e15a217d51": {
+          "id": "223690925caf40ecb14cb5e15a217d51",
+          "stepType": "TextOutput",
+          "name": "Policy on wearing mask in thew office",
+          "secure": false,
+          "value": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "As part of our staySafe return to work policy, employee who opt - in returning to the office will be required to wear a protective mask at all times."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Mask will also be available at the front desk at no cost."
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        }
+      },
+      "edges": [
+        {
+          "id": "c5686e8844fd44ba84237bfffa4ca6d9",
+          "edgeType": "Edge",
+          "source": "08744a2c997748a18446570640c2fbcc",
+          "target": "223690925caf40ecb14cb5e15a217d51",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "b5363904b0464e38af271a2c5229540b",
+          "edgeType": "Edge",
+          "source": "223690925caf40ecb14cb5e15a217d51",
+          "target": "4245382e29914a76bba8b41d2c58d87c",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    }
+  }
+}</graph>
+        <key_phrases/>
+        <library>true</library>
+        <live_agent>false</live_agent>
+        <name>Protective Mask Q&amp;A</name>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider/>
+        <palette_label/>
+        <roles/>
+        <secure_custom_input_control>false</secure_custom_input_control>
+        <source_topic_id/>
+        <sys_class_name>sys_cb_topic</sys_class_name>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-11-09 06:38:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>2f2f8c3d87071510f7c50e1d0ebb3534</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Protective Mask Q&amp;A</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sys_cb_topic_2f2f8c3d87071510f7c50e1d0ebb3534</sys_update_name>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-11-09 06:44:18</sys_updated_on>
+        <triggerable_by_notification>false</triggerable_by_notification>
+        <type>TOPIC_BLOCK</type>
+        <variables/>
+    </sys_cb_topic>
+    <sys_variable_value action="DELETE" query="document_key=2f2f8c3d87071510f7c50e1d0ebb3534"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</application>
+        <file_path/>
+        <instance_id>5b3553eddb6af41007072f17d4961905</instance_id>
+        <instance_name>instavtechnologiespvtltddemo4</instance_name>
+        <name>sys_cb_topic_2f2f8c3d87071510f7c50e1d0ebb3534</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic"><sys_cb_topic action="INSERT_OR_UPDATE"><applicability/><applicability_mode>query</applicability_mode><autopilot_topic>false</autopilot_topic><category>ccde424173f0330018dd3ae234f6a7bf</category><channels/><connect_queue/><description>Provide policy information on employee safety</description><expose_on_palette>false</expose_on_palette><flexible_conversation_switching>true</flexible_conversation_switching><graph>{
+  "graph_api_version": "1.0.39",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "08744a2c997748a18446570640c2fbcc": {
+          "id": "08744a2c997748a18446570640c2fbcc",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "4245382e29914a76bba8b41d2c58d87c": {
+          "id": "4245382e29914a76bba8b41d2c58d87c",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "223690925caf40ecb14cb5e15a217d51": {
+          "id": "223690925caf40ecb14cb5e15a217d51",
+          "stepType": "TextOutput",
+          "name": "Policy on wearing mask in thew office",
+          "secure": false,
+          "value": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "As part of our staySafe return to work policy, employee who opt - in returning to the office will be required to wear a protective mask at all times."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Mask will also be available at the front desk at no cost."
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        }
+      },
+      "edges": [
+        {
+          "id": "c5686e8844fd44ba84237bfffa4ca6d9",
+          "edgeType": "Edge",
+          "source": "08744a2c997748a18446570640c2fbcc",
+          "target": "223690925caf40ecb14cb5e15a217d51",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "b5363904b0464e38af271a2c5229540b",
+          "edgeType": "Edge",
+          "source": "223690925caf40ecb14cb5e15a217d51",
+          "target": "4245382e29914a76bba8b41d2c58d87c",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    }
+  }
+}</graph><key_phrases/><library>true</library><live_agent>false</live_agent><name>Protective Mask Q&amp;A</name><nlu_intent/><nlu_intent_label/><nlu_model/><nlu_model_label/><nlu_provider/><palette_label/><roles/><secure_custom_input_control>false</secure_custom_input_control><source_topic_id/><sys_class_name>sys_cb_topic</sys_class_name><sys_created_by>Jab19</sys_created_by><sys_created_on>2022-11-09 06:38:17</sys_created_on><sys_domain>global</sys_domain><sys_id>2f2f8c3d87071510f7c50e1d0ebb3534</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Protective Mask Q&amp;A</sys_name><sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package><sys_policy/><sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope><sys_update_name>sys_cb_topic_2f2f8c3d87071510f7c50e1d0ebb3534</sys_update_name><sys_updated_by>Jab19</sys_updated_by><sys_updated_on>2022-11-09 06:44:18</sys_updated_on><triggerable_by_notification>false</triggerable_by_notification><type>TOPIC_BLOCK</type><variables/></sys_cb_topic><sys_variable_value action="delete_multiple" query="document_key=2f2f8c3d87071510f7c50e1d0ebb3534"/></record_update>]]></payload>
+        <payload_hash>1455930335</payload_hash>
+        <record_name>Protective Mask Q&amp;A</record_name>
+        <reverted_from/>
+        <source>7a3d9139871e5150f7c50e1d0ebb3587</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-11-09 06:44:18</sys_created_on>
+        <sys_id>449014bd87071510f7c50e1d0ebb358c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1845b21e58e0000001</sys_recorded_at>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-11-09 06:44:18</sys_updated_on>
+        <type>Topic</type>
+        <update_guid>0c9014bd640715106aff6bea2047788b</update_guid>
+        <update_guid_history>0c9014bd640715106aff6bea2047788b:1455930335,41afc87d510715100477d003d26ce26a:-1787560162,c13f8c3d71071510861d8d242418dea8:-821935067</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-11-09 06:49:00</sys_created_on>
+        <sys_db_object display_value="" name="sys_cb_topic">sys_cb_topic</sys_db_object>
+        <sys_id>4fe88e785e824fd6a1152fb628505104</sys_id>
+        <sys_metadata>2f2f8c3d87071510f7c50e1d0ebb3534</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Protective Mask Q&amp;A</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_scope_delete display_value="">74cfaf93962f4aa9bc64e19b81ff1861</sys_scope_delete>
+        <sys_update_name>sys_cb_topic_2f2f8c3d87071510f7c50e1d0ebb3534</sys_update_name>
+        <sys_update_version display_value="sys_cb_topic_2f2f8c3d87071510f7c50e1d0ebb3534">449014bd87071510f7c50e1d0ebb358c</sys_update_version>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-11-09 06:49:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

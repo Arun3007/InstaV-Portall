@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_template">
+    <sc_template action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <available_for>acfae83c87e61510f7c50e1d0ebb355c,8f62d78e0f1110105800707566767ed7</available_for>
+        <cat_item display_value="Catalog Item Builder">91edb87273221010c84e2bb43cf6a7ae</cat_item>
+        <name>Devices</name>
+        <short_description>Order an device</short_description>
+        <sys_class_name>sc_template</sys_class_name>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-18 07:08:19</sys_created_on>
+        <sys_id>d5724fe28766d910f7c50e1d0ebb355c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Devices</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sc_template_d5724fe28766d910f7c50e1d0ebb355c</sys_update_name>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-18 07:08:19</sys_updated_on>
+    </sc_template>
+    <sys_translated_text action="delete_multiple" query="documentkey=d5724fe28766d910f7c50e1d0ebb355c"/>
+</record_update>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="va_branding_contact_menu">
+    <va_branding_contact_menu action="INSERT_OR_UPDATE">
+        <branding display_value="virtual agent">f5b1f9bd87de5150f7c50e1d0ebb35ec</branding>
+        <display_default_icon>true</display_default_icon>
+        <display_wait_time>true</display_wait_time>
+        <icon>7d837d3187129150f7c50e1d0ebb35ea</icon>
+        <label>Call Support (Daily 9AM - 06 PM)</label>
+        <order>2</order>
+        <sys_class_name>va_branding_contact_menu</sys_class_name>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-03 07:09:37</sys_created_on>
+        <sys_id>31837d3187129150f7c50e1d0ebb35ea</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>va_branding_contact_menu_31837d3187129150f7c50e1d0ebb35ea</sys_update_name>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-03 07:37:41</sys_updated_on>
+        <type>Phone</type>
+        <value>1-800-555-5555</value>
+        <visible>true</visible>
+    </va_branding_contact_menu>
+</record_update>

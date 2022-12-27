@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>2</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">962f853487aa1510f7c50e1d0ebb35f4</sp_column>
+        <sp_widget display_value="SC Catalog Item">3c29786e87133200e0ef0cf888cb0bdf</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-14 13:54:18</sys_created_on>
+        <sys_id>8da9f31d8726d510f0bd419d0ebb35cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Self User Registration</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sp_instance_8da9f31d8726d510f0bd419d0ebb35cb</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-14 13:54:18</sys_updated_on>
+        <title>Self User Registration</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+   "display_cart_on_right":{
+      "value":"false",
+      "displayValue":"false"
+   },
+   "record_producer_label":{
+      "value":"Sign Up"
+   }
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=8da9f31d8726d510f0bd419d0ebb35cb"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</application>
+        <file_path/>
+        <instance_id>5b3553eddb6af41007072f17d4961905</instance_id>
+        <instance_name>instavtechnologiespvtltddemo4</instance_name>
+        <name>sp_instance_8da9f31d8726d510f0bd419d0ebb35cb</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance"&gt;&lt;sp_instance action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;order&gt;2&lt;/order&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="2"&gt;962f853487aa1510f7c50e1d0ebb35f4&lt;/sp_column&gt;&lt;sp_widget display_value="SC Catalog Item"&gt;3c29786e87133200e0ef0cf888cb0bdf&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;rajendra.g&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-10-14 13:54:18&lt;/sys_created_on&gt;&lt;sys_id&gt;8da9f31d8726d510f0bd419d0ebb35cb&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Self User Registration&lt;/sys_name&gt;&lt;sys_package display_value="InstaV Portal" source="x_intep_instav"&gt;d86e2d95874a5110f7c50e1d0ebb357d&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="InstaV Portal"&gt;d86e2d95874a5110f7c50e1d0ebb357d&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_8da9f31d8726d510f0bd419d0ebb35cb&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;rajendra.g&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-10-14 13:54:18&lt;/sys_updated_on&gt;&lt;title&gt;Self User Registration&lt;/title&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+   "display_cart_on_right":{
+      "value":"false",
+      "displayValue":"false"
+   },
+   "record_producer_label":{
+      "value":"Sign Up"
+   }
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=8da9f31d8726d510f0bd419d0ebb35cb"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-558352951</payload_hash>
+        <record_name>Self User Registration</record_name>
+        <reverted_from/>
+        <source>42ee3dd087da9550f0bd419d0ebb357b</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-14 13:54:18</sys_created_on>
+        <sys_id>41a9f31d8726d510f0bd419d0ebb35ce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183d6c63a4d0000001</sys_recorded_at>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-14 13:54:18</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>89a9f31d0626d5105607272d3319e4cd</update_guid>
+        <update_guid_history>89a9f31d0626d5105607272d3319e4cd:-558352951</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Self User Registration">16baf75d8726d510f0bd419d0ebb35e2</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-14 13:59:01</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>b88d8decd04641be869d0376300b51e4</sys_id>
+        <sys_metadata>8da9f31d8726d510f0bd419d0ebb35cb</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Self User Registration</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_scope_delete display_value="">74cfaf93962f4aa9bc64e19b81ff1861</sys_scope_delete>
+        <sys_update_name>sp_instance_8da9f31d8726d510f0bd419d0ebb35cb</sys_update_name>
+        <sys_update_version display_value="sp_instance_8da9f31d8726d510f0bd419d0ebb35cb">41a9f31d8726d510f0bd419d0ebb35ce</sys_update_version>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-14 13:59:01</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

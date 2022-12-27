@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>2</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">9f301de487d25d10f7c50e1d0ebb353b</sp_column>
+        <sp_widget display_value="HTML">8679ef89cb21120000f8d856634c9c4f</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-09-29 07:23:20</sys_created_on>
+        <sys_id>e740dde487d25d10f7c50e1d0ebb35fd</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sp_instance_e740dde487d25d10f7c50e1d0ebb35fd</sys_update_name>
+        <sys_updated_by>Daiva Prasad</sys_updated_by>
+        <sys_updated_on>2022-12-26 07:45:27</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"html": {
+		"value": "",
+		"displayValue": "<p>&nbsp;</p>\n<p>Old Page</p>"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=e740dde487d25d10f7c50e1d0ebb35fd"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</application>
+        <file_path/>
+        <instance_id>5b3553eddb6af41007072f17d4961905</instance_id>
+        <instance_name>instavtechnologiespvtltddemo4</instance_name>
+        <name>sp_instance_e740dde487d25d10f7c50e1d0ebb35fd</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance"&gt;&lt;sp_instance action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;order&gt;2&lt;/order&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="2"&gt;9f301de487d25d10f7c50e1d0ebb353b&lt;/sp_column&gt;&lt;sp_widget display_value="HTML"&gt;8679ef89cb21120000f8d856634c9c4f&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;rajendra.g&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-09-29 07:23:20&lt;/sys_created_on&gt;&lt;sys_id&gt;e740dde487d25d10f7c50e1d0ebb35fd&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="InstaV Portal" source="x_intep_instav"&gt;d86e2d95874a5110f7c50e1d0ebb357d&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="InstaV Portal"&gt;d86e2d95874a5110f7c50e1d0ebb357d&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_e740dde487d25d10f7c50e1d0ebb35fd&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;Daiva Prasad&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-12-26 07:45:27&lt;/sys_updated_on&gt;&lt;title/&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"html": {
+		"value": "",
+		"displayValue": "&lt;p&gt;&amp;nbsp;&lt;/p&gt;\n&lt;p&gt;Old Page&lt;/p&gt;"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=e740dde487d25d10f7c50e1d0ebb35fd"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1035704716</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>1c6e2d95874a5110f7c50e1d0ebb357f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Daiva Prasad</sys_created_by>
+        <sys_created_on>2022-12-26 07:45:27</sys_created_on>
+        <sys_id>8a41ea3487c4e150f7c50e1d0ebb35ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1854d64c4420000001</sys_recorded_at>
+        <sys_updated_by>Daiva Prasad</sys_updated_by>
+        <sys_updated_on>2022-12-26 07:45:27</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>4241ea34bbc4e150344830f01a4ebcee</update_guid>
+        <update_guid_history>4241ea34bbc4e150344830f01a4ebcee:-1035704716,c7ee9a70dfc4e150e2c19bcf064a4481:515264533,a6ce9a7056c4e1508ce728cdcdafcd6d:1128917580,536989f6c81a119062d4a71b919ad35e:-1691412491,b472026885965d10510be2595b1fc012:-1323476690,abc8756c0e565d103bec8a3284496c59:1124627087,ff40dde459d25d10f382917ac4ddd4fe:-1091217587</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">4b41ea3487c4e150f7c50e1d0ebb3591</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Daiva Prasad</sys_created_by>
+        <sys_created_on>2022-12-26 07:45:32</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>05c05ba730d5458681ff4203a726f164</sys_id>
+        <sys_metadata>e740dde487d25d10f7c50e1d0ebb35fd</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_scope_delete display_value="">74cfaf93962f4aa9bc64e19b81ff1861</sys_scope_delete>
+        <sys_update_name>sp_instance_e740dde487d25d10f7c50e1d0ebb35fd</sys_update_name>
+        <sys_update_version display_value="sp_instance_e740dde487d25d10f7c50e1d0ebb35fd">8a41ea3487c4e150f7c50e1d0ebb35ee</sys_update_version>
+        <sys_updated_by>Daiva Prasad</sys_updated_by>
+        <sys_updated_on>2022-12-26 07:45:32</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

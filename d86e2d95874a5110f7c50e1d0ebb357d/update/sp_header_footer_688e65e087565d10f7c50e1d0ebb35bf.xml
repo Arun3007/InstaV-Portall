@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_header_footer">
+    <sp_header_footer action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.footerStyle {
+  width: 100%;
+  background-color: #000000;
+  color: $cloud-CloudWhite;
+  text-align: center;
+  font-size: 125%;
+  margin-left: auto; 
+  margin-right: auto;
+  vertical-align: auto;
+  padding-top: 10px;
+}
+
+.contactIT {
+  width: 345px;
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+}
+
+.copyright {
+  width: 400px;
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+}
+
+.social {
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+  font-size: 150%;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>iec_footer</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>iec_footer</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <static>false</static>
+        <sys_class_name>sp_header_footer</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-09-29 09:35:17</sys_created_on>
+        <sys_id>688e65e087565d10f7c50e1d0ebb35bf</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>iec_footer</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sp_header_footer_688e65e087565d10f7c50e1d0ebb35bf</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-14 05:50:54</sys_updated_on>
+        <template><![CDATA[<div class="footerStyle">
+  
+  <div class="contactIT">
+    <p><strong>CONTACT</strong></p>
+    <p>Mobile: +91 9844120261, 
+      				+91 8971955388</p>
+    <p>Mail ID: info@instav-tech.com</p>
+    <p>Website: www.instav-tech.com</p>
+    </p>
+  </div>
+  
+  
+  <div class="copyright">
+    <p>&copy 2018 InstaV Technolgies Inc. All Rights Reserved</p>
+  </div>
+  
+  <div class="social" id="footer">
+    <a class="fa fa-linkedin" href="https://www.linkedin.com/company/instav-technologies/" target="_blank"></a> &nbsp
+    
+    <a class="fa fa-facebook" href="https://www.facebook.com/profile.php?id=100077338609001" target="_blank"></a> &nbsp
+    <a class="fa fa-power-off" href="https://community.servicenow.com" target="_blank"></a>
+  </div>
+  
+</div>]]></template>
+    </sp_header_footer>
+</record_update>

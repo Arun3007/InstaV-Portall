@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="announcement">
+    <announcement action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <click_target/>
+        <details/>
+        <details_link_text/>
+        <details_page/>
+        <details_url/>
+        <dismiss_options>session_dismissible</dismiss_options>
+        <display_first>false</display_first>
+        <display_style display_value="iec style">ae3dca2487d65d10f7c50e1d0ebb3581</display_style>
+        <from>2022-09-29 11:51:07</from>
+        <glyph>volume-up</glyph>
+        <glyph_alt_text/>
+        <name>InstaV</name>
+        <public>true</public>
+        <roles/>
+        <show_for_unauthenticated_users_only>false</show_for_unauthenticated_users_only>
+        <summary>We are happy to announce that the portal page ready.</summary>
+        <sys_class_name>announcement</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-09-29 11:52:53</sys_created_on>
+        <sys_id>447d8e2487d65d10f7c50e1d0ebb35fa</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>InstaV</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>announcement_447d8e2487d65d10f7c50e1d0ebb35fa</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-09-29 11:56:50</sys_updated_on>
+        <title>Portal Ready</title>
+        <to>2022-10-03 11:51:13</to>
+        <type>67eaf134e7a3320075c2a117c2f6a9d2,52fa79f8e763320075c2a117c2f6a991</type>
+    </announcement>
+    <sys_translated_text action="delete_multiple" query="documentkey=447d8e2487d65d10f7c50e1d0ebb35fa"/>
+</record_update>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic">
+    <sys_cb_topic action="INSERT_OR_UPDATE">
+        <applicability/>
+        <applicability_mode>query</applicability_mode>
+        <autopilot_topic>false</autopilot_topic>
+        <category>140e2eda0b203300a1b16c2367673af4</category>
+        <channels/>
+        <connect_queue/>
+        <description>Issue with email</description>
+        <expose_on_palette>false</expose_on_palette>
+        <flexible_conversation_switching>false</flexible_conversation_switching>
+        <graph>{"graph_api_version":"1.0.39","variables":{"3923d6823b4c44d2a32bc80878aced11":{"category":"vaInputs","id":"3923d6823b4c44d2a32bc80878aced11","label":"User","name":"user","table":"sys_user","varType":"reference"}},"goals":{"primary":{"id":"primary","trigger":{"type":"primary"},"name":"primary","applicability":"","description":"","nodes":{"c08b1c94b3614272b26900062f26c529":{"id":"c08b1c94b3614272b26900062f26c529","stepType":"Start","name":"Start","greetingResponse":{"mode":"simple","value":""}},"8b5993c8ab4f49748ae80f0064b34797":{"id":"8b5993c8ab4f49748ae80f0064b34797","stepType":"TerminateGoal","name":"End","confirmationMessage":{"mode":"simple","value":""}}},"edges":[{"id":"b3bcc6a9328a4a4296a1d2abcb1024e9","edgeType":"Edge","source":"c08b1c94b3614272b26900062f26c529","target":"8b5993c8ab4f49748ae80f0064b34797","sourcePort":"","targetPort":""}]}}}</graph>
+        <key_phrases>Report IT Issue,Email Issue,email,issue,outlook,mail,sending,recieving</key_phrases>
+        <library>false</library>
+        <live_agent>false</live_agent>
+        <name>Report IT Issue</name>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider/>
+        <palette_label/>
+        <roles/>
+        <secure_custom_input_control>false</secure_custom_input_control>
+        <source_topic_id>82e881b287d65550f7c50e1d0ebb35cb</source_topic_id>
+        <sys_class_name>sys_cb_topic</sys_class_name>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-06 06:39:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>d88949b287d65550f7c50e1d0ebb35fe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Report IT Issue</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sys_cb_topic_d88949b287d65550f7c50e1d0ebb35fe</sys_update_name>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-06 06:39:56</sys_updated_on>
+        <triggerable_by_notification>false</triggerable_by_notification>
+        <type>STANDARD</type>
+        <variables/>
+    </sys_cb_topic>
+    <sys_variable_value action="delete_multiple" query="document_key=d88949b287d65550f7c50e1d0ebb35fe"/>
+</record_update>

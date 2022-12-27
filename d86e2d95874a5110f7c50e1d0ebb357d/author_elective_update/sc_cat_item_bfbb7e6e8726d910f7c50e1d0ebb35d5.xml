@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item">
+    <sc_cat_item action="DELETE">
+        <access_type>restricted</access_type>
+        <active>false</active>
+        <availability>on_desktop</availability>
+        <billable>false</billable>
+        <category/>
+        <checked_out>false</checked_out>
+        <cost>0</cost>
+        <custom_cart/>
+        <delivery_plan/>
+        <delivery_plan_script/>
+        <delivery_time>1970-01-03 00:00:00</delivery_time>
+        <description/>
+        <display_price_property>non_zero</display_price_property>
+        <entitlement_script/>
+        <flow_designer_flow display_value="Step based request fulfillment">21ea92dd53622010fca7ddeeff7b12b1</flow_designer_flow>
+        <fulfillment_automation_level>fully_automated</fulfillment_automation_level>
+        <group/>
+        <hide_sp>false</hide_sp>
+        <icon/>
+        <ignore_price>false</ignore_price>
+        <image/>
+        <location/>
+        <mandatory_attachment>false</mandatory_attachment>
+        <meta/>
+        <mobile_hide_price>false</mobile_hide_price>
+        <mobile_picture/>
+        <mobile_picture_type>use_desktop_picture</mobile_picture_type>
+        <model/>
+        <name>Apple iPhone X</name>
+        <no_attachment_v2>false</no_attachment_v2>
+        <no_cart>false</no_cart>
+        <no_cart_v2>false</no_cart_v2>
+        <no_delivery_time_v2>false</no_delivery_time_v2>
+        <no_order>false</no_order>
+        <no_order_now>false</no_order_now>
+        <no_proceed_checkout>false</no_proceed_checkout>
+        <no_quantity>false</no_quantity>
+        <no_quantity_v2>false</no_quantity_v2>
+        <no_search>false</no_search>
+        <no_wishlist_v2>false</no_wishlist_v2>
+        <omit_price>false</omit_price>
+        <order>0</order>
+        <ordered_item_link/>
+        <owner display_value="Rajendra Gudimetla">79352ee187ca9110f7c50e1d0ebb35d4</owner>
+        <picture>40cbfe6e8726d910f7c50e1d0ebb35bf</picture>
+        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=bfbb7e6e8726d910f7c50e1d0ebb35d5&amp;sysparm_preview=true", "summary");</preview>
+        <price>999</price>
+        <published_ref display_value="Apple iPhone X">ada7fa2a8726d910f7c50e1d0ebb3564</published_ref>
+        <recurring_frequency>monthly</recurring_frequency>
+        <recurring_price>150</recurring_price>
+        <request_method/>
+        <roles/>
+        <sc_catalogs>2657f22a8726d910f7c50e1d0ebb35af</sc_catalogs>
+        <sc_ic_item_staging/>
+        <sc_ic_version/>
+        <sc_template/>
+        <short_description/>
+        <show_variable_help_on_load>false</show_variable_help_on_load>
+        <start_closed>false</start_closed>
+        <state>draft</state>
+        <sys_class_name>sc_cat_item</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-18 06:36:17</sys_created_on>
+        <sys_id>bfbb7e6e8726d910f7c50e1d0ebb35d5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Apple iPhone X</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sc_cat_item_bfbb7e6e8726d910f7c50e1d0ebb35d5</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-18 06:36:18</sys_updated_on>
+        <taxonomy_topic/>
+        <template/>
+        <template_manager_roles/>
+        <type>item</type>
+        <use_sc_layout>true</use_sc_layout>
+        <vendor/>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <workflow/>
+    </sc_cat_item>
+    <sys_translated_text action="DELETE" query="documentkey=bfbb7e6e8726d910f7c50e1d0ebb35d5"/>
+    <fx_price action="DELETE" query="id=bfbb7e6e8726d910f7c50e1d0ebb35d5"/>
+    <fx_price action="DELETE">
+        <amount>999</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price</field>
+        <id>bfbb7e6e8726d910f7c50e1d0ebb35d5</id>
+        <parent/>
+        <reference_amount>999</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-18 06:36:17</sys_created_on>
+        <sys_id>7fbb7e6e8726d910f7c50e1d0ebb35d8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-18 06:36:21</sys_updated_on>
+        <table>sc_cat_item</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="DELETE">
+        <amount>150</amount>
+        <currency display_value="USD">USD</currency>
+        <field>recurring_price</field>
+        <id>bfbb7e6e8726d910f7c50e1d0ebb35d5</id>
+        <parent/>
+        <reference_amount>150</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-18 06:36:17</sys_created_on>
+        <sys_id>fbbbfe6e8726d910f7c50e1d0ebb35b2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-18 06:36:21</sys_updated_on>
+        <table>sc_cat_item</table>
+        <type>calculated</type>
+    </fx_price>
+    <sys_attachment action="DELETE">
+        <average_image_color>#ced6d5</average_image_color>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/jpeg</content_type>
+        <file_name>picture</file_name>
+        <hash>a986e8b7b49fb0377f913c90095e324f76a892bae1ff52928386c16526aad4e0</hash>
+        <image_height>124</image_height>
+        <image_width>84</image_width>
+        <size_bytes>2392</size_bytes>
+        <size_compressed>2358</size_compressed>
+        <state>available</state>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-18 06:36:18</sys_created_on>
+        <sys_id>40cbfe6e8726d910f7c50e1d0ebb35bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-18 06:36:18</sys_updated_on>
+        <table_name>ZZ_YYsc_cat_item</table_name>
+        <table_sys_id>bfbb7e6e8726d910f7c50e1d0ebb35d5</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="DELETE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="picture" sys_id="40cbfe6e8726d910f7c50e1d0ebb35bf">40cbfe6e8726d910f7c50e1d0ebb35bf</sys_attachment>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-18 06:36:18</sys_created_on>
+        <sys_id>8ccbfe6e8726d910f7c50e1d0ebb35c0</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="DELETE">
+        <data>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</data>
+        <length>3132</length>
+        <position>1</position>
+        <sys_attachment display_value="picture" sys_id="40cbfe6e8726d910f7c50e1d0ebb35bf">40cbfe6e8726d910f7c50e1d0ebb35bf</sys_attachment>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-18 06:36:18</sys_created_on>
+        <sys_id>c4cbfe6e8726d910f7c50e1d0ebb35c1</sys_id>
+    </sys_attachment_doc>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</application>
+        <file_path/>
+        <instance_id>5b3553eddb6af41007072f17d4961905</instance_id>
+        <instance_name>instavtechnologiespvtltddemo4</instance_name>
+        <name>sc_cat_item_bfbb7e6e8726d910f7c50e1d0ebb35d5</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item"><sc_cat_item action="INSERT_OR_UPDATE"><access_type>restricted</access_type><active>false</active><availability>on_desktop</availability><billable>false</billable><category/><checked_out>false</checked_out><cost>0</cost><custom_cart/><delivery_plan/><delivery_plan_script/><delivery_time>1970-01-03 00:00:00</delivery_time><description/><display_price_property>non_zero</display_price_property><entitlement_script/><flow_designer_flow display_value="Step based request fulfillment">21ea92dd53622010fca7ddeeff7b12b1</flow_designer_flow><fulfillment_automation_level>fully_automated</fulfillment_automation_level><group/><hide_sp>false</hide_sp><icon/><ignore_price>false</ignore_price><image/><location/><mandatory_attachment>false</mandatory_attachment><meta/><mobile_hide_price>false</mobile_hide_price><mobile_picture/><mobile_picture_type>use_desktop_picture</mobile_picture_type><model/><name>Apple iPhone X</name><no_attachment_v2>false</no_attachment_v2><no_cart>false</no_cart><no_cart_v2>false</no_cart_v2><no_delivery_time_v2>false</no_delivery_time_v2><no_order>false</no_order><no_order_now>false</no_order_now><no_proceed_checkout>false</no_proceed_checkout><no_quantity>false</no_quantity><no_quantity_v2>false</no_quantity_v2><no_search>false</no_search><no_wishlist_v2>false</no_wishlist_v2><omit_price>false</omit_price><order>0</order><ordered_item_link/><owner display_value="Rajendra Gudimetla">79352ee187ca9110f7c50e1d0ebb35d4</owner><picture>40cbfe6e8726d910f7c50e1d0ebb35bf</picture><preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=bfbb7e6e8726d910f7c50e1d0ebb35d5&amp;sysparm_preview=true", "summary");</preview><price>999</price><published_ref display_value="Apple iPhone X">ada7fa2a8726d910f7c50e1d0ebb3564</published_ref><recurring_frequency>monthly</recurring_frequency><recurring_price>150</recurring_price><request_method/><roles/><sc_catalogs>2657f22a8726d910f7c50e1d0ebb35af</sc_catalogs><sc_ic_item_staging/><sc_ic_version/><sc_template/><short_description/><show_variable_help_on_load>false</show_variable_help_on_load><start_closed>false</start_closed><state>draft</state><sys_class_name>sc_cat_item</sys_class_name><sys_created_by>rajendra.g</sys_created_by><sys_created_on>2022-10-18 06:36:17</sys_created_on><sys_id>bfbb7e6e8726d910f7c50e1d0ebb35d5</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Apple iPhone X</sys_name><sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package><sys_policy/><sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope><sys_update_name>sc_cat_item_bfbb7e6e8726d910f7c50e1d0ebb35d5</sys_update_name><sys_updated_by>rajendra.g</sys_updated_by><sys_updated_on>2022-10-18 06:36:18</sys_updated_on><taxonomy_topic/><template/><template_manager_roles/><type>item</type><use_sc_layout>true</use_sc_layout><vendor/><visible_bundle>true</visible_bundle><visible_guide>true</visible_guide><visible_standalone>true</visible_standalone><workflow/></sc_cat_item><sys_translated_text action="delete_multiple" query="documentkey=bfbb7e6e8726d910f7c50e1d0ebb35d5"/><fx_price action="delete_multiple" query="id=bfbb7e6e8726d910f7c50e1d0ebb35d5"/><fx_price action="INSERT_OR_UPDATE"><amount>999</amount><currency display_value="USD">USD</currency><field>price</field><id>bfbb7e6e8726d910f7c50e1d0ebb35d5</id><parent/><reference_amount>999</reference_amount><reference_currency display_value="USD">USD</reference_currency><sys_created_by>rajendra.g</sys_created_by><sys_created_on>2022-10-18 06:36:17</sys_created_on><sys_id>7fbb7e6e8726d910f7c50e1d0ebb35d8</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>rajendra.g</sys_updated_by><sys_updated_on>2022-10-18 06:36:21</sys_updated_on><table>sc_cat_item</table><type>calculated</type></fx_price><fx_price action="INSERT_OR_UPDATE"><amount>150</amount><currency display_value="USD">USD</currency><field>recurring_price</field><id>bfbb7e6e8726d910f7c50e1d0ebb35d5</id><parent/><reference_amount>150</reference_amount><reference_currency display_value="USD">USD</reference_currency><sys_created_by>rajendra.g</sys_created_by><sys_created_on>2022-10-18 06:36:17</sys_created_on><sys_id>fbbbfe6e8726d910f7c50e1d0ebb35b2</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>rajendra.g</sys_updated_by><sys_updated_on>2022-10-18 06:36:21</sys_updated_on><table>sc_cat_item</table><type>calculated</type></fx_price><sys_attachment action="INSERT_OR_UPDATE"><average_image_color>#ced6d5</average_image_color><chunk_size_bytes>700000</chunk_size_bytes><compressed>true</compressed><content_type>image/jpeg</content_type><file_name>picture</file_name><hash>a986e8b7b49fb0377f913c90095e324f76a892bae1ff52928386c16526aad4e0</hash><image_height>124</image_height><image_width>84</image_width><size_bytes>2392</size_bytes><size_compressed>2358</size_compressed><state>available</state><sys_created_by>rajendra.g</sys_created_by><sys_created_on>2022-10-18 06:36:18</sys_created_on><sys_id>40cbfe6e8726d910f7c50e1d0ebb35bf</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>rajendra.g</sys_updated_by><sys_updated_on>2022-10-18 06:36:18</sys_updated_on><table_name>ZZ_YYsc_cat_item</table_name><table_sys_id>bfbb7e6e8726d910f7c50e1d0ebb35d5</table_sys_id></sys_attachment><sys_attachment_doc action="INSERT_OR_UPDATE"><data>H4sIAAAAAAAAAA==</data><length>16</length><position>0</position><sys_attachment display_value="picture" sys_id="40cbfe6e8726d910f7c50e1d0ebb35bf">40cbfe6e8726d910f7c50e1d0ebb35bf</sys_attachment><sys_created_by>rajendra.g</sys_created_by><sys_created_on>2022-10-18 06:36:18</sys_created_on><sys_id>8ccbfe6e8726d910f7c50e1d0ebb35c0</sys_id></sys_attachment_doc><sys_attachment_doc action="INSERT_OR_UPDATE"><data>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</data><length>3132</length><position>1</position><sys_attachment display_value="picture" sys_id="40cbfe6e8726d910f7c50e1d0ebb35bf">40cbfe6e8726d910f7c50e1d0ebb35bf</sys_attachment><sys_created_by>rajendra.g</sys_created_by><sys_created_on>2022-10-18 06:36:18</sys_created_on><sys_id>c4cbfe6e8726d910f7c50e1d0ebb35c1</sys_id></sys_attachment_doc></record_update>]]></payload>
+        <payload_hash>0</payload_hash>
+        <record_name>Apple iPhone X</record_name>
+        <reverted_from/>
+        <source>2557695287629910f7c50e1d0ebb3595</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-18 06:36:22</sys_created_on>
+        <sys_id>41cbfe6e8726d910f7c50e1d0ebb35fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183e9ceb8b30000001</sys_recorded_at>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-18 06:36:22</sys_updated_on>
+        <type>Catalog Item</type>
+        <update_guid>49cbfe6e7d26d9107616fe9166d456ca</update_guid>
+        <update_guid_history>49cbfe6e7d26d9107616fe9166d456ca:-1284996909,f3bbfe6ea326d91002f413ec361a77b5:-1922114873</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Apple iPhone X">5bec36ee8726d910f7c50e1d0ebb3586</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-10-18 06:41:26</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item">sc_cat_item</sys_db_object>
+        <sys_id>7a75afeb2e3f417ebf81616cbbc606c4</sys_id>
+        <sys_metadata>bfbb7e6e8726d910f7c50e1d0ebb35d5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Apple iPhone X</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_scope_delete display_value="">74cfaf93962f4aa9bc64e19b81ff1861</sys_scope_delete>
+        <sys_update_name>sc_cat_item_bfbb7e6e8726d910f7c50e1d0ebb35d5</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_bfbb7e6e8726d910f7c50e1d0ebb35d5">41cbfe6e8726d910f7c50e1d0ebb35fd</sys_update_version>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-10-18 06:41:26</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

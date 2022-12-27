@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_link">
+    <sp_instance_link action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph>comment</glyph>
+        <id/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <order>1</order>
+        <roles/>
+        <sc_cat_item display_value="Leave Management">b30db73287e61d10f7c50e1d0ebb358a</sc_cat_item>
+        <sc_category/>
+        <short_description>Connect with colleagues across the world</short_description>
+        <size>md</size>
+        <sp_column display_value="4">2ab283d58762d510f0bd419d0ebb353a</sp_column>
+        <sp_page display_value="test_1_leave_management">f2dbd9ba87671d50f0bd419d0ebb3583</sp_page>
+        <sp_widget display_value="Icon Link">3caa67afcb13020000f8d856634c9c2e</sp_widget>
+        <sys_class_name>sp_instance_link</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-20 07:00:17</sys_created_on>
+        <sys_id>7a64d55387aa9d10f0bd419d0ebb3520</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>Community</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sp_instance_link_7a64d55387aa9d10f0bd419d0ebb3520</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-12-23 07:09:46</sys_updated_on>
+        <title>Community</title>
+        <type>url</type>
+        <url>https://www.servicenow.com/community/</url>
+        <widget_parameters><![CDATA[{
+	"link_template": {
+		"value": "Circle Icon",
+		"displayValue": "Circle Icon"
+	}
+}]]></widget_parameters>
+    </sp_instance_link>
+    <sys_translated_text action="delete_multiple" query="documentkey=7a64d55387aa9d10f0bd419d0ebb3520"/>
+</record_update>

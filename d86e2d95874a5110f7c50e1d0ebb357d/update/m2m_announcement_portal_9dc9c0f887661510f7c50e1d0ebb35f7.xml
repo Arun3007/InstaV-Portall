@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_announcement_portal">
+    <m2m_announcement_portal action="INSERT_OR_UPDATE">
+        <announcement display_value="Announcement 3">b4c904f887661510f7c50e1d0ebb35fe</announcement>
+        <order>100</order>
+        <sp_portal display_value="InstaV - Employee Center">6124c65887da9550f0bd419d0ebb3541</sp_portal>
+        <sys_class_name>m2m_announcement_portal</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-12 07:11:07</sys_created_on>
+        <sys_id>9dc9c0f887661510f7c50e1d0ebb35f7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Announcement 2.InstaV - Employee Center</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>m2m_announcement_portal_9dc9c0f887661510f7c50e1d0ebb35f7</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-12 07:11:07</sys_updated_on>
+    </m2m_announcement_portal>
+</record_update>

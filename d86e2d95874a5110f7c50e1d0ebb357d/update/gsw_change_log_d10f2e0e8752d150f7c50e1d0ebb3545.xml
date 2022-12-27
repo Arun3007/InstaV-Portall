@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_change_log">
+    <gsw_change_log action="INSERT_OR_UPDATE">
+        <change_date>2022-10-04 06:08:02</change_date>
+        <changed_by display_value="Jab Nur">46e7a225870ed910f0bd419d0ebb3547</changed_by>
+        <content display_value="Service Portal web client*">c821485bdb021050ab1354e4dc961970</content>
+        <related_change_log_entry/>
+        <related_task_entry/>
+        <sys_class_name>gsw_change_log</sys_class_name>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-04 06:08:02</sys_created_on>
+        <sys_id>d10f2e0e8752d150f7c50e1d0ebb3545</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>2022-10-04 06:08:02</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>gsw_change_log_d10f2e0e8752d150f7c50e1d0ebb3545</sys_update_name>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-04 06:08:02</sys_updated_on>
+        <type>7</type>
+    </gsw_change_log>
+</record_update>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>kn_b</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Kn b</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-10 07:34:23</sys_created_on>
+        <sys_id>7c5cb90c87ea5110f0bd419d0ebb358c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Kn b</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sp_widget_7c5cb90c87ea5110f0bd419d0ebb358c</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-10 07:39:27</sys_updated_on>
+        <template><![CDATA[<p style="text-align: center;"><a title="InstaV Technologies official documentation" href="?id=kb_view2"><img style="max-width: 100%; max-height: 480px;" src="iec_knowledge.png" alt="" /></a></p>
+<h3 style="text-align: center;"><strong>Knowledge</strong></h3>
+<p style="text-align: center;">Search the knowledge base</p>]]></template>
+    </sp_widget>
+</record_update>

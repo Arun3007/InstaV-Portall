@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="3">bb30dde487d25d10f7c50e1d0ebb3517</sp_column>
+        <sp_widget display_value="HTML">8679ef89cb21120000f8d856634c9c4f</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-09-29 07:23:36</sys_created_on>
+        <sys_id>f750112887d25d10f7c50e1d0ebb35a8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sp_instance_f750112887d25d10f7c50e1d0ebb35a8</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-09-29 11:05:51</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"html": {
+		"value": "<p style=\"text-align: center;\" data-mce-style=\"text-align: center;\"><a title=\"HR Portal\" href=\"?id=esc_dashboard\" data-mce-href=\"?id=esc_dashboard\"><img src=\"iec_human.png\" alt=\"\" data-mce-src=\"iec_human.png\"></a></p><h3 style=\"text-align: center;\" data-mce-style=\"text-align: center;\"><strong>Human resources</strong></h3><p style=\"text-align: center;\" data-mce-style=\"text-align: center;\">Contact HR Services</p>",
+		"displayValue": "<p style=\"text-align: center;\"><a title=\"HR Portal\" href=\"?id=esc_dashboard\"><img src=\"iec_human.png\" alt=\"\" /></a></p>\n<h3 style=\"text-align: center;\"><strong>Human resources</strong></h3>\n<p style=\"text-align: center;\">Contact HR Services</p>"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=f750112887d25d10f7c50e1d0ebb35a8"/>
+</record_update>

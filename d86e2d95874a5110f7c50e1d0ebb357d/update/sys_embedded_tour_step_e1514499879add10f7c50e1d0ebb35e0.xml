@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_embedded_tour_step">
+    <sys_embedded_tour_step action="INSERT_OR_UPDATE">
+        <action>true</action>
+        <action_event>click</action_event>
+        <action_target/>
+        <action_target_ref display_value="xpath">e5514499879add10f7c50e1d0ebb35dd</action_target_ref>
+        <active>true</active>
+        <content><![CDATA[Click the Wrench icon]]></content>
+        <guide display_value="How to Log an Incident">d4c0cc59879add10f7c50e1d0ebb3572</guide>
+        <implicit>false</implicit>
+        <link/>
+        <name/>
+        <options>{"url":"/iec?id=iec_index"}</options>
+        <order>1</order>
+        <placement>top</placement>
+        <skippable>false</skippable>
+        <step_type>step</step_type>
+        <sys_class_name>sys_embedded_tour_step</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-01 09:33:45</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e1514499879add10f7c50e1d0ebb35e0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sys_embedded_tour_step_e1514499879add10f7c50e1d0ebb35e0</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-01 09:33:45</sys_updated_on>
+        <target/>
+        <target_ref display_value="xpath">e5514499879add10f7c50e1d0ebb35dd</target_ref>
+        <title/>
+        <ui_version>dynamic</ui_version>
+        <view/>
+        <window>iec</window>
+    </sys_embedded_tour_step>
+    <sys_translated_text action="delete_multiple" query="documentkey=e1514499879add10f7c50e1d0ebb35e0"/>
+</record_update>

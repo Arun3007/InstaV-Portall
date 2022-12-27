@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="4">f730dde487d25d10f7c50e1d0ebb3519</sp_column>
+        <sp_widget display_value="HTML">8679ef89cb21120000f8d856634c9c4f</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-09-29 07:23:39</sys_created_on>
+        <sys_id>ac60112887d25d10f7c50e1d0ebb35e4</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sp_instance_ac60112887d25d10f7c50e1d0ebb35e4</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-06 08:58:30</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"html": {
+		"value": "<p style=\"text-align: center;\" data-mce-style=\"text-align: center;\"><a title=\"Access the most up to date corporate policies\" href=\"?id=kb_article&amp;sys_id=0e58a9b6879a1190f0bd419d0ebb35c7\" data-mce-href=\"?id=kb_article&amp;sys_id=0e58a9b6879a1190f0bd419d0ebb35c7\"><img src=\"iec_corperate.png\" alt=\"\" data-mce-src=\"iec_corperate.png\"></a></p><h3 style=\"text-align: center;\" data-mce-style=\"text-align: center;\"><strong>Corporate policies</strong></h3><p style=\"text-align: center;\" data-mce-style=\"text-align: center;\">Browse corporate policies</p>",
+		"displayValue": "<p style=\"text-align: center;\"><a title=\"Access the most up to date corporate policies\" href=\"?id=kb_article&amp;sys_id=0e58a9b6879a1190f0bd419d0ebb35c7\"><img src=\"iec_corperate.png\" alt=\"\" /></a></p>\n<h3 style=\"text-align: center;\"><strong>Corporate policies</strong></h3>\n<p style=\"text-align: center;\">Browse corporate policies</p>"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=ac60112887d25d10f7c50e1d0ebb35e4"/>
+</record_update>

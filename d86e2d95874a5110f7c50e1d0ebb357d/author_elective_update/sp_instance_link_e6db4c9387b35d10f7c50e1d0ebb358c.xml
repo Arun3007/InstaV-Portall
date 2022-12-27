@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_link">
+    <sp_instance_link action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <order>1</order>
+        <roles/>
+        <sc_cat_item display_value="Leave Management">b30db73287e61d10f7c50e1d0ebb358a</sc_cat_item>
+        <sc_category/>
+        <short_description>----</short_description>
+        <size>md</size>
+        <sp_column display_value="1">13301de487d25d10f7c50e1d0ebb353a</sp_column>
+        <sp_page display_value="test_1_leave_management">f2dbd9ba87671d50f0bd419d0ebb3583</sp_page>
+        <sp_widget display_value="Icon Link">3caa67afcb13020000f8d856634c9c2e</sp_widget>
+        <sys_class_name>sp_instance_link</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-12-21 05:01:43</sys_created_on>
+        <sys_id>e6db4c9387b35d10f7c50e1d0ebb358c</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>demo tab</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sp_instance_link_e6db4c9387b35d10f7c50e1d0ebb358c</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-12-21 05:10:41</sys_updated_on>
+        <title>demo tab</title>
+        <type>sc_cat_item</type>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"link_template": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]></widget_parameters>
+    </sp_instance_link>
+    <sys_translated_text action="DELETE" query="documentkey=e6db4c9387b35d10f7c50e1d0ebb358c"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</application>
+        <file_path/>
+        <instance_id>5b3553eddb6af41007072f17d4961905</instance_id>
+        <instance_name>instavtechnologiespvtltddemo4</instance_name>
+        <name>sp_instance_link_e6db4c9387b35d10f7c50e1d0ebb358c</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_link"&gt;&lt;sp_instance_link action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;kb_article/&gt;&lt;kb_category/&gt;&lt;kb_topic/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;sc_cat_item display_value="Leave Management"&gt;b30db73287e61d10f7c50e1d0ebb358a&lt;/sc_cat_item&gt;&lt;sc_category/&gt;&lt;short_description&gt;----&lt;/short_description&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="1"&gt;13301de487d25d10f7c50e1d0ebb353a&lt;/sp_column&gt;&lt;sp_page display_value="test_1_leave_management"&gt;f2dbd9ba87671d50f0bd419d0ebb3583&lt;/sp_page&gt;&lt;sp_widget display_value="Icon Link"&gt;3caa67afcb13020000f8d856634c9c2e&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance_link&lt;/sys_class_name&gt;&lt;sys_created_by&gt;rajendra.g&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-12-21 05:01:43&lt;/sys_created_on&gt;&lt;sys_id&gt;e6db4c9387b35d10f7c50e1d0ebb358c&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name&gt;demo tab&lt;/sys_name&gt;&lt;sys_package display_value="InstaV Portal" source="x_intep_instav"&gt;d86e2d95874a5110f7c50e1d0ebb357d&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="InstaV Portal"&gt;d86e2d95874a5110f7c50e1d0ebb357d&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_link_e6db4c9387b35d10f7c50e1d0ebb358c&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;rajendra.g&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-12-21 05:10:41&lt;/sys_updated_on&gt;&lt;title&gt;demo tab&lt;/title&gt;&lt;type&gt;sc_cat_item&lt;/type&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"link_template": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_link&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=e6db4c9387b35d10f7c50e1d0ebb358c"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1474267357</payload_hash>
+        <record_name>demo tab</record_name>
+        <reverted_from/>
+        <source>d6610fa687ff9910f7c50e1d0ebb3529</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-12-21 05:10:41</sys_created_on>
+        <sys_id>c6edcc1787b35d10f7c50e1d0ebb35b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>185331744d70000001</sys_recorded_at>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-12-21 05:10:41</sys_updated_on>
+        <type>Instance with Link</type>
+        <update_guid>8eedcc1716b35d10276c6bed1fbdbeb4</update_guid>
+        <update_guid_history>8eedcc1716b35d10276c6bed1fbdbeb4:-1474267357,917d44171ab35d10d9e0f70efd380bbd:-1669149098,3e3d80175fb35d10bc1ae3d2cb8fcbc3:-1561122148,63fcccd3ceb35d100ca2b59b1a8c60fc:-1669149098,882c40d341b35d105f855c07abbe8d30:-1184236434,36db4c930fb35d100ae989fdbdbd5a8e:906505537</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="demo tab">141e805787b35d10f7c50e1d0ebb3556</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-12-21 05:11:22</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_link">sp_instance_link</sys_db_object>
+        <sys_id>2b1887ec8e2d478bbea1ef526473bd09</sys_id>
+        <sys_metadata>e6db4c9387b35d10f7c50e1d0ebb358c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>demo tab</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_scope_delete display_value="">74cfaf93962f4aa9bc64e19b81ff1861</sys_scope_delete>
+        <sys_update_name>sp_instance_link_e6db4c9387b35d10f7c50e1d0ebb358c</sys_update_name>
+        <sys_update_version display_value="sp_instance_link_e6db4c9387b35d10f7c50e1d0ebb358c">c6edcc1787b35d10f7c50e1d0ebb35b5</sys_update_version>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-12-21 05:11:22</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

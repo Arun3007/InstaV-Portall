@@ -1,0 +1,993 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic">
+    <sys_cb_topic action="INSERT_OR_UPDATE">
+        <applicability/>
+        <applicability_mode>query</applicability_mode>
+        <autopilot_topic>false</autopilot_topic>
+        <category>3efd22da0b203300a1b16c2367673a10</category>
+        <channels/>
+        <connect_queue/>
+        <description>ITSM conversation flow to check status of incidents and requested items.</description>
+        <expose_on_palette>false</expose_on_palette>
+        <flexible_conversation_switching>false</flexible_conversation_switching>
+        <graph>{
+  "graph_api_version": "1.0.39",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "1a54008922244308a530bded149757fb": {
+          "id": "1a54008922244308a530bded149757fb",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "mode": "simple",
+            "value": ""
+          },
+          "applicability": {
+            "mode": "query",
+            "value": ""
+          }
+        },
+        "ea97f922072b4e6ba95ad3e10e94c8bc": {
+          "id": "ea97f922072b4e6ba95ad3e10e94c8bc",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "mode": "query",
+            "value": ""
+          }
+        },
+        "e7eeffbb18e04c0797b90a95b39538a8": {
+          "id": "e7eeffbb18e04c0797b90a95b39538a8",
+          "name": "Check Incidents and Requested Items",
+          "script": "(function execute() {\n    /*\n        Determining whether there are,\n        1. Active incidents opened by the current user\n        2. Active Requested items requested for the current user\n        and assigning the corresponding script variables.\n    */\n\n    // Setting the incident count\n    var incidents = new GlideAggregate('u_employee_tasks');\n    incidents.addQuery('active', true);\n    incidents.addQuery('caller_id', vaInputs.user);\n    incidents.addAggregate('COUNT');\n    incidents.query();\n    var incidentCount = 0;\n    if (incidents.next())\n        incidentCount = incidents.getAggregate('COUNT');\n        \n    vaVars.incident_count = incidentCount;\n\n    // Setting the requested items count\n    var reqItems = new GlideAggregate('u_employee_tasks');\n    reqItems.addQuery('active', true);\n    reqItems.addQuery('request.requested_for', vaInputs.user);\n    reqItems.addAggregate('COUNT');\n    reqItems.query();\n    var reqItemsCount = 0;\n    if (reqItems.next())\n        reqItemsCount = reqItems.getAggregate('COUNT');\n\n    vaVars.requested_item_count = reqItemsCount;\n})()\n",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "mode": "query",
+            "value": ""
+          }
+        },
+        "bf657e1cd8264eb887f85a7445449df0": {
+          "id": "bf657e1cd8264eb887f85a7445449df0",
+          "stepType": "Decision",
+          "name": "Records  Decision",
+          "applicability": {
+            "mode": "query",
+            "value": ""
+          }
+        },
+        "128dcc023af04527a81a647e91d9035a": {
+          "stepType": "ReferenceChoicePrompt",
+          "name": "Get Record",
+          "prompt": {
+            "value": "(function execute() {\n    if (vaVars.table_name == 'u_employee_tasks') {\n        if (parseInt(vaVars.incident_count) &gt; parseInt(vaVars.limit)) \n            return gs.getMessage('You have {0} incidents:', vaVars.incident_count);\n        else\n            return gs.getMessage('Here are your incidents:');\n    }\n\n    if (parseInt(vaVars.requested_item_count) &gt; parseInt(vaVars.limit)) \n        return gs.getMessage('You have {0} requested items:', vaVars.requested_item_count);\n    return gs.getMessage('Here are your requested items:');\n})()\n",
+            "mode": "script"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "mode": "query",
+            "value": ""
+          },
+          "optional": false,
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "1bca1f79674f4162a47b2f513b704435",
+          "id": "128dcc023af04527a81a647e91d9035a",
+          "mode": "external",
+          "script": "(function execute() {\n    /*\n        1. Query the requested items table and get all the active items requested_for the user\n        2. Show the recently updated 5(limit) requested items, apply pagination if there are more than 5.\n    */\n\n\n    var count = 0;\n\n    var options = [];    \n    var gr = new GlideRecord(vaVars.table_name);\n    gr.addActiveQuery();\n    if (vaVars.table_name == 'incident')\n        gr.addQuery('caller_id', vaInputs.user);\n    else \n        gr.addQuery('request.requested_for', vaInputs.user);\n\n    gr.orderByDesc('sys_updated_on');\n    gr.query();\n\n    count = gr.getRowCount();\n    vaVars.count = count;\n    var cnt = 0;\n\n    while(gr.next()) {\n        if (gr.canRead()) {\n            if (vaVars.table_name == 'incident')\n                options.push({ 'value': gr.getUniqueValue(), 'label': gr.getDisplayValue('short_description') + ' [' + gr.getValue('number') + ']'});\n            else\n                options.push({ 'value': gr.getUniqueValue(), 'label': gr.getDisplayValue('cat_item')  + ' [' + gr.getValue('number') + ']'});\n            cnt++;\n        } \n    }\n\n        \n    return options;\n})()",
+          "noRecordsResponseMsg": {
+            "mode": "simple",
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": "No Records Found"
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ]
+          },
+          "condition": {
+            "value": "(function execute() {\n    /*\n        1. Query the requested items table and get all the active items requested_for the user\n        2. Show the recently updated 5(limit) requested items, apply pagination if there are more than 5.\n    */\n\n\n    var count = 0;\n\n    var options = [];    \n    var gr = new GlideRecord(vaVars.table_name);\n    gr.addActiveQuery();\n    if (vaVars.table_name == 'incident')\n        gr.addQuery('caller_id', vaInputs.user);\n    else \n        gr.addQuery('request.requested_for', vaInputs.user);\n\n    gr.orderByDesc('sys_updated_on');\n    gr.query();\n\n    count = gr.getRowCount();\n    vaVars.count = count;\n    var cnt = 0;\n\n    while(gr.next()) {\n        if (gr.canRead()) {\n            if (vaVars.table_name == 'incident')\n                options.push({ 'value': gr.getUniqueValue(), 'label': gr.getDisplayValue('short_description') + ' [' + gr.getValue('number') + ']'});\n            else\n                options.push({ 'value': gr.getUniqueValue(), 'label': gr.getDisplayValue('cat_item')  + ' [' + gr.getValue('number') + ']'});\n            cnt++;\n        } \n    }\n\n        \n    return options;\n})()",
+            "mode": "external_script"
+          },
+          "table": "sc_req_item",
+          "withNluUserInput": true,
+          "skipIfFulfilled": true,
+          "entity": {
+            "id": ""
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "hasCardHeader": false
+        },
+        "22042f1406324bde899afa52392f79bf": {
+          "stepType": "ChoicePrompt",
+          "name": "Incident or Requested Item",
+          "prompt": {
+            "value": "(function execute() {\n    var output = '';\n    var incidents = '';\n    var items = '';\n\n    if (vaVars.incident_count != 1) {\n            incidents = gs.getMessage('{0} open incidents',vaVars.incident_count);\n    } else {\n            incidents = gs.getMessage('{0} open incident', vaVars.incident_count);\n    }\n\n    if (vaVars.requested_item_count != 1) {\n            items = gs.getMessage('{0} requested items', vaVars.requested_item_count);\n    } else {\n            items = gs.getMessage('{0} requested item', vaVars.requested_item_count);\n    }\n\n    return gs.getMessage('I just checked and you have {0} and {1}.  Which status would you like to check?', [incidents,items]);\n})()\n",
+            "mode": "script"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "mode": "query",
+            "value": ""
+          },
+          "optional": false,
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "ebe799b62c2f495d856abcc3940d05e8",
+          "id": "22042f1406324bde899afa52392f79bf",
+          "withNluUserInput": true,
+          "skipIfFulfilled": true,
+          "entity": {
+            "id": ""
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "hasCardHeader": false
+        },
+        "4fab3c90050a40099c5241ebaf3d8666": {
+          "id": "4fab3c90050a40099c5241ebaf3d8666",
+          "stepType": "TextOutput",
+          "name": "No Incidents or Requested Items",
+          "value": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": "You have no active incidents or requested items."
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "applicability": {
+            "mode": "query",
+            "value": ""
+          },
+          "secure": false
+        },
+        "0e5ecde282f44b93920f227464c431b1": {
+          "id": "0e5ecde282f44b93920f227464c431b1",
+          "stepType": "Prompt",
+          "name": "Add Comment",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": "Would you like to add a comment?"
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "mode": "query",
+            "value": ""
+          },
+          "optional": false,
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "a8e57a27c5ff4d2184628a21bf859cee",
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "entity": {
+            "id": ""
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "5dbfb6e3b51c41f09773d0807eb5f9dc": {
+          "id": "5dbfb6e3b51c41f09773d0807eb5f9dc",
+          "stepType": "Decision",
+          "name": "Add Comment Decision",
+          "applicability": {
+            "mode": "query",
+            "value": ""
+          }
+        },
+        "219bcc5623134149a77a6288c32f3f42": {
+          "id": "219bcc5623134149a77a6288c32f3f42",
+          "stepType": "Prompt",
+          "name": "Comment",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": "Please enter your comment."
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "mode": "query",
+            "value": ""
+          },
+          "optional": false,
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "6c15e0e27afd4225b334cf6d958546dc",
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "entity": {
+            "id": ""
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        },
+        "5e8f0e0a0721413da7d8b8ca98e25177": {
+          "id": "5e8f0e0a0721413da7d8b8ca98e25177",
+          "stepType": "Decision",
+          "name": "Count Decision",
+          "applicability": {
+            "mode": "query",
+            "value": ""
+          }
+        },
+        "10f65ccc1c7048e7b6c2c86b9b55539c": {
+          "id": "10f65ccc1c7048e7b6c2c86b9b55539c",
+          "stepType": "ScriptOutput",
+          "name": "Update Record",
+          "output_type": "single_part",
+          "script": "(function execute() {\n    var response = '';\n    var gr = new GlideRecordSecure(vaVars.table_name);\n    if (gr.get(vaVars.sys_id)) {\n        var comment = vaInputs.comment.getValue().trim();\n        if (comment) {\n            gr.comments = comment;\n            gr.update();\n            if (vaVars.table_name == 'u_employee_tasks')\n                response = gs.getMessage(\"I've updated the incident.\");\n            else\n                response = gs.getMessage(\"I've updated the requested item.\");  \n        } else {\n            response = gs.getMessage(\"OK, no comment will be added.\");\n        }\n    } else\n        response = gs.getMessage(\"I couldn't find the record.\");\n\n    return response;\n})()",
+          "applicability": {
+            "mode": "query",
+            "value": ""
+          }
+        },
+        "dd4b76e8e8d14693a1943126c68a3e7a": {
+          "id": "dd4b76e8e8d14693a1943126c68a3e7a",
+          "stepType": "Decision",
+          "name": "Decision",
+          "applicability": {
+            "mode": "query",
+            "value": ""
+          }
+        },
+        "e5ae9a5e67474dc88284e88c4e394f77": {
+          "id": "e5ae9a5e67474dc88284e88c4e394f77",
+          "name": "Set Incident Table",
+          "script": "(function execute() {\n    vaVars.table_name = 'u_employee_tasks';\n    vaVars.count = vaVars.incident_count;\n})()\n",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "mode": "query",
+            "value": ""
+          }
+        },
+        "59da78dba9c04957a08184b125c710c0": {
+          "id": "59da78dba9c04957a08184b125c710c0",
+          "name": "Set Requested Item table",
+          "script": "(function execute() {\n    vaVars.table_name = 'u_employee_tasks';\n    vaVars.count = vaVars.requested_item_count;\n})()\n",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "mode": "query",
+            "value": ""
+          }
+        },
+        "901b66a9166b47618c11d3e251983d80": {
+          "id": "901b66a9166b47618c11d3e251983d80",
+          "name": "Set Table",
+          "script": "(function execute() {\n    vaVars.table_name = vaInputs.u_employee_tasks;\n    if (vaVars.table_name == 'u_employee_tasks')\n        vaVars.count = vaVars.incident_count;\n    else \n        vaVars.count = vaVars.requested_item_count;\n})()\n",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "mode": "query",
+            "value": ""
+          }
+        },
+        "a086c28b4baa482b8427cac47dce3932": {
+          "id": "a086c28b4baa482b8427cac47dce3932",
+          "name": "Set Sys Id",
+          "script": "(function execute() {\n    vaVars.sys_id = vaInputs.get_record.getValue();\n})()\n",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "mode": "query",
+            "value": ""
+          }
+        },
+        "33e661f9a43840c897c44c496ed6dd74": {
+          "id": "33e661f9a43840c897c44c496ed6dd74",
+          "name": "Set Sys Id",
+          "script": "(function execute() {\n    // Query the requested item table and get the only requested item\n      var gr = new GlideRecord(vaVars.table_name);\n      gr.addQuery('active', true);\n      if (vaVars.table_name == 'u_employee_tasks')\n            gr.addQuery('caller_id', vaInputs.user);\n      else \n            gr.addQuery('request.requested_for', vaInputs.user);\n\n      gr.setLimit(1);\n      gr.query();\n      if (gr.next()) {\n          vaVars.sys_id = gr.getUniqueValue();\n      }\n})()\n",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "mode": "query",
+            "value": ""
+          }
+        },
+        "50cb15da09a14dc08ff92322d79f075e": {
+          "id": "50cb15da09a14dc08ff92322d79f075e",
+          "stepType": "TextOutput",
+          "name": "Before Card",
+          "value": {
+            "value": "(function execute() {\n    if (vaVars.table_name == 'u_employee_tasks') {\n        if (parseInt(vaVars.count) == 1)\n            return gs.getMessage('OK, here is your incident:');\n        return gs.getMessage('Here is your incident:');\n    }\n    if (parseInt(vaVars.count) == 1)\n        return gs.getMessage('OK, here is your requested item:');\n    return gs.getMessage('Here is your requested item:');\n})()\n",
+            "mode": "script"
+          },
+          "applicability": {
+            "mode": "query",
+            "value": ""
+          },
+          "secure": false
+        },
+        "e61e1ef293484352b158f44ff16cc19a": {
+          "id": "e61e1ef293484352b158f44ff16cc19a",
+          "stepType": "Decision",
+          "name": "Decision",
+          "applicability": {
+            "mode": "query",
+            "value": ""
+          }
+        },
+        "4cf76201dddd481f9abbd38fca49bb61": {
+          "id": "4cf76201dddd481f9abbd38fca49bb61",
+          "stepType": "Component",
+          "name": "No Deflection",
+          "fields": [],
+          "reusableTopicId": "7fb4ca055303201033cdddeeff7b12b3",
+          "reusableTopicChoice": "Deflection",
+          "sourceType": "TOPIC_BLOCK",
+          "loading": false,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "inputs": {
+            "deflection_configuration": {
+              "value": "5292005253213010000dddeeff7b126c",
+              "mode": "string",
+              "type": "Reference",
+              "table": "ssa_deflection_configuration"
+            },
+            "deflection_pattern": {
+              "value": "9ee3409253213010000dddeeff7b123b",
+              "mode": "string",
+              "type": "Reference",
+              "table": "ssa_deflection_pattern"
+            },
+            "activity_table": {
+              "value": "",
+              "mode": "simple",
+              "type": "String"
+            },
+            "activity_ids": {
+              "value": "",
+              "mode": "simple",
+              "type": "String"
+            }
+          },
+          "outputs": [],
+          "outdatedNote": false,
+          "variableIds": []
+        },
+        "907d5c5d815e443c8bce732d32d3b453": {
+          "id": "907d5c5d815e443c8bce732d32d3b453",
+          "stepType": "Component",
+          "name": "Deflection: Status shown",
+          "fields": [],
+          "reusableTopicId": "7fb4ca055303201033cdddeeff7b12b3",
+          "reusableTopicChoice": "Deflection",
+          "sourceType": "TOPIC_BLOCK",
+          "loading": false,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "inputs": {
+            "deflection_configuration": {
+              "value": "5292005253213010000dddeeff7b126c",
+              "mode": "string",
+              "type": "Reference",
+              "table": "ssa_deflection_configuration"
+            },
+            "deflection_pattern": {
+              "value": "0273885253213010000dddeeff7b1210",
+              "mode": "string",
+              "type": "Reference",
+              "table": "ssa_deflection_pattern"
+            },
+            "activity_table": {
+              "value": "",
+              "mode": "simple",
+              "type": "String"
+            },
+            "activity_ids": {
+              "value": "",
+              "mode": "simple",
+              "type": "String"
+            }
+          },
+          "outputs": [],
+          "outdatedNote": false,
+          "variableIds": []
+        }
+      },
+      "edges": [
+        {
+          "id": "a06992f0872643a9a7c15d5408953143",
+          "edgeType": "Branch",
+          "source": "e61e1ef293484352b158f44ff16cc19a",
+          "target": "0e5ecde282f44b93920f227464c431b1",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    return vaVars.table_name == 'u_employee_tasks';\n})()\n"
+          },
+          "label": "Incident"
+        },
+        {
+          "id": "eb75b2e995e841ffa6043f3a832fdf45",
+          "edgeType": "Edge",
+          "source": "128dcc023af04527a81a647e91d9035a",
+          "target": "a086c28b4baa482b8427cac47dce3932",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "682d7e49dec64dddb49efaddb68019ea",
+          "edgeType": "Branch",
+          "source": "5dbfb6e3b51c41f09773d0807eb5f9dc",
+          "target": "ea97f922072b4e6ba95ad3e10e94c8bc",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": "add_comment="
+          },
+          "label": "No"
+        },
+        {
+          "id": "8bd7c087d430458698875569b3e55afa",
+          "edgeType": "Branch",
+          "source": "dd4b76e8e8d14693a1943126c68a3e7a",
+          "target": "bf657e1cd8264eb887f85a7445449df0",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    return parseInt(vaVars.incident_count) != 0 || parseInt(vaVars.requested_item_count) != 0;\n})()\n"
+          },
+          "label": "Has Records"
+        },
+        {
+          "id": "50e6816cd7624010a63b98b0867bb9c0",
+          "edgeType": "Edge",
+          "source": "e5ae9a5e67474dc88284e88c4e394f77",
+          "target": "5e8f0e0a0721413da7d8b8ca98e25177",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "ad722b9a52ce4f8692e9774c96db7a74",
+          "edgeType": "Edge",
+          "source": "a086c28b4baa482b8427cac47dce3932",
+          "target": "50cb15da09a14dc08ff92322d79f075e",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "35adc07d72d7480ba2f4d05863fb1ac2",
+          "edgeType": "Edge",
+          "source": "901b66a9166b47618c11d3e251983d80",
+          "target": "5e8f0e0a0721413da7d8b8ca98e25177",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "d1c9788cda584870a2d3690e994867b4",
+          "edgeType": "Edge",
+          "source": "10f65ccc1c7048e7b6c2c86b9b55539c",
+          "target": "ea97f922072b4e6ba95ad3e10e94c8bc",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "89f2df15d6e84153b6e84f4f28ed4c36",
+          "edgeType": "Edge",
+          "source": "1a54008922244308a530bded149757fb",
+          "target": "e7eeffbb18e04c0797b90a95b39538a8",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "d63a0dda3bb24220b83279304b8737f6",
+          "edgeType": "Branch",
+          "source": "bf657e1cd8264eb887f85a7445449df0",
+          "target": "22042f1406324bde899afa52392f79bf",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    return vaVars.incident_count != 0 &amp;&amp; vaVars.requested_item_count != 0;\n})()"
+          },
+          "label": "Both Incidents and Requested Items"
+        },
+        {
+          "id": "4b2551bdd4c148358253f77d5b769973",
+          "edgeType": "Branch",
+          "source": "5dbfb6e3b51c41f09773d0807eb5f9dc",
+          "target": "219bcc5623134149a77a6288c32f3f42",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": "add_comment=true"
+          },
+          "label": "Yes"
+        },
+        {
+          "id": "2225b98935b941c38b65000fcb15938e",
+          "edgeType": "Branch",
+          "source": "5e8f0e0a0721413da7d8b8ca98e25177",
+          "target": "128dcc023af04527a81a647e91d9035a",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    return vaVars.count &gt; 1;\n})()"
+          },
+          "label": "Multiple Records"
+        },
+        {
+          "id": "0be6340157004b55989cec95fc5f2713",
+          "edgeType": "Edge",
+          "source": "219bcc5623134149a77a6288c32f3f42",
+          "target": "10f65ccc1c7048e7b6c2c86b9b55539c",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "bbfd80793f98435880cfb3ec685b15cb",
+          "edgeType": "Edge",
+          "source": "e7eeffbb18e04c0797b90a95b39538a8",
+          "target": "dd4b76e8e8d14693a1943126c68a3e7a",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "1b23aebf6ca7479d93f724103c914be2",
+          "edgeType": "Branch",
+          "source": "dd4b76e8e8d14693a1943126c68a3e7a",
+          "target": "4fab3c90050a40099c5241ebaf3d8666",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    return parseInt(vaVars.incident_count) == 0 &amp;&amp; parseInt(vaVars.requested_item_count) == 0;\n})()\n"
+          },
+          "label": "Neither Incidents nor Requested Items"
+        },
+        {
+          "id": "8e7260f7658944bf815a981781c06324",
+          "edgeType": "Branch",
+          "source": "bf657e1cd8264eb887f85a7445449df0",
+          "target": "e5ae9a5e67474dc88284e88c4e394f77",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    return parseInt(vaVars.incident_count) &gt; 0 &amp;&amp; parseInt(vaVars.requested_item_count) == 0;\n})()"
+          },
+          "label": "Incidents only"
+        },
+        {
+          "id": "05a192c41014427baeda0244eb16c676",
+          "edgeType": "Branch",
+          "source": "bf657e1cd8264eb887f85a7445449df0",
+          "target": "59da78dba9c04957a08184b125c710c0",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    return parseInt(vaVars.requested_item_count) &gt; 0 &amp;&amp; parseInt(vaVars.incident_count) == 0;\n})()\n"
+          },
+          "label": "Requested Items Only"
+        },
+        {
+          "id": "8845ef47019c4978b3284ed19710fb03",
+          "edgeType": "Edge",
+          "source": "59da78dba9c04957a08184b125c710c0",
+          "target": "5e8f0e0a0721413da7d8b8ca98e25177",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "714297eb391a49c8821e5f2327ae1885",
+          "edgeType": "Edge",
+          "source": "22042f1406324bde899afa52392f79bf",
+          "target": "901b66a9166b47618c11d3e251983d80",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "b6b72d8d28e14352889bfeaeabe9575c",
+          "edgeType": "Branch",
+          "source": "5e8f0e0a0721413da7d8b8ca98e25177",
+          "target": "33e661f9a43840c897c44c496ed6dd74",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    return parseInt(vaVars.count) == 1;\n})()"
+          },
+          "label": "Only One Record"
+        },
+        {
+          "id": "95e6aa0346f9451ab170be909ea65477",
+          "edgeType": "Edge",
+          "source": "33e661f9a43840c897c44c496ed6dd74",
+          "target": "50cb15da09a14dc08ff92322d79f075e",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "e33d58a4eb0345e6823670286a38247f",
+          "edgeType": "Edge",
+          "source": "50cb15da09a14dc08ff92322d79f075e",
+          "target": "e61e1ef293484352b158f44ff16cc19a",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "2079f52c403b4835b0149ccc0b9a35b6",
+          "edgeType": "Edge",
+          "source": "4fab3c90050a40099c5241ebaf3d8666",
+          "target": "4cf76201dddd481f9abbd38fca49bb61",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "4ffd8bc612914b36be8ddeecd775f60a",
+          "edgeType": "Edge",
+          "source": "4cf76201dddd481f9abbd38fca49bb61",
+          "target": "ea97f922072b4e6ba95ad3e10e94c8bc",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "df36c77ff584426db4bcd1cadcf402c3",
+          "edgeType": "Edge",
+          "source": "0e5ecde282f44b93920f227464c431b1",
+          "target": "907d5c5d815e443c8bce732d32d3b453",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "9ba85666d70547dfb0d5e78d9bf4b912",
+          "edgeType": "Edge",
+          "source": "907d5c5d815e443c8bce732d32d3b453",
+          "target": "5dbfb6e3b51c41f09773d0807eb5f9dc",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "c9d30ad865b9412a8e628ff384c9f89c": {
+      "id": "c9d30ad865b9412a8e628ff384c9f89c",
+      "name": "LiveAgent_application",
+      "value": {
+        "mode": "simple",
+        "value": "itsm"
+      },
+      "varType": "script",
+      "label": "LiveAgent_application",
+      "category": "vaVars"
+    },
+    "1bca1f79674f4162a47b2f513b704435": {
+      "id": "1bca1f79674f4162a47b2f513b704435",
+      "name": "get_record",
+      "label": "Get Record",
+      "varType": "reference",
+      "table": "sc_req_item",
+      "category": "vaInputs"
+    },
+    "ebe799b62c2f495d856abcc3940d05e8": {
+      "id": "ebe799b62c2f495d856abcc3940d05e8",
+      "name": "incident_or_requested_item",
+      "label": "Incident Or Requested Item",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "Incident",
+          "value": "incident"
+        },
+        {
+          "label": "Requested Item ",
+          "value": "sc_req_item"
+        }
+      ],
+      "category": "vaInputs"
+    },
+    "a8e57a27c5ff4d2184628a21bf859cee": {
+      "id": "a8e57a27c5ff4d2184628a21bf859cee",
+      "name": "add_comment",
+      "label": "Add Comment",
+      "varType": "boolean",
+      "category": "vaInputs"
+    },
+    "6c15e0e27afd4225b334cf6d958546dc": {
+      "id": "6c15e0e27afd4225b334cf6d958546dc",
+      "name": "comment",
+      "label": "Comment",
+      "varType": "string",
+      "category": "vaInputs",
+      "secure": false,
+      "encryptionSalt": {
+        "value": "MTYzMDQ3Nzg5NDQ4NCBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      },
+      "encryptionHashFunction": "SHA-256"
+    },
+    "216d588e1e7a4292bfa49326152a0541": {
+      "id": "216d588e1e7a4292bfa49326152a0541",
+      "value": {
+        "mode": "simple",
+        "value": "0"
+      },
+      "name": "index",
+      "label": "index",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "c1cd2ee0e8574d83a6ec091f032871a7": {
+      "id": "c1cd2ee0e8574d83a6ec091f032871a7",
+      "value": {
+        "mode": "simple",
+        "value": "5"
+      },
+      "name": "limit",
+      "label": "limit",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "43cdf605523342b79b43941cae834e7e": {
+      "id": "43cdf605523342b79b43941cae834e7e",
+      "value": {
+        "mode": "simple",
+        "value": "0"
+      },
+      "name": "incident_count",
+      "label": "incident_count",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "35d207fc89634f0ba29cf3f828d041ec": {
+      "id": "35d207fc89634f0ba29cf3f828d041ec",
+      "value": {
+        "mode": "simple",
+        "value": "0"
+      },
+      "name": "requested_item_count",
+      "label": "requested_item_count",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "2e2ad2749c4c4ea3b75a854ea9ec7348": {
+      "id": "2e2ad2749c4c4ea3b75a854ea9ec7348",
+      "value": {
+        "value": "",
+        "mode": "simple"
+      },
+      "name": "table_name",
+      "label": "table_name",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "faf67f64120d41bca28aa03cad621612": {
+      "id": "faf67f64120d41bca28aa03cad621612",
+      "value": {
+        "mode": "simple",
+        "value": "0"
+      },
+      "name": "count",
+      "label": "count",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "e11b1bc802f3444697bb283b312246ef": {
+      "id": "e11b1bc802f3444697bb283b312246ef",
+      "value": {
+        "value": "",
+        "mode": "simple"
+      },
+      "name": "sys_id",
+      "label": "sys_id",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "110baa54fb7342288df3a0899e85c437": {
+      "category": "vaInputs",
+      "id": "110baa54fb7342288df3a0899e85c437",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "d680f64e5a51426692dac1888cb7622f": {
+      "id": "d680f64e5a51426692dac1888cb7622f",
+      "value": {
+        "mode": "script",
+        "value": "(function execute() {\n    if (vaContext.deviceType == 'ios' || vaContext.deviceType == 'android')\n        return 'mesp';\n\n    return gs.getProperty('sn_itsm_va.com.snc.itsm.virtualagent.portal_url');\n})()\n"
+      },
+      "name": "portalName",
+      "label": "portalName",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "0d2ca5e37ba148ff83151faac3f03e46": {
+      "id": "0d2ca5e37ba148ff83151faac3f03e46",
+      "value": {
+        "mode": "simple",
+        "value": "3"
+      },
+      "name": "max_comment_count",
+      "label": "max_comment_count",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "3be0a37f6df8476a848fba7595b0ac19": {
+      "id": "3be0a37f6df8476a848fba7595b0ac19",
+      "value": {
+        "mode": "simple",
+        "value": "143"
+      },
+      "name": "comments_length",
+      "label": "comments_length",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "620f35b24d144db59d8aca22ec56578e": {
+      "id": "620f35b24d144db59d8aca22ec56578e",
+      "value": {
+        "mode": "script",
+        "value": "(function execute() {\n    return gs.getProperty('glide.servlet.uri') ;\n})()\n"
+      },
+      "name": "baseUri",
+      "label": "baseUri",
+      "varType": "script",
+      "category": "vaVars"
+    }
+  }
+}</graph>
+        <key_phrases>inc req item,Check request item Status,Check status,ticket status,latest,update,check,status,Request,Requested Item,Incident</key_phrases>
+        <library>false</library>
+        <live_agent>false</live_agent>
+        <name>inc req item</name>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider/>
+        <palette_label/>
+        <roles/>
+        <secure_custom_input_control>false</secure_custom_input_control>
+        <source_topic_id>c2310cc9873ad150f7c50e1d0ebb3592</source_topic_id>
+        <sys_class_name>sys_cb_topic</sys_class_name>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-26 09:21:30</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>024eec15877a1550f7c50e1d0ebb35f8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>inc req item</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sys_cb_topic_024eec15877a1550f7c50e1d0ebb35f8</sys_update_name>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-26 09:31:20</sys_updated_on>
+        <triggerable_by_notification>false</triggerable_by_notification>
+        <type>STANDARD</type>
+        <variables/>
+    </sys_cb_topic>
+    <sys_variable_value action="delete_multiple" query="document_key=024eec15877a1550f7c50e1d0ebb35f8"/>
+</record_update>

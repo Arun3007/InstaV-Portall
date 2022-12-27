@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic">
+    <sys_cb_topic action="DELETE">
+        <applicability/>
+        <applicability_mode>query</applicability_mode>
+        <autopilot_topic>false</autopilot_topic>
+        <category/>
+        <channels/>
+        <connect_queue/>
+        <description>Find employees in the company </description>
+        <expose_on_palette>false</expose_on_palette>
+        <flexible_conversation_switching>false</flexible_conversation_switching>
+        <graph>{
+  "graph_api_version": "1.0.39",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "5b24485bd0c641829245142073de7dcf": {
+          "id": "5b24485bd0c641829245142073de7dcf",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Hi,"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "I can help you to find employees in the company"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          }
+        },
+        "eafcdcb8f5034fee99f0d6f5f85862bc": {
+          "id": "eafcdcb8f5034fee99f0d6f5f85862bc",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Thank You for contracting With Us!"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Have a nice Day"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          }
+        },
+        "01400ff144ec4876873096156869e31d": {
+          "id": "01400ff144ec4876873096156869e31d",
+          "stepType": "Prompt",
+          "name": "employee Name",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "who you are looking for ?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Got it! Let me have a look"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "b6a126f403f048e6a22b7baca75f074d",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        },
+        "7aa5c0ac3a29423d8e4585c9c3b5410a": {
+          "stepType": "ReferenceChoicePrompt",
+          "name": "List Employees",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "type": "datapill",
+                    "dataPill": {
+                      "value": "{{vaInputs.employee_name}}",
+                      "displayValue": "Input Variables➛Employee Name"
+                    },
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "type": "datapill",
+                    "dataPill": {
+                      "value": "{{vaInputs.employee_name}}",
+                      "displayValue": "Input Variables➛Employee Name"
+                    },
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "type": "datapill",
+                    "dataPill": {
+                      "value": "{{vaInputs.list_employees.name}}",
+                      "displayValue": "Input Variables➛List Employees➛Name"
+                    },
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "32918b1db5354dd7b5a24173fcabdbfc",
+          "id": "7aa5c0ac3a29423d8e4585c9c3b5410a",
+          "mode": "glide_record",
+          "script": "",
+          "metadataScript": "",
+          "cardData": {},
+          "noRecordsResponseMsg": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "No record match for your search"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "condition": {
+            "mode": "glide_query",
+            "value": "nameLIKE{{vaInputs.employee_name}}^email={{vaInputs.user.email}}"
+          },
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "889eae1eca694a18aadcf40b0592df8e": {
+          "id": "889eae1eca694a18aadcf40b0592df8e",
+          "stepType": "RecordOutput",
+          "name": "User Information",
+          "variableId": "32918b1db5354dd7b5a24173fcabdbfc",
+          "cardTemplate": "General",
+          "cardFields": {},
+          "mode": "variable",
+          "tableName": "sys_user",
+          "fields": [
+            "name",
+            "user_name",
+            "email"
+          ],
+          "cardDefinition": {
+            "name": "Record",
+            "value": "General"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "condition": {
+            "mode": "glide_query",
+            "value": ""
+          }
+        },
+        "251d8d90f9da46faa5f54641213e373e": {
+          "id": "251d8d90f9da46faa5f54641213e373e",
+          "stepType": "Prompt",
+          "name": "Another lookup",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Would you like to search Again?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "7f771c2b73d44f71a49b49b63f7a9d4c"
+        },
+        "442930c90a7341c6957252e158cc3f95": {
+          "id": "442930c90a7341c6957252e158cc3f95",
+          "stepType": "Decision",
+          "name": "Would you loke to search again"
+        }
+      },
+      "edges": [
+        {
+          "id": "1cf851a270314fe89eaff126b1909921",
+          "edgeType": "Edge",
+          "source": "5b24485bd0c641829245142073de7dcf",
+          "target": "01400ff144ec4876873096156869e31d",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "a9da6a4852fd4659b30ed05be145f716",
+          "edgeType": "Edge",
+          "source": "01400ff144ec4876873096156869e31d",
+          "target": "7aa5c0ac3a29423d8e4585c9c3b5410a",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "fb0bd0334b1a4a7687abec1d9bbadc6b",
+          "edgeType": "Edge",
+          "source": "7aa5c0ac3a29423d8e4585c9c3b5410a",
+          "target": "889eae1eca694a18aadcf40b0592df8e",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "0f49ed6f88b74bce8255877deb399b8c",
+          "edgeType": "Edge",
+          "source": "889eae1eca694a18aadcf40b0592df8e",
+          "target": "251d8d90f9da46faa5f54641213e373e",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "b25e860517eb4b99b6bdc39965ad947a",
+          "edgeType": "Edge",
+          "source": "251d8d90f9da46faa5f54641213e373e",
+          "target": "442930c90a7341c6957252e158cc3f95",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "4b466b0e932f4d978cf3a4d1f0f14414",
+          "edgeType": "Branch",
+          "source": "442930c90a7341c6957252e158cc3f95",
+          "target": "eafcdcb8f5034fee99f0d6f5f85862bc",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.another_lookup=",
+            "mode": "query"
+          },
+          "label": "No"
+        },
+        {
+          "id": "cbf3cb471bc941ca84c8cbc48a113813",
+          "edgeType": "Branch",
+          "source": "442930c90a7341c6957252e158cc3f95",
+          "target": "01400ff144ec4876873096156869e31d",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.another_lookup=true",
+            "mode": "query"
+          },
+          "label": "Yes"
+        }
+      ]
+    }
+  },
+  "variables": {
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "b6a126f403f048e6a22b7baca75f074d": {
+      "id": "b6a126f403f048e6a22b7baca75f074d",
+      "name": "employee_name",
+      "label": "Employee Name",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTY2NTAzOTgxNjk5NyBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
+    },
+    "32918b1db5354dd7b5a24173fcabdbfc": {
+      "id": "32918b1db5354dd7b5a24173fcabdbfc",
+      "name": "list_employees",
+      "label": "List Employees",
+      "varType": "reference",
+      "table": "sys_user",
+      "category": "vaInputs"
+    },
+    "7f771c2b73d44f71a49b49b63f7a9d4c": {
+      "id": "7f771c2b73d44f71a49b49b63f7a9d4c",
+      "name": "another_lookup",
+      "label": "Another Lookup",
+      "varType": "boolean",
+      "secure": false,
+      "category": "vaInputs"
+    }
+  }
+}</graph>
+        <key_phrases>Find Employees,find,employee</key_phrases>
+        <library>false</library>
+        <live_agent>false</live_agent>
+        <name>Find Employees</name>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider/>
+        <palette_label/>
+        <roles/>
+        <secure_custom_input_control>false</secure_custom_input_control>
+        <source_topic_id/>
+        <sys_class_name>sys_cb_topic</sys_class_name>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-06 06:56:47</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>4b5dc1b687d65550f7c50e1d0ebb359f</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Find Employees</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sys_cb_topic_4b5dc1b687d65550f7c50e1d0ebb359f</sys_update_name>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-06 08:41:03</sys_updated_on>
+        <triggerable_by_notification>false</triggerable_by_notification>
+        <type>STANDARD</type>
+        <variables/>
+    </sys_cb_topic>
+    <sys_variable_value action="DELETE" query="document_key=4b5dc1b687d65550f7c50e1d0ebb359f"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</application>
+        <file_path/>
+        <instance_id>5b3553eddb6af41007072f17d4961905</instance_id>
+        <instance_name>instavtechnologiespvtltddemo4</instance_name>
+        <name>sys_cb_topic_4b5dc1b687d65550f7c50e1d0ebb359f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic"><sys_cb_topic action="INSERT_OR_UPDATE"><applicability/><applicability_mode>query</applicability_mode><autopilot_topic>false</autopilot_topic><category/><channels/><connect_queue/><description>Find employees in the company </description><expose_on_palette>false</expose_on_palette><flexible_conversation_switching>false</flexible_conversation_switching><graph>{
+  "graph_api_version": "1.0.39",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "5b24485bd0c641829245142073de7dcf": {
+          "id": "5b24485bd0c641829245142073de7dcf",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Hi,"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "I can help you to find employees in the company"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          }
+        },
+        "eafcdcb8f5034fee99f0d6f5f85862bc": {
+          "id": "eafcdcb8f5034fee99f0d6f5f85862bc",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Thank You for contracting With Us!"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Have a nice Day"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          }
+        },
+        "01400ff144ec4876873096156869e31d": {
+          "id": "01400ff144ec4876873096156869e31d",
+          "stepType": "Prompt",
+          "name": "employee Name",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "who you are looking for ?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Got it! Let me have a look"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "b6a126f403f048e6a22b7baca75f074d",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        },
+        "7aa5c0ac3a29423d8e4585c9c3b5410a": {
+          "stepType": "ReferenceChoicePrompt",
+          "name": "List Employees",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "type": "datapill",
+                    "dataPill": {
+                      "value": "{{vaInputs.employee_name}}",
+                      "displayValue": "Input Variables➛Employee Name"
+                    },
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "type": "datapill",
+                    "dataPill": {
+                      "value": "{{vaInputs.employee_name}}",
+                      "displayValue": "Input Variables➛Employee Name"
+                    },
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "type": "datapill",
+                    "dataPill": {
+                      "value": "{{vaInputs.list_employees.name}}",
+                      "displayValue": "Input Variables➛List Employees➛Name"
+                    },
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "32918b1db5354dd7b5a24173fcabdbfc",
+          "id": "7aa5c0ac3a29423d8e4585c9c3b5410a",
+          "mode": "glide_record",
+          "script": "",
+          "metadataScript": "",
+          "cardData": {},
+          "noRecordsResponseMsg": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "No record match for your search"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "condition": {
+            "mode": "glide_query",
+            "value": "nameLIKE{{vaInputs.employee_name}}^email={{vaInputs.user.email}}"
+          },
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "889eae1eca694a18aadcf40b0592df8e": {
+          "id": "889eae1eca694a18aadcf40b0592df8e",
+          "stepType": "RecordOutput",
+          "name": "User Information",
+          "variableId": "32918b1db5354dd7b5a24173fcabdbfc",
+          "cardTemplate": "General",
+          "cardFields": {},
+          "mode": "variable",
+          "tableName": "sys_user",
+          "fields": [
+            "name",
+            "user_name",
+            "email"
+          ],
+          "cardDefinition": {
+            "name": "Record",
+            "value": "General"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "condition": {
+            "mode": "glide_query",
+            "value": ""
+          }
+        },
+        "251d8d90f9da46faa5f54641213e373e": {
+          "id": "251d8d90f9da46faa5f54641213e373e",
+          "stepType": "Prompt",
+          "name": "Another lookup",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Would you like to search Again?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "7f771c2b73d44f71a49b49b63f7a9d4c"
+        },
+        "442930c90a7341c6957252e158cc3f95": {
+          "id": "442930c90a7341c6957252e158cc3f95",
+          "stepType": "Decision",
+          "name": "Would you loke to search again"
+        }
+      },
+      "edges": [
+        {
+          "id": "1cf851a270314fe89eaff126b1909921",
+          "edgeType": "Edge",
+          "source": "5b24485bd0c641829245142073de7dcf",
+          "target": "01400ff144ec4876873096156869e31d",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "a9da6a4852fd4659b30ed05be145f716",
+          "edgeType": "Edge",
+          "source": "01400ff144ec4876873096156869e31d",
+          "target": "7aa5c0ac3a29423d8e4585c9c3b5410a",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "fb0bd0334b1a4a7687abec1d9bbadc6b",
+          "edgeType": "Edge",
+          "source": "7aa5c0ac3a29423d8e4585c9c3b5410a",
+          "target": "889eae1eca694a18aadcf40b0592df8e",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "0f49ed6f88b74bce8255877deb399b8c",
+          "edgeType": "Edge",
+          "source": "889eae1eca694a18aadcf40b0592df8e",
+          "target": "251d8d90f9da46faa5f54641213e373e",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "b25e860517eb4b99b6bdc39965ad947a",
+          "edgeType": "Edge",
+          "source": "251d8d90f9da46faa5f54641213e373e",
+          "target": "442930c90a7341c6957252e158cc3f95",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "4b466b0e932f4d978cf3a4d1f0f14414",
+          "edgeType": "Branch",
+          "source": "442930c90a7341c6957252e158cc3f95",
+          "target": "eafcdcb8f5034fee99f0d6f5f85862bc",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.another_lookup=",
+            "mode": "query"
+          },
+          "label": "No"
+        },
+        {
+          "id": "cbf3cb471bc941ca84c8cbc48a113813",
+          "edgeType": "Branch",
+          "source": "442930c90a7341c6957252e158cc3f95",
+          "target": "01400ff144ec4876873096156869e31d",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.another_lookup=true",
+            "mode": "query"
+          },
+          "label": "Yes"
+        }
+      ]
+    }
+  },
+  "variables": {
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "b6a126f403f048e6a22b7baca75f074d": {
+      "id": "b6a126f403f048e6a22b7baca75f074d",
+      "name": "employee_name",
+      "label": "Employee Name",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTY2NTAzOTgxNjk5NyBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
+    },
+    "32918b1db5354dd7b5a24173fcabdbfc": {
+      "id": "32918b1db5354dd7b5a24173fcabdbfc",
+      "name": "list_employees",
+      "label": "List Employees",
+      "varType": "reference",
+      "table": "sys_user",
+      "category": "vaInputs"
+    },
+    "7f771c2b73d44f71a49b49b63f7a9d4c": {
+      "id": "7f771c2b73d44f71a49b49b63f7a9d4c",
+      "name": "another_lookup",
+      "label": "Another Lookup",
+      "varType": "boolean",
+      "secure": false,
+      "category": "vaInputs"
+    }
+  }
+}</graph><key_phrases>Find Employees,find,employee</key_phrases><library>false</library><live_agent>false</live_agent><name>Find Employees</name><nlu_intent/><nlu_intent_label/><nlu_model/><nlu_model_label/><nlu_provider/><palette_label/><roles/><secure_custom_input_control>false</secure_custom_input_control><source_topic_id/><sys_class_name>sys_cb_topic</sys_class_name><sys_created_by>Jab19</sys_created_by><sys_created_on>2022-10-06 06:56:47</sys_created_on><sys_domain>global</sys_domain><sys_id>4b5dc1b687d65550f7c50e1d0ebb359f</sys_id><sys_mod_count>9</sys_mod_count><sys_name>Find Employees</sys_name><sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package><sys_policy/><sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope><sys_update_name>sys_cb_topic_4b5dc1b687d65550f7c50e1d0ebb359f</sys_update_name><sys_updated_by>Jab19</sys_updated_by><sys_updated_on>2022-10-06 08:41:03</sys_updated_on><triggerable_by_notification>false</triggerable_by_notification><type>STANDARD</type><variables/></sys_cb_topic><sys_variable_value action="delete_multiple" query="document_key=4b5dc1b687d65550f7c50e1d0ebb359f"/></record_update>]]></payload>
+        <payload_hash>1354428608</payload_hash>
+        <record_name>Find Employees</record_name>
+        <reverted_from/>
+        <source>7a3d9139871e5150f7c50e1d0ebb3587</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-06 08:41:03</sys_created_on>
+        <sys_id>5235a1fa871a5550f7c50e1d0ebb35a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183ac748f2a0000001</sys_recorded_at>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-06 08:41:03</sys_updated_on>
+        <type>Topic</type>
+        <update_guid>5a35a1faf41a55501a50ae43b0bdb7a4</update_guid>
+        <update_guid_history>5a35a1faf41a55501a50ae43b0bdb7a4:1354428608,c0bf95f6681a555078521a161cdfa04c:-413105455,a9f555beefd65550853882b94bef3567:161039938,19f4517e2ad65550174fbdf839544fbc:1236562059,2ae3153e1ed655505dce936309e81bae:-930404385,c29295fad3d655507bb7758ed9ebb037:1789417395,53e0dd3a86d6555012b4dc733e210247:-278410340,5c309d3adbd65550d52cdd3c844e5d2c:2097318370,706d4d7690d6555057cdd5517d24b9ec:644373662,8f5dc5b6d3d655507072052506da65fa:1322145453</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-06 08:45:21</sys_created_on>
+        <sys_db_object display_value="" name="sys_cb_topic">sys_cb_topic</sys_db_object>
+        <sys_id>5733ef176d664a209715f558597fc104</sys_id>
+        <sys_metadata>4b5dc1b687d65550f7c50e1d0ebb359f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Find Employees</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_scope_delete display_value="">74cfaf93962f4aa9bc64e19b81ff1861</sys_scope_delete>
+        <sys_update_name>sys_cb_topic_4b5dc1b687d65550f7c50e1d0ebb359f</sys_update_name>
+        <sys_update_version display_value="sys_cb_topic_4b5dc1b687d65550f7c50e1d0ebb359f">5235a1fa871a5550f7c50e1d0ebb35a5</sys_update_version>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-06 08:45:21</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

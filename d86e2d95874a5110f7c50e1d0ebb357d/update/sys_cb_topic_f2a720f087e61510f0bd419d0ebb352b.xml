@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic">
+    <sys_cb_topic action="INSERT_OR_UPDATE">
+        <applicability/>
+        <applicability_mode>query</applicability_mode>
+        <autopilot_topic>false</autopilot_topic>
+        <category/>
+        <channels/>
+        <connect_queue/>
+        <description>For Document</description>
+        <expose_on_palette>false</expose_on_palette>
+        <flexible_conversation_switching>false</flexible_conversation_switching>
+        <graph>{
+  "graph_api_version": "1.0.39",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "6b59e8557fdf4ecc818335193159ad97": {
+          "id": "6b59e8557fdf4ecc818335193159ad97",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "738ff79f46334ed6803d41429261d052": {
+          "id": "738ff79f46334ed6803d41429261d052",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Thanks"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          }
+        },
+        "08de4f8815da413a8021b1787a3cc57d": {
+          "stepType": "ReferenceChoicePrompt",
+          "name": "List Knowledge Article",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "type": "datapill",
+                    "dataPill": {
+                      "value": "{{vaInputs.list_knowledge_article}}",
+                      "displayValue": "Input Variables➛List Knowledge Article"
+                    },
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "e36f780816b64a3ab8d439ce82c10fa5",
+          "id": "08de4f8815da413a8021b1787a3cc57d",
+          "mode": "glide_record",
+          "script": "",
+          "metadataScript": "",
+          "cardData": {},
+          "noRecordsResponseMsg": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "No Record Match Found"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "condition": {
+            "mode": "glide_query",
+            "value": "authorANYTHING"
+          },
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "8bd9f7540b9a4aa38d3f687f9b128079": {
+          "id": "8bd9f7540b9a4aa38d3f687f9b128079",
+          "stepType": "RecordOutput",
+          "name": "Knowledge Information",
+          "variableId": "e36f780816b64a3ab8d439ce82c10fa5",
+          "cardTemplate": "General",
+          "cardFields": {},
+          "mode": "variable",
+          "tableName": "kb_knowledge",
+          "fields": [
+            "category"
+          ],
+          "cardDefinition": {
+            "name": "Record",
+            "value": "General"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "condition": {
+            "mode": "glide_query",
+            "value": ""
+          }
+        },
+        "7835a99453b0491fae505dda75621a7e": {
+          "id": "7835a99453b0491fae505dda75621a7e",
+          "stepType": "Prompt",
+          "name": "Knowledge article name",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "What are you looking for?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Got it let me have a check"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "b5319fa128f44469a02a8358d2dc7cc6",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        }
+      },
+      "edges": [
+        {
+          "id": "915dc78ec3b24e40a6b4c4dbb63cdefd",
+          "edgeType": "Edge",
+          "source": "08de4f8815da413a8021b1787a3cc57d",
+          "target": "8bd9f7540b9a4aa38d3f687f9b128079",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "2ac2c157d7cc46e3b9e1417ddbaf9873",
+          "edgeType": "Edge",
+          "source": "8bd9f7540b9a4aa38d3f687f9b128079",
+          "target": "738ff79f46334ed6803d41429261d052",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "c4b1a70db69b487aa73d60e25e95b630",
+          "edgeType": "Edge",
+          "source": "6b59e8557fdf4ecc818335193159ad97",
+          "target": "7835a99453b0491fae505dda75621a7e",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "ae15a41895ae4a37afa41868531cd6a8",
+          "edgeType": "Edge",
+          "source": "7835a99453b0491fae505dda75621a7e",
+          "target": "08de4f8815da413a8021b1787a3cc57d",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "e36f780816b64a3ab8d439ce82c10fa5": {
+      "id": "e36f780816b64a3ab8d439ce82c10fa5",
+      "name": "list_knowledge_article",
+      "label": "List Knowledge Article",
+      "varType": "reference",
+      "table": "kb_knowledge_base",
+      "category": "vaInputs"
+    },
+    "b5319fa128f44469a02a8358d2dc7cc6": {
+      "id": "b5319fa128f44469a02a8358d2dc7cc6",
+      "name": "knowledge_article_name",
+      "label": "Knowledge Article Name",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTY2NTU2ODk1ODQ4MyBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
+    }
+  }
+}</graph>
+        <key_phrases>Find Knowledge bases,Knowledge,knowledge article</key_phrases>
+        <library>false</library>
+        <live_agent>false</live_agent>
+        <name>Find Knowledge bases</name>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider/>
+        <palette_label/>
+        <roles/>
+        <secure_custom_input_control>false</secure_custom_input_control>
+        <source_topic_id/>
+        <sys_class_name>sys_cb_topic</sys_class_name>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-12 09:19:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>f2a720f087e61510f0bd419d0ebb352b</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Find Knowledge bases</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sys_cb_topic_f2a720f087e61510f0bd419d0ebb352b</sys_update_name>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-25 07:29:27</sys_updated_on>
+        <triggerable_by_notification>false</triggerable_by_notification>
+        <type>STANDARD</type>
+        <variables/>
+    </sys_cb_topic>
+    <sys_variable_value action="delete_multiple" query="document_key=f2a720f087e61510f0bd419d0ebb352b"/>
+</record_update>

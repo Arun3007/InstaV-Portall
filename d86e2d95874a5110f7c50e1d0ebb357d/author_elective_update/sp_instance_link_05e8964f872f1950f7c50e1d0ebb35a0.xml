@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_link">
+    <sp_instance_link action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph>user</glyph>
+        <id/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <order>2</order>
+        <roles/>
+        <sc_cat_item display_value="Leave Request Record Producer">69eab58f87e75d50f0bd419d0ebb3502</sc_cat_item>
+        <sc_category/>
+        <short_description>Request a leave</short_description>
+        <size>md</size>
+        <sp_column display_value="3">1afc2fdd87e2d510f0bd419d0ebb355a</sp_column>
+        <sp_page display_value="sc_cat_item">9f12251147132100ba13a5554ee490f4</sp_page>
+        <sp_widget display_value="Icon Link">3caa67afcb13020000f8d856634c9c2e</sp_widget>
+        <sys_class_name>sp_instance_link</sys_class_name>
+        <sys_created_by>piyush</sys_created_by>
+        <sys_created_on>2022-12-08 10:23:45</sys_created_on>
+        <sys_id>05e8964f872f1950f7c50e1d0ebb35a0</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Leave Request</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sp_instance_link_05e8964f872f1950f7c50e1d0ebb35a0</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-12-23 07:07:02</sys_updated_on>
+        <title>Leave Request</title>
+        <type>sc_cat_item</type>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"link_template": {
+		"value": "Circle Icon",
+		"displayValue": "Circle Icon"
+	}
+}]]></widget_parameters>
+    </sp_instance_link>
+    <sys_translated_text action="DELETE" query="documentkey=05e8964f872f1950f7c50e1d0ebb35a0"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</application>
+        <file_path/>
+        <instance_id>5b3553eddb6af41007072f17d4961905</instance_id>
+        <instance_name>instavtechnologiespvtltddemo4</instance_name>
+        <name>sp_instance_link_05e8964f872f1950f7c50e1d0ebb35a0</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_link"&gt;&lt;sp_instance_link action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph&gt;user&lt;/glyph&gt;&lt;id/&gt;&lt;kb_article/&gt;&lt;kb_category/&gt;&lt;kb_topic/&gt;&lt;order&gt;2&lt;/order&gt;&lt;roles/&gt;&lt;sc_cat_item display_value="Leave Request Record Producer"&gt;69eab58f87e75d50f0bd419d0ebb3502&lt;/sc_cat_item&gt;&lt;sc_category/&gt;&lt;short_description&gt;Request a leave&lt;/short_description&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="3"&gt;1afc2fdd87e2d510f0bd419d0ebb355a&lt;/sp_column&gt;&lt;sp_page display_value="sc_cat_item"&gt;9f12251147132100ba13a5554ee490f4&lt;/sp_page&gt;&lt;sp_widget display_value="Icon Link"&gt;3caa67afcb13020000f8d856634c9c2e&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance_link&lt;/sys_class_name&gt;&lt;sys_created_by&gt;piyush&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-12-08 10:23:45&lt;/sys_created_on&gt;&lt;sys_id&gt;05e8964f872f1950f7c50e1d0ebb35a0&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;Leave Request&lt;/sys_name&gt;&lt;sys_package display_value="InstaV Portal" source="x_intep_instav"&gt;d86e2d95874a5110f7c50e1d0ebb357d&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="InstaV Portal"&gt;d86e2d95874a5110f7c50e1d0ebb357d&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_link_05e8964f872f1950f7c50e1d0ebb35a0&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;rajendra.g&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-12-23 07:07:02&lt;/sys_updated_on&gt;&lt;title&gt;Leave Request&lt;/title&gt;&lt;type&gt;sc_cat_item&lt;/type&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"link_template": {
+		"value": "Circle Icon",
+		"displayValue": "Circle Icon"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_link&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=05e8964f872f1950f7c50e1d0ebb35a0"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1928346501</payload_hash>
+        <record_name>Leave Request</record_name>
+        <reverted_from/>
+        <source>619bfabb873fdd10f7c50e1d0ebb352d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-12-23 07:07:02</sys_created_on>
+        <sys_id>79bb7ebb873fdd10f7c50e1d0ebb35b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1853dce83250000001</sys_recorded_at>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-12-23 07:07:02</sys_updated_on>
+        <type>Instance with Link</type>
+        <update_guid>71bb7ebb5f3fdd109688968822ee48b1</update_guid>
+        <update_guid_history>71bb7ebb5f3fdd109688968822ee48b1:1928346501,9179de4f9c2f195066eb2e6f3b7be27e:1755691332,e219564fce2f1950c1408e53218dafae:1972157122,cde8964f312f1950b27c42a10e65b1a1:1192054807</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Leave Request">6a0cb2fb873fdd10f7c50e1d0ebb3584</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-12-23 07:08:26</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_link">sp_instance_link</sys_db_object>
+        <sys_id>0f6c3688c2d543448781459e333ec8e9</sys_id>
+        <sys_metadata>05e8964f872f1950f7c50e1d0ebb35a0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Leave Request</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_scope_delete display_value="">74cfaf93962f4aa9bc64e19b81ff1861</sys_scope_delete>
+        <sys_update_name>sp_instance_link_05e8964f872f1950f7c50e1d0ebb35a0</sys_update_name>
+        <sys_update_version display_value="sp_instance_link_05e8964f872f1950f7c50e1d0ebb35a0">79bb7ebb873fdd10f7c50e1d0ebb35b1</sys_update_version>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-12-23 07:08:26</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

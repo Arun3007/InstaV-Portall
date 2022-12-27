@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
+    <io_set_item action="INSERT_OR_UPDATE">
+        <order>200</order>
+        <sc_cat_item display_value="Apple Iphone">c38b0f2e8766d910f7c50e1d0ebb353a</sc_cat_item>
+        <sys_class_name>io_set_item</sys_class_name>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-18 07:46:18</sys_created_on>
+        <sys_id>a9cbc36e8766d910f7c50e1d0ebb3505</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>common_comments.</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>io_set_item_a9cbc36e8766d910f7c50e1d0ebb3505</sys_update_name>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-18 07:46:18</sys_updated_on>
+        <variable_set display_value="common_comments">aaf21572875a1190f0bd419d0ebb3519</variable_set>
+    </io_set_item>
+</record_update>

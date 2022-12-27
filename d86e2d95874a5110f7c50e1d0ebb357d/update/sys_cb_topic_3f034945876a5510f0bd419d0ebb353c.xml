@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic">
+    <sys_cb_topic action="INSERT_OR_UPDATE">
+        <applicability/>
+        <applicability_mode>query</applicability_mode>
+        <autopilot_topic>false</autopilot_topic>
+        <category/>
+        <channels/>
+        <connect_queue/>
+        <description>search for an announcement</description>
+        <expose_on_palette>false</expose_on_palette>
+        <flexible_conversation_switching>false</flexible_conversation_switching>
+        <graph>{
+  "graph_api_version": "1.0.39",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "c83c29a8557a4409aab74c906b3087a3": {
+          "id": "c83c29a8557a4409aab74c906b3087a3",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "afd36eaf7f8d4fcc841cd44a9489aadf": {
+          "id": "afd36eaf7f8d4fcc841cd44a9489aadf",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "2a1f9b119c8b4457a4a819d3cc242573": {
+          "id": "2a1f9b119c8b4457a4a819d3cc242573",
+          "stepType": "Prompt",
+          "name": "Announcement",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "What you are searching for?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Let me have a check"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "8681424a91a0486ebc6f03a7a23da97f",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        },
+        "439ced4102974e60908989a78bd9dd45": {
+          "stepType": "ReferenceChoicePrompt",
+          "name": "List Announcement ",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "type": "datapill",
+                    "dataPill": {
+                      "value": "{{vaInputs.list_announcement_}}",
+                      "displayValue": "Input Variables➛List Announcement "
+                    },
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "e9cc1facb31b493e9a1d58e8f53aac17",
+          "id": "439ced4102974e60908989a78bd9dd45",
+          "mode": "glide_record",
+          "script": "",
+          "metadataScript": "",
+          "cardData": {},
+          "noRecordsResponseMsg": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "No Records found"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "condition": {
+            "mode": "glide_query",
+            "value": "titleANYTHING"
+          },
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "35edea0c1efa4ced851fd6e1e6f60f20": {
+          "id": "35edea0c1efa4ced851fd6e1e6f60f20",
+          "stepType": "RecordOutput",
+          "name": "Announcement Information",
+          "variableId": "e9cc1facb31b493e9a1d58e8f53aac17",
+          "cardTemplate": "General",
+          "cardFields": {},
+          "mode": "variable",
+          "tableName": "announcement",
+          "fields": [
+            "title"
+          ],
+          "cardDefinition": {
+            "name": "Record",
+            "value": "General"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "condition": {
+            "mode": "glide_query",
+            "value": ""
+          }
+        }
+      },
+      "edges": [
+        {
+          "id": "06a16b4e04e14caeb7c7382e38de297b",
+          "edgeType": "Edge",
+          "source": "c83c29a8557a4409aab74c906b3087a3",
+          "target": "2a1f9b119c8b4457a4a819d3cc242573",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "90cff33571ee4c7c9adeb8167611e53a",
+          "edgeType": "Edge",
+          "source": "2a1f9b119c8b4457a4a819d3cc242573",
+          "target": "439ced4102974e60908989a78bd9dd45",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "dc1a4c6bf930411fac35e5c0f71d5dbe",
+          "edgeType": "Edge",
+          "source": "439ced4102974e60908989a78bd9dd45",
+          "target": "35edea0c1efa4ced851fd6e1e6f60f20",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "ed9391fd0c8a460fb84bd8ce91fa5f63",
+          "edgeType": "Edge",
+          "source": "35edea0c1efa4ced851fd6e1e6f60f20",
+          "target": "afd36eaf7f8d4fcc841cd44a9489aadf",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "8681424a91a0486ebc6f03a7a23da97f": {
+      "id": "8681424a91a0486ebc6f03a7a23da97f",
+      "name": "announcement",
+      "label": "Announcement",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTY2NTY0MTExNzI2MiBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
+    },
+    "e9cc1facb31b493e9a1d58e8f53aac17": {
+      "id": "e9cc1facb31b493e9a1d58e8f53aac17",
+      "name": "list_announcement_",
+      "label": "List Announcement ",
+      "varType": "reference",
+      "table": "announcement",
+      "category": "vaInputs"
+    }
+  }
+}</graph>
+        <key_phrases>Search Announcement,announement</key_phrases>
+        <library>false</library>
+        <live_agent>false</live_agent>
+        <name>Search Announcement</name>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider/>
+        <palette_label/>
+        <roles/>
+        <secure_custom_input_control>false</secure_custom_input_control>
+        <source_topic_id/>
+        <sys_class_name>sys_cb_topic</sys_class_name>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-13 05:58:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>3f034945876a5510f0bd419d0ebb353c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Search Announcement</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sys_cb_topic_3f034945876a5510f0bd419d0ebb353c</sys_update_name>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-13 06:12:47</sys_updated_on>
+        <triggerable_by_notification>false</triggerable_by_notification>
+        <type>STANDARD</type>
+        <variables/>
+    </sys_cb_topic>
+    <sys_variable_value action="delete_multiple" query="document_key=3f034945876a5510f0bd419d0ebb353c"/>
+</record_update>

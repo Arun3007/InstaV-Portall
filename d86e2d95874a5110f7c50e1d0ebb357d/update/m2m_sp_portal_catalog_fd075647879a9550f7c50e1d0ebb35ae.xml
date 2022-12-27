@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_portal_catalog">
+    <m2m_sp_portal_catalog action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <order>100</order>
+        <sc_catalog display_value="Service Catalog">e0d08b13c3330100c8b837659bba8fb4</sc_catalog>
+        <sp_portal display_value="InstaV - Employee Center">6124c65887da9550f0bd419d0ebb3541</sp_portal>
+        <sys_class_name>m2m_sp_portal_catalog</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-07 06:57:07</sys_created_on>
+        <sys_id>fd075647879a9550f7c50e1d0ebb35ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Catalog.InstaV - Employee Center</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>m2m_sp_portal_catalog_fd075647879a9550f7c50e1d0ebb35ae</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-07 06:57:07</sys_updated_on>
+    </m2m_sp_portal_catalog>
+</record_update>

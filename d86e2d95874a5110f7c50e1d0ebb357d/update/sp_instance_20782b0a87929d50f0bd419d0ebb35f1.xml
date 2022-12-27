@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">ff30dde487d25d10f7c50e1d0ebb3513</sp_column>
+        <sp_widget display_value="HTML">8679ef89cb21120000f8d856634c9c4f</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-04 10:18:55</sys_created_on>
+        <sys_id>20782b0a87929d50f0bd419d0ebb35f1</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sp_instance_20782b0a87929d50f0bd419d0ebb35f1</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-06 07:43:50</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"html": {
+		"value": "<p style=\"text-align: center;\" data-mce-style=\"text-align: center;\"><a title=\"Submit a password reset request\" href=\"?id=sc_cat_item&amp;sys_id=466119fe871a1190f0bd419d0ebb3543\" data-mce-href=\"?id=sc_cat_item&amp;sys_id=466119fe871a1190f0bd419d0ebb3543\"><img src=\"iec_password.png\" alt=\"\" data-mce-src=\"iec_password.png\"></a></p><h3 style=\"text-align: center;\" data-mce-style=\"text-align: center;\"><strong>Password reset</strong></h3><p style=\"text-align: center;\" data-mce-style=\"text-align: center;\">Request a service or application reset</p>",
+		"displayValue": "<p style=\"text-align: center;\"><a title=\"Submit a password reset request\" href=\"?id=sc_cat_item&amp;sys_id=466119fe871a1190f0bd419d0ebb3543\"><img src=\"iec_password.png\" alt=\"\" /></a></p>\n<h3 style=\"text-align: center;\"><strong>Password reset</strong></h3>\n<p style=\"text-align: center;\">Request a service or application reset</p>"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=20782b0a87929d50f0bd419d0ebb35f1"/>
+</record_update>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Employee Kit">72c2186b87365d10f0bd419d0ebb359d</sc_cat_item>
+        <sc_category display_value="Things you can request">f20dba11f9542010fa9b7f43378be374</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-11-02 08:03:33</sys_created_on>
+        <sys_id>209f50a787765d10f0bd419d0ebb354b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Things you can request.Employee Kit</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sc_cat_item_category_209f50a787765d10f0bd419d0ebb354b</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-11-02 08:03:33</sys_updated_on>
+    </sc_cat_item_category>
+</record_update>

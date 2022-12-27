@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">e23274b587c71510f7c50e1d0ebb350e</sp_column>
+        <sp_widget display_value="HRI Case Details">d36719ae9f3312009205f7f8677fcf18</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-11-09 09:11:37</sys_created_on>
+        <sys_id>f14234b587c71510f7c50e1d0ebb3590</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sp_instance_f14234b587c71510f7c50e1d0ebb3590</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-11-09 09:11:37</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=f14234b587c71510f7c50e1d0ebb3590"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</application>
+        <file_path/>
+        <instance_id>5b3553eddb6af41007072f17d4961905</instance_id>
+        <instance_name>instavtechnologiespvtltddemo4</instance_name>
+        <name>sp_instance_f14234b587c71510f7c50e1d0ebb3590</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance"><sp_instance action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><glyph/><id/><order>1</order><roles/><short_description/><size>md</size><sp_column display_value="1">e23274b587c71510f7c50e1d0ebb350e</sp_column><sp_widget display_value="HRI Case Details">d36719ae9f3312009205f7f8677fcf18</sp_widget><sys_class_name>sp_instance</sys_class_name><sys_created_by>rajendra.g</sys_created_by><sys_created_on>2022-11-09 09:11:37</sys_created_on><sys_id>f14234b587c71510f7c50e1d0ebb3590</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package><sys_policy/><sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope><sys_update_name>sp_instance_f14234b587c71510f7c50e1d0ebb3590</sys_update_name><sys_updated_by>rajendra.g</sys_updated_by><sys_updated_on>2022-11-09 09:11:37</sys_updated_on><title/><url/><widget_parameters/></sp_instance><sys_translated_text action="delete_multiple" query="documentkey=f14234b587c71510f7c50e1d0ebb3590"/></record_update>]]></payload>
+        <payload_hash>-1653194816</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>8bcc892487d25d10f7c50e1d0ebb35b0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-11-09 09:11:38</sys_created_on>
+        <sys_id>c242b4b587c71510f7c50e1d0ebb3539</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1845ba8c5cb0000001</sys_recorded_at>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-11-09 09:11:38</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>ca42b4b55ac7151009a8fa2f9ea4f138</update_guid>
+        <update_guid_history>ca42b4b55ac7151009a8fa2f9ea4f138:-1653194816</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">a85274b587c71510f7c50e1d0ebb3518</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-11-09 09:11:49</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>92896980a27b4758a86b6f6f7024c440</sys_id>
+        <sys_metadata>f14234b587c71510f7c50e1d0ebb3590</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_scope_delete display_value="">74cfaf93962f4aa9bc64e19b81ff1861</sys_scope_delete>
+        <sys_update_name>sp_instance_f14234b587c71510f7c50e1d0ebb3590</sys_update_name>
+        <sys_update_version display_value="sp_instance_f14234b587c71510f7c50e1d0ebb3590">c242b4b587c71510f7c50e1d0ebb3539</sys_update_version>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-11-09 09:11:49</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

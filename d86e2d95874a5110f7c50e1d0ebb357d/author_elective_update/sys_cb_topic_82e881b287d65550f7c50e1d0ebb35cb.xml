@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic">
+    <sys_cb_topic action="DELETE">
+        <applicability/>
+        <applicability_mode>query</applicability_mode>
+        <autopilot_topic>false</autopilot_topic>
+        <category>140e2eda0b203300a1b16c2367673af4</category>
+        <channels/>
+        <connect_queue/>
+        <description>Issue with email</description>
+        <expose_on_palette>false</expose_on_palette>
+        <flexible_conversation_switching>false</flexible_conversation_switching>
+        <graph>{"graph_api_version":"1.0.39","variables":{},"goals":{"primary":{"id":"primary","trigger":{"type":"primary"},"name":"primary","applicability":"","description":"","nodes":{"ce8ee94f00224fe2a053bd0d6b4ba169":{"id":"ce8ee94f00224fe2a053bd0d6b4ba169","stepType":"Start","name":"Start","greetingResponse":{"mode":"simple","value":""}},"bfd48cf7f6fa4bfbbc6db31d080dd0f3":{"id":"bfd48cf7f6fa4bfbbc6db31d080dd0f3","stepType":"TerminateGoal","name":"End","confirmationMessage":{"mode":"simple","value":""}}},"edges":[{"id":"7c1176b174e04562bb47f8043230fd39","edgeType":"Edge","source":"ce8ee94f00224fe2a053bd0d6b4ba169","target":"bfd48cf7f6fa4bfbbc6db31d080dd0f3","sourcePort":"","targetPort":""}]}}}</graph>
+        <key_phrases>Email Issue,email,issue,outlook,mail,sending,recieving</key_phrases>
+        <library>false</library>
+        <live_agent>false</live_agent>
+        <name>Email Issue</name>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider/>
+        <palette_label/>
+        <roles/>
+        <secure_custom_input_control>false</secure_custom_input_control>
+        <source_topic_id/>
+        <sys_class_name>sys_cb_topic</sys_class_name>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-06 06:37:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>82e881b287d65550f7c50e1d0ebb35cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Email Issue</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sys_cb_topic_82e881b287d65550f7c50e1d0ebb35cb</sys_update_name>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-06 06:37:20</sys_updated_on>
+        <triggerable_by_notification>false</triggerable_by_notification>
+        <type>STANDARD</type>
+        <variables/>
+    </sys_cb_topic>
+    <sys_variable_value action="DELETE" query="document_key=82e881b287d65550f7c50e1d0ebb35cb"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</application>
+        <file_path/>
+        <instance_id>5b3553eddb6af41007072f17d4961905</instance_id>
+        <instance_name>instavtechnologiespvtltddemo4</instance_name>
+        <name>sys_cb_topic_82e881b287d65550f7c50e1d0ebb35cb</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic"><sys_cb_topic action="INSERT_OR_UPDATE"><applicability/><applicability_mode>query</applicability_mode><autopilot_topic>false</autopilot_topic><category>140e2eda0b203300a1b16c2367673af4</category><channels/><connect_queue/><description>Issue with email</description><expose_on_palette>false</expose_on_palette><flexible_conversation_switching>false</flexible_conversation_switching><graph>{"graph_api_version":"1.0.39","variables":{},"goals":{"primary":{"id":"primary","trigger":{"type":"primary"},"name":"primary","applicability":"","description":"","nodes":{"ce8ee94f00224fe2a053bd0d6b4ba169":{"id":"ce8ee94f00224fe2a053bd0d6b4ba169","stepType":"Start","name":"Start","greetingResponse":{"mode":"simple","value":""}},"bfd48cf7f6fa4bfbbc6db31d080dd0f3":{"id":"bfd48cf7f6fa4bfbbc6db31d080dd0f3","stepType":"TerminateGoal","name":"End","confirmationMessage":{"mode":"simple","value":""}}},"edges":[{"id":"7c1176b174e04562bb47f8043230fd39","edgeType":"Edge","source":"ce8ee94f00224fe2a053bd0d6b4ba169","target":"bfd48cf7f6fa4bfbbc6db31d080dd0f3","sourcePort":"","targetPort":""}]}}}</graph><key_phrases>Email Issue,email,issue,outlook,mail,sending,recieving</key_phrases><library>false</library><live_agent>false</live_agent><name>Email Issue</name><nlu_intent/><nlu_intent_label/><nlu_model/><nlu_model_label/><nlu_provider/><palette_label/><roles/><secure_custom_input_control>false</secure_custom_input_control><source_topic_id/><sys_class_name>sys_cb_topic</sys_class_name><sys_created_by>Jab19</sys_created_by><sys_created_on>2022-10-06 06:37:20</sys_created_on><sys_domain>global</sys_domain><sys_id>82e881b287d65550f7c50e1d0ebb35cb</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Email Issue</sys_name><sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package><sys_policy/><sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope><sys_update_name>sys_cb_topic_82e881b287d65550f7c50e1d0ebb35cb</sys_update_name><sys_updated_by>Jab19</sys_updated_by><sys_updated_on>2022-10-06 06:37:20</sys_updated_on><triggerable_by_notification>false</triggerable_by_notification><type>STANDARD</type><variables/></sys_cb_topic><sys_variable_value action="delete_multiple" query="document_key=82e881b287d65550f7c50e1d0ebb35cb"/></record_update>]]></payload>
+        <payload_hash>1778297055</payload_hash>
+        <record_name>Email Issue</record_name>
+        <reverted_from/>
+        <source>7a3d9139871e5150f7c50e1d0ebb3587</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-06 06:37:22</sys_created_on>
+        <sys_id>26e849b287d65550f7c50e1d0ebb35f8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183ac0353240000001</sys_recorded_at>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-06 06:37:22</sys_updated_on>
+        <type>Topic</type>
+        <update_guid>6ee849b2fdd65550527783a48afb73f7</update_guid>
+        <update_guid_history>6ee849b2fdd65550527783a48afb73f7:1778297055</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Jab19</sys_created_by>
+        <sys_created_on>2022-10-06 06:41:54</sys_created_on>
+        <sys_db_object display_value="" name="sys_cb_topic">sys_cb_topic</sys_db_object>
+        <sys_id>a96d0a75a5ae4cb8bf669016d675a640</sys_id>
+        <sys_metadata>82e881b287d65550f7c50e1d0ebb35cb</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Email Issue</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_scope_delete display_value="">74cfaf93962f4aa9bc64e19b81ff1861</sys_scope_delete>
+        <sys_update_name>sys_cb_topic_82e881b287d65550f7c50e1d0ebb35cb</sys_update_name>
+        <sys_update_version display_value="sys_cb_topic_82e881b287d65550f7c50e1d0ebb35cb">26e849b287d65550f7c50e1d0ebb35f8</sys_update_version>
+        <sys_updated_by>Jab19</sys_updated_by>
+        <sys_updated_on>2022-10-06 06:41:54</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

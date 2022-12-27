@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_menu">
+    <sp_instance_menu action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column/>
+        <sp_widget display_value="Header Menu">5ef595c1cb12020000f8d856634c9c6e</sp_widget>
+        <sys_class_name>sp_instance_menu</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-01 08:57:03</sys_created_on>
+        <sys_id>48f87b81879add10f7c50e1d0ebb3554</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>IEC Header Menu</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sp_instance_menu_48f87b81879add10f7c50e1d0ebb3554</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-01 08:57:14</sys_updated_on>
+        <title>IEC Header Menu</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"enable_cart": {
+		"displayValue": "true",
+		"value": true
+	},
+      "enable_wishlist": {
+        "displayValue": "true",
+          "value": true
+      }
+}]]></widget_parameters>
+    </sp_instance_menu>
+    <sys_translated_text action="DELETE" query="documentkey=48f87b81879add10f7c50e1d0ebb3554"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</application>
+        <file_path/>
+        <instance_id>5b3553eddb6af41007072f17d4961905</instance_id>
+        <instance_name>instavtechnologiespvtltddemo4</instance_name>
+        <name>sp_instance_menu_48f87b81879add10f7c50e1d0ebb3554</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_menu"&gt;&lt;sp_instance_menu action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column/&gt;&lt;sp_widget display_value="Header Menu"&gt;5ef595c1cb12020000f8d856634c9c6e&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance_menu&lt;/sys_class_name&gt;&lt;sys_created_by&gt;rajendra.g&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-10-01 08:57:03&lt;/sys_created_on&gt;&lt;sys_id&gt;48f87b81879add10f7c50e1d0ebb3554&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;IEC Header Menu&lt;/sys_name&gt;&lt;sys_package display_value="InstaV Portal" source="x_intep_instav"&gt;d86e2d95874a5110f7c50e1d0ebb357d&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="InstaV Portal"&gt;d86e2d95874a5110f7c50e1d0ebb357d&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_menu_48f87b81879add10f7c50e1d0ebb3554&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;rajendra.g&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-10-01 08:57:14&lt;/sys_updated_on&gt;&lt;title&gt;IEC Header Menu&lt;/title&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"enable_cart": {
+		"displayValue": "true",
+		"value": true
+	},
+      "enable_wishlist": {
+        "displayValue": "true",
+          "value": true
+      }
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_menu&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=48f87b81879add10f7c50e1d0ebb3554"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1373456531</payload_hash>
+        <record_name>IEC Header Menu</record_name>
+        <reverted_from/>
+        <source>42ee3dd087da9550f0bd419d0ebb357b</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-01 08:57:14</sys_created_on>
+        <sys_id>7af8fb81879add10f7c50e1d0ebb3577</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18392c393860000001</sys_recorded_at>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-01 08:57:14</sys_updated_on>
+        <type>Instance with Menu</type>
+        <update_guid>b2f8fb81b29add10d4cb43dee755d977</update_guid>
+        <update_guid_history>b2f8fb81b29add10d4cb43dee755d977:1373456531,ccf87b81069add107b54f70d3dc1c956:165478959</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="IEC Header Menu">52cb3745879add10f7c50e1d0ebb3593</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-01 09:09:30</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_menu">sp_instance_menu</sys_db_object>
+        <sys_id>33e1051ec1a044e78bc4c89560f2a4e9</sys_id>
+        <sys_metadata>48f87b81879add10f7c50e1d0ebb3554</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>IEC Header Menu</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_scope_delete display_value="">74cfaf93962f4aa9bc64e19b81ff1861</sys_scope_delete>
+        <sys_update_name>sp_instance_menu_48f87b81879add10f7c50e1d0ebb3554</sys_update_name>
+        <sys_update_version display_value="sp_instance_menu_48f87b81879add10f7c50e1d0ebb3554">7af8fb81879add10f7c50e1d0ebb3577</sys_update_version>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-01 09:09:30</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

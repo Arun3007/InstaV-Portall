@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ais_datasource">
+    <ais_datasource action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <filter/>
+        <force_late_binding>false</force_late_binding>
+        <name>Locations</name>
+        <retention_policy/>
+        <source>cmn_location</source>
+        <sys_class_name>ais_datasource</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-07 04:53:31</sys_created_on>
+        <sys_id>436a790b871a9550f7c50e1d0ebb358d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Locations</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>ais_datasource_436a790b871a9550f7c50e1d0ebb358d</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-07 04:53:31</sys_updated_on>
+        <type>internal</type>
+    </ais_datasource>
+</record_update>

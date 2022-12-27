@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_theme_css_include">
+    <m2m_sp_theme_css_include action="DELETE">
+        <order>2</order>
+        <sp_css_include display_value="">3b11c203875a9550f7c50e1d0ebb352f</sp_css_include>
+        <sp_theme display_value="iec_theme">c488a1ac87165d10f7c50e1d0ebb3518</sp_theme>
+        <sys_class_name>m2m_sp_theme_css_include</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-07 05:22:13</sys_created_on>
+        <sys_id>a741cecf871a9550f7c50e1d0ebb3556</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>.iec_theme</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>m2m_sp_theme_css_include_a741cecf871a9550f7c50e1d0ebb3556</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-13 06:26:01</sys_updated_on>
+    </m2m_sp_theme_css_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</application>
+        <file_path/>
+        <instance_id>5b3553eddb6af41007072f17d4961905</instance_id>
+        <instance_name>instavtechnologiespvtltddemo4</instance_name>
+        <name>m2m_sp_theme_css_include_a741cecf871a9550f7c50e1d0ebb3556</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_theme_css_include"><m2m_sp_theme_css_include action="INSERT_OR_UPDATE"><order>2</order><sp_css_include display_value="">3b11c203875a9550f7c50e1d0ebb352f</sp_css_include><sp_theme display_value="iec_theme">c488a1ac87165d10f7c50e1d0ebb3518</sp_theme><sys_class_name>m2m_sp_theme_css_include</sys_class_name><sys_created_by>rajendra.g</sys_created_by><sys_created_on>2022-10-07 05:22:13</sys_created_on><sys_id>a741cecf871a9550f7c50e1d0ebb3556</sys_id><sys_mod_count>1</sys_mod_count><sys_name>.iec_theme</sys_name><sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package><sys_policy/><sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope><sys_update_name>m2m_sp_theme_css_include_a741cecf871a9550f7c50e1d0ebb3556</sys_update_name><sys_updated_by>rajendra.g</sys_updated_by><sys_updated_on>2022-10-13 06:26:01</sys_updated_on></m2m_sp_theme_css_include></record_update>]]></payload>
+        <payload_hash>2116732969</payload_hash>
+        <record_name>.iec_theme</record_name>
+        <reverted_from/>
+        <source>7b8f3132871e1190f0bd419d0ebb356a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-13 06:26:01</sys_created_on>
+        <sys_id>a87981c9872a5510f7c50e1d0ebb3543</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183d00572430000001</sys_recorded_at>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-13 06:26:01</sys_updated_on>
+        <type>Stylesheets</type>
+        <update_guid>e07981c9002a5510d9b53becc9256c43</update_guid>
+        <update_guid_history>e07981c9002a5510d9b53becc9256c43:2116732969,ef418603c15a9550cd6fed9b4f59e34a:444104065</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value=".iec_theme">518981c9872a5510f7c50e1d0ebb354a</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-13 06:26:20</sys_created_on>
+        <sys_db_object display_value="" name="m2m_sp_theme_css_include">m2m_sp_theme_css_include</sys_db_object>
+        <sys_id>023562c3f01843c080069382ed4dbf71</sys_id>
+        <sys_metadata>a741cecf871a9550f7c50e1d0ebb3556</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.iec_theme</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_scope_delete display_value="">74cfaf93962f4aa9bc64e19b81ff1861</sys_scope_delete>
+        <sys_update_name>m2m_sp_theme_css_include_a741cecf871a9550f7c50e1d0ebb3556</sys_update_name>
+        <sys_update_version display_value="m2m_sp_theme_css_include_a741cecf871a9550f7c50e1d0ebb3556">a87981c9872a5510f7c50e1d0ebb3543</sys_update_version>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-13 06:26:20</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

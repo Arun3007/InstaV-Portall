@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="category" table="x_intep_instav_employee_task" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>category</element>
+            <name>x_intep_instav_employee_task</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>rajendra.g</sys_created_by>
+            <sys_created_on>2022-10-17 07:32:19</sys_created_on>
+            <sys_id>befef11a87a29910f7c50e1d0ebb35c2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>category</sys_name>
+            <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+            <sys_update_name>sys_choice_x_intep_instav_employee_task_category</sys_update_name>
+            <sys_updated_by>rajendra.g</sys_updated_by>
+            <sys_updated_on>2022-10-17 07:32:19</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Inquiry / Help</label>
+            <language>en</language>
+            <name>x_intep_instav_employee_task</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>rajendra.g</sys_created_by>
+            <sys_created_on>2022-10-17 07:32:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3afef11a87a29910f7c50e1d0ebb35c2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajendra.g</sys_updated_by>
+            <sys_updated_on>2022-10-17 07:32:19</sys_updated_on>
+            <value>inquiry</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Software</label>
+            <language>en</language>
+            <name>x_intep_instav_employee_task</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>rajendra.g</sys_created_by>
+            <sys_created_on>2022-10-17 07:32:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>03fef11a87a29910f7c50e1d0ebb35c7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajendra.g</sys_updated_by>
+            <sys_updated_on>2022-10-17 07:32:20</sys_updated_on>
+            <value>software</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Hardware</label>
+            <language>en</language>
+            <name>x_intep_instav_employee_task</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>rajendra.g</sys_created_by>
+            <sys_created_on>2022-10-17 07:32:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d7fef11a87a29910f7c50e1d0ebb35ca</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajendra.g</sys_updated_by>
+            <sys_updated_on>2022-10-17 07:32:20</sys_updated_on>
+            <value>hardware</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Network</label>
+            <language>en</language>
+            <name>x_intep_instav_employee_task</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>rajendra.g</sys_created_by>
+            <sys_created_on>2022-10-17 07:32:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>affef11a87a29910f7c50e1d0ebb35cd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajendra.g</sys_updated_by>
+            <sys_updated_on>2022-10-17 07:32:21</sys_updated_on>
+            <value>network</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Database</label>
+            <language>en</language>
+            <name>x_intep_instav_employee_task</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>rajendra.g</sys_created_by>
+            <sys_created_on>2022-10-17 07:32:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>77fef11a87a29910f7c50e1d0ebb35d1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajendra.g</sys_updated_by>
+            <sys_updated_on>2022-10-17 07:32:22</sys_updated_on>
+            <value>database</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

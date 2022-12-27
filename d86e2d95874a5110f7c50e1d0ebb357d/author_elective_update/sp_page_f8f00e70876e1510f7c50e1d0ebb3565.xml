@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page">
+    <sp_page action="DELETE">
+        <category>custom</category>
+        <css/>
+        <draft>false</draft>
+        <dynamic_title_structure/>
+        <id>user_register</id>
+        <internal>false</internal>
+        <omit_watcher>false</omit_watcher>
+        <public>false</public>
+        <roles/>
+        <seo_script/>
+        <short_description/>
+        <sys_class_name>sp_page</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-12 15:50:02</sys_created_on>
+        <sys_id>f8f00e70876e1510f7c50e1d0ebb3565</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>user_register</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_update_name>sp_page_f8f00e70876e1510f7c50e1d0ebb3565</sys_update_name>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-12 15:50:02</sys_updated_on>
+        <title>user register</title>
+        <use_seo_script>false</use_seo_script>
+    </sp_page>
+    <sys_translated_text action="DELETE" query="documentkey=f8f00e70876e1510f7c50e1d0ebb3565"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</application>
+        <file_path/>
+        <instance_id>5b3553eddb6af41007072f17d4961905</instance_id>
+        <instance_name>instavtechnologiespvtltddemo4</instance_name>
+        <name>sp_page_f8f00e70876e1510f7c50e1d0ebb3565</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page"><sp_page action="INSERT_OR_UPDATE"><category>custom</category><css/><draft>false</draft><dynamic_title_structure/><id>user_register</id><internal>false</internal><omit_watcher>false</omit_watcher><public>false</public><roles/><seo_script/><short_description/><sys_class_name>sp_page</sys_class_name><sys_created_by>rajendra.g</sys_created_by><sys_created_on>2022-10-12 15:50:02</sys_created_on><sys_id>f8f00e70876e1510f7c50e1d0ebb3565</sys_id><sys_mod_count>0</sys_mod_count><sys_name>user_register</sys_name><sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package><sys_policy/><sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope><sys_update_name>sp_page_f8f00e70876e1510f7c50e1d0ebb3565</sys_update_name><sys_updated_by>rajendra.g</sys_updated_by><sys_updated_on>2022-10-12 15:50:02</sys_updated_on><title>user register</title><use_seo_script>false</use_seo_script></sp_page><sys_translated_text action="delete_multiple" query="documentkey=f8f00e70876e1510f7c50e1d0ebb3565"/></record_update>]]></payload>
+        <payload_hash>-1038988578</payload_hash>
+        <record_name>user_register</record_name>
+        <reverted_from/>
+        <source>7b8f3132871e1190f0bd419d0ebb356a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-12 15:50:03</sys_created_on>
+        <sys_id>09f0c2b0876e1510f7c50e1d0ebb35b3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183cce379ad0000001</sys_recorded_at>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-12 15:50:03</sys_updated_on>
+        <type>Page</type>
+        <update_guid>01f0c2b08c6e15103b4a8a6dd52665b3</update_guid>
+        <update_guid_history>01f0c2b08c6e15103b4a8a6dd52665b3:-1038988578</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="user_register">a4810eb0876e1510f7c50e1d0ebb35d9</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-12 15:52:28</sys_created_on>
+        <sys_db_object display_value="" name="sp_page">sp_page</sys_db_object>
+        <sys_id>0ea1268da8c5474082099b30e4bf2464</sys_id>
+        <sys_metadata>f8f00e70876e1510f7c50e1d0ebb3565</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>user_register</sys_name>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+        <sys_scope_delete display_value="">74cfaf93962f4aa9bc64e19b81ff1861</sys_scope_delete>
+        <sys_update_name>sp_page_f8f00e70876e1510f7c50e1d0ebb3565</sys_update_name>
+        <sys_update_version display_value="sp_page_f8f00e70876e1510f7c50e1d0ebb3565">09f0c2b0876e1510f7c50e1d0ebb35b3</sys_update_version>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-12 15:52:28</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

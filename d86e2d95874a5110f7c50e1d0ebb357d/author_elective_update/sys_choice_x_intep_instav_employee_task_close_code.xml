@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="close_code" table="x_intep_instav_employee_task" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>close_code</element>
+            <name>x_intep_instav_employee_task</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>rajendra.g</sys_created_by>
+            <sys_created_on>2022-10-17 10:28:28</sys_created_on>
+            <sys_id>9f47ae9e87269910f7c50e1d0ebb3585</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>close_code</sys_name>
+            <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="InstaV Portal">d86e2d95874a5110f7c50e1d0ebb357d</sys_scope>
+            <sys_update_name>sys_choice_x_intep_instav_employee_task_close_code</sys_update_name>
+            <sys_updated_by>rajendra.g</sys_updated_by>
+            <sys_updated_on>2022-10-17 10:28:28</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>close_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Solved (Work Around)</label>
+            <language>en</language>
+            <name>x_intep_instav_employee_task</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>rajendra.g</sys_created_by>
+            <sys_created_on>2022-10-17 10:28:28</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5b47ae9e87269910f7c50e1d0ebb3585</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajendra.g</sys_updated_by>
+            <sys_updated_on>2022-10-17 10:28:28</sys_updated_on>
+            <value>solved (work around)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>close_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Solved (Permanently)</label>
+            <language>en</language>
+            <name>x_intep_instav_employee_task</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>rajendra.g</sys_created_by>
+            <sys_created_on>2022-10-17 10:28:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2f47ae9e87269910f7c50e1d0ebb3589</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajendra.g</sys_updated_by>
+            <sys_updated_on>2022-10-17 10:28:29</sys_updated_on>
+            <value>solved (permanently)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>close_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Solved Remotely (Work Around)</label>
+            <language>en</language>
+            <name>x_intep_instav_employee_task</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>rajendra.g</sys_created_by>
+            <sys_created_on>2022-10-17 10:28:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b747ae9e87269910f7c50e1d0ebb35cb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajendra.g</sys_updated_by>
+            <sys_updated_on>2022-10-17 10:28:30</sys_updated_on>
+            <value>solved remotely (work around)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>close_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Solved Remotely (Permanently)</label>
+            <language>en</language>
+            <name>x_intep_instav_employee_task</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>rajendra.g</sys_created_by>
+            <sys_created_on>2022-10-17 10:28:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4c57ae9e87269910f7c50e1d0ebb35ce</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajendra.g</sys_updated_by>
+            <sys_updated_on>2022-10-17 10:28:32</sys_updated_on>
+            <value>solved remotely (permanently)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>close_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Not Solved (Not Reproducible)</label>
+            <language>en</language>
+            <name>x_intep_instav_employee_task</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>rajendra.g</sys_created_by>
+            <sys_created_on>2022-10-17 10:28:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2457ae9e87269910f7c50e1d0ebb35d2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajendra.g</sys_updated_by>
+            <sys_updated_on>2022-10-17 10:28:34</sys_updated_on>
+            <value>not solved (not reproducible)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>close_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Not Solved (Too Costly)</label>
+            <language>en</language>
+            <name>x_intep_instav_employee_task</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>rajendra.g</sys_created_by>
+            <sys_created_on>2022-10-17 10:28:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c557ee9e87269910f7c50e1d0ebb3507</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajendra.g</sys_updated_by>
+            <sys_updated_on>2022-10-17 10:28:36</sys_updated_on>
+            <value>not solved (too costly)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>close_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Closed/Resolved by Caller</label>
+            <language>en</language>
+            <name>x_intep_instav_employee_task</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>rajendra.g</sys_created_by>
+            <sys_created_on>2022-10-17 10:28:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ad57ee9e87269910f7c50e1d0ebb350a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajendra.g</sys_updated_by>
+            <sys_updated_on>2022-10-17 10:28:37</sys_updated_on>
+            <value>closed/resolved by caller</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="External User Self-Registration" source="com.snc.external_user_self_registration">1adeac5c87569550f0bd419d0ebb35dc</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>rajendra.g</sys_created_by>
+        <sys_created_on>2022-10-11 08:45:31</sys_created_on>
+        <sys_id>643613988762d110f0bd419d0ebb3514</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="InstaV Portal" source="x_intep_instav">d86e2d95874a5110f7c50e1d0ebb357d</sys_package>
+        <sys_updated_by>rajendra.g</sys_updated_by>
+        <sys_updated_on>2022-10-11 08:45:31</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

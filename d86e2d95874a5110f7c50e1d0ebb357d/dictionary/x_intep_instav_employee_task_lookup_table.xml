@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="update_synch=true" extends="dl_matcher" label="employee task lookup table" max_length="40" name="x_intep_instav_employee_task_lookup_table" sizeclass="1" type="collection"/>
+</database>
